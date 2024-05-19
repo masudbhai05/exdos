@@ -1,0 +1,98 @@
+@use '../../utils' as*;
+
+.tp-project-tab-area {
+    @media #{$lg} {
+        padding-right: 40px;
+    }
+
+    @media #{$md} {
+        padding-right: 0;
+    }
+
+    @media #{$xs} {
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+    @media #{$md} {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+.tp-project-tab {
+
+    @media #{$md,$xs} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &-content {
+        @media #{$md} {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        @media #{$xs} {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    & button {
+        color: #fff;
+        font-size: 100px;
+        line-height: 1.2;
+        font-family: var(--tp-font-heading);
+        border-bottom: 1px solid #2F446B;
+        padding: 12px 84px;
+        padding-right: 37px;
+        text-align: left;
+
+        @media #{$xxlm} {
+            font-size: 80px;
+        }
+
+        @media #{$lg} {
+            padding-right: 40px;
+            padding-left: 40px;
+            font-size: 50px;
+            width: 100%;
+        }
+
+        @media #{$md} {
+            padding-right: 21px;
+            padding-left: 0px;
+            font-size: 22px;
+        }
+
+        @media #{$xs} {
+            padding-left: 0px;
+            font-size: 18px;
+            padding-right: 20px;
+            margin-bottom: 10px;
+        }
+
+        margin-bottom: 15px;
+
+        @media #{$xl} {
+            font-size: 66px;
+            padding: 12px 46px;
+        }
+    }
+
+    & .active {
+        color: var(--tp-theme-color-2);
+        border-color: var(--tp-theme-color-2);
+    }
+
+    &-thumb {
+        & img {
+            border-radius: 20px;
+            width: 100%;
+        }
+    }
+}

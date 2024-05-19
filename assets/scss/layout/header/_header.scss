@@ -1,0 +1,192 @@
+@use '../../utils' as *;
+
+.tp-transparent-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.tp-header-area {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    @media #{$xl,$xs} {
+        padding-left: 30px;
+    }
+    @media #{$lg,$md} {
+        padding-left: 40px;
+    }
+}
+
+.tp-main-menu {
+    @media #{$xl} {
+        padding-left: 16px;
+    }
+    & ul {
+        & li {
+            display: inline-block;
+            margin-right: 42px;
+            position: relative;
+
+            @media #{$xxlm} {
+                margin-right: 27px;
+            }
+            @media #{$xl} {
+                margin-right: 19px;
+            }
+
+            &>a {
+                color: #fff;
+                font-family: var(--tp-font-heading);
+                font-size: 18px;
+                line-height: 28px;
+                display: inline-block;
+                padding: 36px 0;
+
+                &::before {
+                    content: "\f118";
+                    font-family: var(--tp-font-flaticon);
+                    font-size: 40px;
+                    position: absolute;
+                    top: 0;
+                    left: 10px;
+                    transform: rotate(130deg);
+                    opacity: 0;
+                    transition: all 0.3s;
+                }
+            }
+
+            & .sub-menu {
+                position: absolute;
+                top: 105%;
+                left: 0;
+                width: 213px;
+                background-color: #fff;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s;
+
+                & li {
+                    display: block;
+                    margin-right: 0;
+
+                    & a {
+                        display: block;
+                        padding: 10px 15px;
+                        color: #000;
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+
+                    & .sub-menu {
+                        left: 95%;
+                        top: 5%;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+
+                    &:hover {
+                        &>a {
+                            color: #0057FC;
+                        }
+
+                        .sub-menu {
+                            visibility: visible;
+                            opacity: 1;
+                            left: 100%;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                & a {
+                    color: var(--tp-theme-color-2);
+
+                    &::before {
+                        opacity: 1;
+                        left: 21px;
+                    }
+                }
+
+                & .sub-menu {
+                    visibility: visible;
+                    opacity: 1;
+                    top: 100%;
+                }
+            }
+        }
+    }
+}
+
+.tp-header {
+    &-search {
+        margin-right: 40px;
+        @media #{$xl} {
+            margin-right: 23px;
+        }
+
+        & button {
+            & i {
+                font-size: 28px;
+                color: #B1B4BA;
+            }
+        }
+    }
+
+    &-cta {
+        padding: 28px 40px;
+        border-left: 1px solid rgba(255, 255, 255, 0.15);
+        @media #{$xl} {
+            padding: 28px 20px;
+        }
+
+
+        &-text {
+            & span {
+                color: #B1B4BA;
+                font-size: 15px;
+                display: block;
+                margin-bottom: 6px;
+                line-height: 1;
+            }
+        }
+
+        & h4 {
+            color: #fff;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        &-icon {
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & i {
+                font-size: 35px;
+                color: var(--tp-theme-color-2);
+            }
+        }
+    }
+
+    &-bar {
+        & button {
+            background: #23252D;
+            padding: 23px 23px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & i {
+                font-size: 53px;
+            }
+        }
+    }
+
+}

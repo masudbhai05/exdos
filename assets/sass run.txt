@@ -1,0 +1,7 @@
+sass --watch d:\Web-Template\Quick-Start-Pack\assets\scss\main.scss:d:\Web-Template\Quick-Start-Pack\assets\css\style.css
+
+
+
+@media #{$xl}{
+    margin:20px;
+}

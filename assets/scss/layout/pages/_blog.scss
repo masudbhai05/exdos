@@ -1,0 +1,52 @@
+@use '../../utils' as *;
+.tp-blog-post-area{
+    @media #{$xs} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+.tpblog {
+    &__thumb {
+        & img {
+            border-radius: 20px;
+            width: 100%;
+        }
+    }
+
+    &__content {
+        @media #{$lg,$md,$xs} {
+            padding-left: 0;
+        }
+
+
+    }
+
+    &__meta {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        & span {
+            & i {
+                margin-right: 5px;
+            }
+        }
+
+        & cite {
+            display: inline-block;
+            width: 2px;
+            height: 16px;
+            background: #57595C;
+            margin: 0 15px;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 1.25;
+
+        @media #{$lg,$md} {
+            font-size: 27px;
+        }
+    }
+}

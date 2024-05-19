@@ -1,0 +1,56 @@
+@use '../utils' as *;
+
+.tp-btn {
+	background: var(--tp-theme-color);
+	padding: 16px 46px;
+	border-radius: 5px;
+	font-size: 18px;
+	font-family: var(--tp-font-heading);
+	display: inline-block;
+	color: #fff;
+
+	&-sec {
+		background: var(--tp-theme-color-2);
+		padding: 16px 46px;
+		border-radius: 5px;
+		font-size: 18px;
+		color: var(--tp-common-black);
+		font-family: var(--tp-font-heading);
+		display: inline-block;
+
+		&-lg {
+			padding: 24px 46px;
+		}
+	}
+
+	&-circle {
+		font-family: var(--tp-font-heading);
+		font-size: 60px;
+		line-height: 1.2;
+		color: #fff;
+		opacity: 0.3;
+		border: 2px solid #fff;
+		display: inline-block;
+		padding: 42px 74px;
+		border-radius: 100%;
+
+		@media #{$xs} {
+			font-size: 38px;
+			padding: 24px 38px;
+		}
+	}
+
+}
+
+.tp-text-btn {
+	margin-right: 10px;
+	font-family: var(--tp-font-heading);
+	color: #57595C;
+	display: flex;
+	align-items: center;
+
+	& i {
+		transform: rotate(-45deg);
+		margin-left: 10px;
+	}
+}

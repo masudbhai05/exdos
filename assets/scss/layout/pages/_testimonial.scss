@@ -1,0 +1,143 @@
+@use '../../utils' as*;
+.tp-testimonial-area{
+    padding-bottom: 75px;
+}
+.tp-testimonial {
+    &-desc {
+        font-size: 97px;
+
+        @media #{$xl} {
+            font-size: 80px;
+        }
+
+        @media #{$lg} {
+            font-size: 60px;
+        }
+
+        @media #{$md} {
+            font-size: 45px;
+        }
+        
+        @media #{$xs} {
+            font-size: 29px;
+        }
+        @media #{$sm} {
+            font-size: 37px;
+        }
+    }
+
+    &-name {
+        font-size: 30px;
+        margin-bottom: 9px;
+    }
+
+    &-desig {
+        font-size: 17px;
+        color: #57595c;
+        margin-left: 70px;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 60px;
+            height: 1px;
+            background: #57595c;
+            margin: 5px 13px;
+        }
+    }
+
+    &-shape {
+        font-size: 630px;
+        color: #F5F5F5;
+        position: absolute;
+        top: -18px;
+        right: 0;
+        left: 0;
+        z-index: -1;
+
+        @media #{$xl} {
+            font-size: 497px;
+            top: 14px;
+        }
+
+        @media #{$lg} {
+            font-size: 390px;
+        }
+
+        @media #{$md} {
+            font-size: 417px;
+        }
+        @media #{$xs} {
+            font-size: 254px;
+        }
+
+        &-thumb-1 {
+            left: 0;
+            top: 124px;
+
+            @media #{$lg} {
+                top: 48px;
+            }
+
+            @media #{$xl} {
+                top: 65px;
+            }
+        }
+
+        &-thumb-2 {
+            right: 0;
+            top: 27px;
+        }
+    }
+}
+
+.tp-rotate-180 {
+    transform: rotateY(180deg)
+}
+
+.tp-swiper-test-button {
+    position: absolute;
+    top: 33%;
+    left: -100px;
+    font-size: 50px;
+    z-index: 99;
+
+    @media #{$xxlm,$xl,$md,$xs} {
+        top: inherit;
+        left: 0;
+        bottom: 0;
+    }
+
+    @media #{$xs} {
+        position: sticky;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    @media #{$lg} {
+        left: 0;
+    }
+
+    &-next {
+        left: auto;
+        right: -100px;
+
+        @media #{$xxlm,$xl,$md,$xs} {
+            left: 67px;
+            right: auto;
+        }
+
+        @media #{$xs} {
+            left: 67px;
+            right: auto;
+        }
+
+        @media #{$lg} {
+            right: 0;
+        }
+    }
+
+    &-prev {
+        transform: rotateY(180deg)
+    }
+}

@@ -1,0 +1,83 @@
+@use '../../utils' as *;
+
+.tp-award-area {
+    @media #{$xs} {
+        padding-bottom: 80px;
+    }
+}
+
+.tpaward-wrapper {
+    padding-right: 80px;
+
+    @media #{$xs} {
+        padding-right: 0;
+    }
+
+    & .row {
+        & .col-md-6:nth-child(even) {
+            & .tpaward {
+                border-left: 1px solid #57595C;
+                padding-left: 50px;
+
+                @media #{$xs} {
+                    border-left: none;
+                    padding-left: 0;
+                }
+            }
+        }
+
+        & .col-md-6:nth-child(1) {
+            & .tpaward {
+                padding-top: 0;
+
+                @media #{$xs} {
+                    padding-top: 40px;
+                }
+            }
+        }
+
+        & .col-md-6:nth-child(2) {
+            & .tpaward {
+                padding-top: 0;
+
+                @media #{$xs} {
+                    padding-top: 40px;
+                }
+            }
+        }
+
+        & .col-md-6:nth-last-child(-n+2) {
+            & .tpaward {
+                border-bottom: 0;
+                padding-bottom: 0;
+
+                @media #{$xs} {
+                    border-bottom: 1px solid #57595C;
+                    padding-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+
+.tpaward {
+    padding: 40px 0;
+    border-bottom: 1px solid #57595C;
+
+    & span {
+        color: #57595C;
+        font-size: 20px;
+        display: block;
+        margin-bottom: 10px;
+        font-family: var(--tp-font-heading);
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 30px;
+
+        @media #{$xl} {
+            font-size: 25px;
+        }
+    }
+}

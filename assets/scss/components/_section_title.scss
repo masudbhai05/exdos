@@ -1,0 +1,33 @@
+@use '../utils' as *;
+
+.tp-section-title {
+	& br {
+		@media #{$xs} {
+			display: none;
+		}
+	}
+
+	&-wrapper {
+		& p {
+			& br {
+				@media #{$xs} {
+					display: none;
+				}
+			}
+		}
+	}
+
+	font-size: 60px;
+
+	@media #{$lg,$xs} {
+		font-size: 40px;
+	}
+
+	@media #{$md} {
+		font-size: 35px;
+	}
+
+	&-white {
+		color: #fff;
+	}
+}

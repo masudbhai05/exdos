@@ -1,0 +1,243 @@
+@use '../../utils' as *;
+
+.footer-sep {
+    background: #fff;
+    opacity: 0.15;
+    height: 1px;
+}
+
+.tp-footer-logo-area{
+    @media #{$xs} {
+        padding-top: 80px;
+    }
+}
+
+.tpfooter-social {
+    @media #{$xs} {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    & a {
+        color: #fff;
+        opacity: 0.8;
+        margin-right: 19px;
+    }
+
+    @media #{$xxlm} {
+        padding-left: 13px;
+    }
+}
+
+.tp-footer-widget-area {
+    border-bottom: 1px solid rgba($color: #FFF, $alpha: 0.15);
+    @media #{$xs} {
+        padding-bottom: 20px;
+    }
+}
+
+.tp-footer-wedget-title {
+    font-size: 20px;
+    color: #fff;
+}
+
+.tp-footer-wedget {
+    @media #{$md} {
+        position: relative;
+    }
+
+    @media #{$xs} {
+        position: relative;
+        z-index: 99;
+    }
+
+    & ul {
+        & li {
+            margin-bottom: 5px;
+
+            & a {
+                font-size: 17px;
+                color: #b1b4ba;
+            }
+        }
+    }
+}
+
+.footer-content {
+    & span {
+        font-size: 17px;
+        color: #B1B4BA;
+    }
+}
+
+.tp-footer-contact-item {
+    & span {
+        font-size: 17px;
+        color: #b1b4ba;
+    }
+
+    & h4 {
+        font-size: 30px;
+        color: #fff;
+
+        @media #{$xl, $lg} {
+            font-size: 26px;
+        }
+
+        @media #{$md} {
+            font-size: 24px;
+        }
+    }
+}
+
+.tp-footer-col {
+    &-03 {
+        padding-left: 60px;
+        position: relative;
+
+        @media #{$xs} {
+            padding-left: 0;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            height: 100%;
+            width: 2px;
+            background-color: #FFF;
+            opacity: 0.15;
+            position: absolute;
+            left: -40px;
+            top: 0;
+
+            @media #{$xxlm} {
+                left: -38px;
+            }
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+
+        &::after {
+            left: auto;
+            right: 33px;
+
+            @media #{$xxlm} {
+                right: 53px;
+            }
+        }
+
+        @media #{$md} {
+            padding-left: 0;
+        }
+    }
+
+    &-04 {
+        padding-left: 35px;
+
+        @media #{$xxlm} {
+            padding-left: 13px;
+        }
+
+        @media #{$md,$xs} {
+            padding-left: 0;
+        }
+    }
+}
+
+.tp-footer-copyright {
+    & p {
+        font-size: 17px;
+        color: #b1b4ba;
+
+        & a {
+            color: #ffe815;
+        }
+    }
+}
+
+.tp-footer-menu {
+    @media #{$xs} {
+        text-align: left !important;
+    }
+
+    & ul {
+
+        & li {
+            display: inline-block;
+            margin-left: 30px;
+            padding-left: 30px;
+            position: relative;
+
+            @media #{$xs} {
+                padding-left: 10px;
+                margin-left: 10px;
+            }
+
+            &::before {
+                content: "";
+                height: 13px;
+                width: 2px;
+                background-color: #b1b4ba;
+                position: absolute;
+                left: 0;
+                top: 8px;
+            }
+
+            &:first-child {
+                &::before {
+                    display: none;
+                }
+
+                @media #{$md,$xs} {
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+            }
+
+            & a {
+                font-size: 15px;
+                text-transform: uppercase;
+                color: #b1b4ba;
+            }
+        }
+    }
+}
+
+// footer shape here 
+.tp-footer-shape {
+    &-01 {
+        left: 17%;
+        top: 43%;
+
+        @media #{$lg} {
+            display: none;
+        }
+    }
+
+    &-02 {
+        left: 46.5%;
+        top: 15.5%;
+    }
+
+    &-03 {
+        right: 7%;
+        top: 13%;
+
+        @media #{$lg} {
+            left: 21%;
+            top: 65%;
+            width: 9%;
+        }
+    }
+
+    &-04 {
+        right: 12%;
+        top: 69%;
+
+        @media #{$md} {
+            display: none;
+        }
+    }
+}

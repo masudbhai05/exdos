@@ -1,0 +1,83 @@
+@use '../../utils' as *;
+
+.tp-about-area {
+    @media #{$xs} {
+        padding-top: 69px;
+        padding-bottom: 128px;
+    }
+}
+
+.tp-about-box {
+
+    @media #{$md,$xs} {
+        padding-left: 0px;
+    }
+}
+
+.tp-about-video {
+    @media #{$xl,$lg, $md,$xs} {
+        padding-left: 0px;
+    }
+
+    &-icon {
+        & a {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #57595C;
+            text-align: center;
+            line-height: 75px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+    }
+
+    & h4 {
+        color: #57595C;
+        font-size: 30px;
+    }
+}
+
+.tp-about {
+    &-content {
+        &-1 {
+            @media #{$xs} {
+               margin-bottom: 60px;
+            }
+        }
+        &-2 {
+            @media #{$xs} {
+                display: flex;
+                flex-direction: column-reverse;
+
+            }
+        }
+    }
+
+    &-image {
+        @media #{$md,$xs} {
+            padding-left: 0px;
+        }
+
+        @media #{$xs} {
+            margin-bottom: 30px;
+        }
+    }
+
+    &-shape-1 {
+        top: 22%;
+        left: -12px;
+        z-index: 1;
+    }
+
+    &-shape-2 {
+        top: 43%;
+        right: 35%;
+        z-index: 1;
+    }
+
+    &-shape-3 {
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+}

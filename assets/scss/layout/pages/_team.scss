@@ -1,0 +1,96 @@
+@use '../../utils' as*;
+
+.tp-team-area {
+    @media #{$xl} {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @media #{$lg} {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    @media #{$xs} {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+.tpteam {
+    &__thumb {
+        & img {
+            border-radius: 15px;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+
+        @media #{$xl} {
+            font-size: 26px;
+        }
+
+        @media #{$sm} {
+            font-size: 40px;
+        }
+    }
+
+    &__info {
+        @media #{$xxlm,$xl,$md} {
+            margin-left: 0;
+        }
+
+        @media #{$md} {
+            margin-left: 30px;
+        }
+
+        @media #{$lg} {
+            margin-left: 35px;
+        }
+
+        @media #{$xs} {
+            margin-left: 50px;
+        }
+
+        & span {
+
+
+            & i {
+                width: 60px;
+                height: 1px;
+                background: #D6D6D1;
+                display: inline-block;
+                margin-right: 5px;
+                transform: translateY(-5px);
+            }
+        }
+    }
+
+    &__social {
+        & a {
+            font-size: 25px;
+            color: #0A0E1A;
+            margin-right: 18px;
+        }
+    }
+}
+
+.tp-team-slider-button {
+    display: inline-block;
+    font-size: 52px;
+}
+
+.tp-team-nav {
+    & span {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-color: #DBDBDB;
+        border-radius: 100%;
+        margin: 0 10px;
+    }
+}

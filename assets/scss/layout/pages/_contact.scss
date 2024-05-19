@@ -1,0 +1,22 @@
+@use '../../utils' as *;
+.tp-contact-form-area{
+    @media #{$xs} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+.fs-100{
+    font-size: 100px;
+    @media #{$xl} {
+        font-size: 88px;
+    }
+    @media #{$xs} {
+        font-size: 74px;
+    }
+}
+
+.contact-form-box{
+    & input, & textarea{
+        border-color: #57595C;
+    }
+}
