@@ -34,4 +34,7 @@
     @media #{$md, $sm} {
         width: 50%;
     }
+    @media #{$xs} {
+        width: 100%;
+    }
 }

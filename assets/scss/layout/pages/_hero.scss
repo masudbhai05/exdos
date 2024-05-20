@@ -9,6 +9,15 @@
 
 .tp-hero {
     z-index: 2;
+    &-bg {
+        width: 43.4%;
+        height: calc(100% - 101px);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
     @media #{$xxlm} {
         padding-left: 90px;
@@ -60,6 +69,52 @@
                 transform: translateY(0);
             }
         }
+        &-2{
+            font-size: 100px;
+        }
+    }
+
+    &-desc {
+        & p {
+            font-family: var(--tp-font-heading);
+            font-size: 30px;
+            line-height: 1.33;
+            color: #B1B4BA;
+            display: inline-block;
+            margin: 0;
+            margin-right: 59px;
+
+            @media #{$md} {
+                font-size: 25px;
+                transform: translateY(-4px);
+            }
+
+            @media #{$xs} {
+                font-size: 16px;
+                transform: translateY(0);
+            }
+        }
+
+    }
+
+    &-url-box {
+        & a {
+            display: flex;
+            align-items: center;
+        }
+        & i {
+            font-size: 52px;
+            display: inline-flex;
+            margin-left: -19px;
+        }
+    }
+
+    &-url-bg {
+        width: 30px;
+        height: 65px;
+        background: #fff;
+        opacity: 0.2;
+        display: inline-block;
     }
 
 }
@@ -83,7 +138,8 @@
 
     &-social {
         transform: rotate(-90deg);
-        display: block ruby;
+        // display: block ruby;
+        white-space: nowrap;
 
         @media #{$xxl} {
             position: absolute;
@@ -94,7 +150,7 @@
 
     &-text {
         transform: rotate(-90deg);
-        display: block ruby;
+        white-space: nowrap;
 
         @media #{$xxl} {
             position: absolute;

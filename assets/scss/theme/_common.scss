@@ -55,6 +55,25 @@ img {
 	border-radius: 20px;
 }
 
+.br {
+	&-20 {
+		& img {
+			border-radius: 20px;
+		}
+	}
+	
+	&-15 {
+		& img {
+			border-radius: 15px;
+		}
+	}
+}
+
+.tp-pos-end{
+	background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
 .tp-black-bg {
 	background-color: var(--tp-common-black);
 }

@@ -148,7 +148,31 @@
   font-size: 18px;
   font-family: var(--tp-font-heading);
   display: inline-block;
+  color: #000000;
+  position: relative;
+  overflow: hidden;
+}
+.tp-btn i {
+  height: 100%;
+  width: 22px;
+  background-color: #71A2FF;
+  position: absolute;
+  top: 5px;
+  right: -12px;
+  transform: rotate(16deg);
+  transition: 0.3s;
+}
+.tp-btn:hover {
   color: #fff;
+}
+.tp-btn:hover i {
+  right: -100px;
+}
+.tp-btn:hover .tp-btn-y-1 {
+  transform: translateY(-100%);
+}
+.tp-btn:hover .tp-btn-y-2 {
+  transform: translateY(0);
 }
 .tp-btn-sec {
   background: var(--tp-theme-color-2);
@@ -158,9 +182,48 @@
   color: var(--tp-common-black);
   font-family: var(--tp-font-heading);
   display: inline-block;
+  position: relative;
+  overflow: hidden;
 }
 .tp-btn-sec-lg {
   padding: 24px 46px;
+}
+.tp-btn-sec i {
+  height: 100%;
+  width: 22px;
+  background-color: #E5CF00;
+  position: absolute;
+  top: 6px;
+  right: -9px;
+  transform: rotate(16deg);
+  transition: 0.3s;
+}
+.tp-btn-sec:hover i {
+  right: -100px;
+}
+.tp-btn-sec:hover .tp-btn-y-1 {
+  transform: translateY(-100%);
+}
+.tp-btn-sec:hover .tp-btn-y-2 {
+  transform: translateY(0);
+}
+.tp-btn-wrap {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.tp-btn-wrap span {
+  transition: 0.3s;
+  display: block;
+}
+.tp-btn-y-1 {
+  transform: translateY(0);
+}
+.tp-btn-y-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
 }
 .tp-btn-circle {
   font-family: var(--tp-font-heading);
@@ -172,12 +235,18 @@
   display: inline-block;
   padding: 42px 74px;
   border-radius: 100%;
+  transition: 0.3s;
 }
 @media (max-width: 767px) {
   .tp-btn-circle {
     font-size: 38px;
     padding: 24px 38px;
   }
+}
+.tp-btn-circle:hover {
+  color: var(--tp-theme-color-2);
+  opacity: 1;
+  border-color: var(--tp-theme-color-2);
 }
 
 .tp-text-btn {
@@ -486,6 +555,18 @@ img {
 
 .br-20 {
   border-radius: 20px;
+}
+
+.br-20 img {
+  border-radius: 20px;
+}
+.br-15 img {
+  border-radius: 15px;
+}
+
+.tp-pos-end {
+  background-position: bottom left;
+  background-repeat: no-repeat;
 }
 
 .tp-black-bg {
@@ -4333,12 +4414,20 @@ img {
   padding-right: 100px;
 }
 
-.pt-290 {
-  padding-top: 290px;
+.pt-279 {
+  padding-top: 279px;
 }
 
-.pb-180 {
-  padding-bottom: 180px;
+.pt-270 {
+  padding-top: 270px;
+}
+
+.pb-170 {
+  padding-bottom: 170px;
+}
+
+.pb-140 {
+  padding-bottom: 150px;
 }
 
 .ml-195 {
@@ -4524,6 +4613,15 @@ img {
 .tp-hero {
   z-index: 2;
 }
+.tp-hero-bg {
+  width: 43.4%;
+  height: calc(100% - 101px);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .tp-hero {
     padding-left: 90px;
@@ -4580,6 +4678,46 @@ img {
     transform: translateY(0);
   }
 }
+.tp-hero-title-2 {
+  font-size: 100px;
+}
+.tp-hero-desc p {
+  font-family: var(--tp-font-heading);
+  font-size: 30px;
+  line-height: 1.33;
+  color: #B1B4BA;
+  display: inline-block;
+  margin: 0;
+  margin-right: 59px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .tp-hero-desc p {
+    font-size: 25px;
+    transform: translateY(-4px);
+  }
+}
+@media (max-width: 767px) {
+  .tp-hero-desc p {
+    font-size: 16px;
+    transform: translateY(0);
+  }
+}
+.tp-hero-url-box a {
+  display: flex;
+  align-items: center;
+}
+.tp-hero-url-box i {
+  font-size: 52px;
+  display: inline-flex;
+  margin-left: -19px;
+}
+.tp-hero-url-bg {
+  width: 30px;
+  height: 65px;
+  background: #fff;
+  opacity: 0.2;
+  display: inline-block;
+}
 
 .hero-info {
   width: 100px;
@@ -4596,7 +4734,7 @@ img {
 }
 .hero-info-social {
   transform: rotate(-90deg);
-  display: block ruby;
+  white-space: nowrap;
 }
 @media only screen and (min-width: 1400px) and (max-width: 4000px) {
   .hero-info-social {
@@ -4607,7 +4745,7 @@ img {
 }
 .hero-info-text {
   transform: rotate(-90deg);
-  display: block ruby;
+  white-space: nowrap;
 }
 @media only screen and (min-width: 1400px) and (max-width: 4000px) {
   .hero-info-text {
@@ -4945,6 +5083,11 @@ img {
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
   .cols {
     width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .cols {
+    width: 100%;
   }
 }
 

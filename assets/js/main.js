@@ -6,6 +6,16 @@
         $(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
     })
 
+    // about intro video Popup
+    $('.popup-image').magnificPopup({
+        type: 'image'
+        // other options
+      });
+    $('.popup-video').magnificPopup({
+        type: 'iframe'
+        // other options
+      });
+
     // testimonial swiper 
     var swiper = new Swiper(".tp-testimonial-active", {
         slidesPerView: 1,
