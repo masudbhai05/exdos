@@ -1,33 +1,51 @@
 @use '../utils' as *;
 
-.tp-section-title {
-	& br {
-		@media #{$xs} {
-			display: none;
+.tp-section {
+	&-subtitle {
+		font-size: 15px;
+		text-transform: uppercase;
+		text-align: center;
+		color: #57595c;
+		display: inline-block;
+		& i{
+			width: 10px;
+			height: 10px;
+			border-radius: 30px;
+			background-color: #0057FC;
+			display: inline-block;
+			transform: translateY(-1px);
 		}
 	}
 
-	&-wrapper {
-		& p {
-			& br {
-				@media #{$xs} {
-					display: none;
+	&-title {
+		& br {
+			@media #{$xs} {
+				display: none;
+			}
+		}
+
+		&-wrapper {
+			& p {
+				& br {
+					@media #{$xs} {
+						display: none;
+					}
 				}
 			}
 		}
-	}
 
-	font-size: 60px;
+		font-size: 60px;
 
-	@media #{$lg,$xs} {
-		font-size: 40px;
-	}
+		@media #{$lg,$xs} {
+			font-size: 40px;
+		}
 
-	@media #{$md} {
-		font-size: 35px;
-	}
+		@media #{$md} {
+			font-size: 35px;
+		}
 
-	&-white {
-		color: #fff;
+		&-white {
+			color: #fff;
+		}
 	}
 }

@@ -41,9 +41,10 @@
     &-content {
         &-1 {
             @media #{$xs} {
-               margin-bottom: 60px;
+                margin-bottom: 60px;
             }
         }
+
         &-2 {
             @media #{$xs} {
                 display: flex;
@@ -79,5 +80,34 @@
         top: 0;
         right: 0;
         z-index: 1;
+    }
+
+    &-content {
+        & ul {
+            & li {
+                margin-bottom: 20px;
+                & i {
+                    font-size: 30px;
+                    color: #000;
+                    margin-right: 12px;
+                }
+
+                & span {
+                    font-family: var(--tp-font-heading);
+                    font-size: 30px;
+                    line-height: 1.3;
+                    color: #0a0e1a;
+                }
+            }
+        }
+    }
+    &-circle-image{
+        position: absolute;
+        top: 0;
+        right: 185px;
+        z-index: 1;
+        & img{
+            max-width: inherit;
+        }
     }
 }
