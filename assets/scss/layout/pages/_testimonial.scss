@@ -1,7 +1,15 @@
 @use '../../utils' as*;
-.tp-testimonial-area{
+
+.tp-testimonial-area {
     padding-bottom: 75px;
+
+    &-2 {
+        & .tp-testimonial-area {
+            padding-bottom: 75px;
+        }
+    }
 }
+
 .tp-testimonial {
     &-desc {
         font-size: 97px;
@@ -17,10 +25,11 @@
         @media #{$md} {
             font-size: 45px;
         }
-        
+
         @media #{$xs} {
             font-size: 29px;
         }
+
         @media #{$sm} {
             font-size: 37px;
         }
@@ -67,6 +76,7 @@
         @media #{$md} {
             font-size: 417px;
         }
+
         @media #{$xs} {
             font-size: 254px;
         }
@@ -89,6 +99,58 @@
             top: 27px;
         }
     }
+
+    // Home page 2 
+    // Testimonial Home Page 2 Style =============================================
+
+    &-2 {
+        & .tp-testimonial {
+            &-desc {
+                font-weight: 400;
+                font-size: 60px;
+                text-align: left;
+                color: #FFF;
+                text-transform: uppercase;
+                margin-left: 30px;
+
+                &::before {
+                    content: "\f119";
+                    display: inline-block;
+                    font-family: "flaticon";
+                    font-size: 43px;
+                    color: var(--tp-theme-color-2);
+                    transform: rotateY(180deg) translateX(24px) translateY(-5px);
+                }
+
+                &::after {
+                    content: "\f119";
+                    display: inline-block;
+                    font-family: "flaticon";
+                    font-size: 43px;
+                    color: var(--tp-theme-color-2);
+                    transform: rotateY(0deg) translateX(0px) translateY(12px);
+                }
+            }
+
+            &-author-info {
+                text-align: left;
+            }
+
+            &-name {
+                color: #FFF;
+            }
+
+            &-desig {
+                color: #FFF;
+                margin-left: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+    }
 }
 
 .tp-rotate-180 {
@@ -102,6 +164,21 @@
     font-size: 50px;
     z-index: 99;
 
+    // Home page 2 
+    // Testimonial Home Page 2 Style =============================================
+
+    &-2 {
+        z-index: 999;
+        top: 82%;
+        left: 36%;
+
+        &.tp-swiper-test-button-next {
+            right: 54%;
+        }
+
+    }
+
+    //======================================================================
     @media #{$xxlm,$xl,$md,$xs} {
         top: inherit;
         left: 0;
