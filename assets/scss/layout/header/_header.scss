@@ -14,6 +14,7 @@
     @media #{$xl,$xs} {
         padding-left: 30px;
     }
+
     @media #{$lg,$md} {
         padding-left: 40px;
     }
@@ -23,6 +24,7 @@
     @media #{$xl} {
         padding-left: 16px;
     }
+
     & ul {
         & li {
             display: inline-block;
@@ -32,6 +34,7 @@
             @media #{$xxlm} {
                 margin-right: 27px;
             }
+
             @media #{$xl} {
                 margin-right: 19px;
             }
@@ -121,26 +124,57 @@
             }
         }
     }
+
+    &-black {
+        & ul {
+            & li {
+                &>a {
+                    color: #0A0E1A;
+                }
+
+                &:hover {
+                    & a {
+                        color: var(--tp-theme-orange);
+
+                        &::before {
+                            opacity: 1;
+                            left: 21px;
+                        }
+                    }
+
+                    & .sub-menu {
+                        & li {
+                            &:hover {
+                                &>a {
+                                    color: var(--tp-theme-orange);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .tp-header {
     &-search {
         margin-right: 40px;
+
         @media #{$xl} {
             margin-right: 23px;
         }
 
-        & button {
-            & i {
-                font-size: 28px;
-                color: #B1B4BA;
-            }
+        & i {
+            font-size: 28px;
+            color: #B1B4BA;
         }
     }
 
     &-cta {
         padding: 28px 40px;
         border-left: 1px solid rgba(255, 255, 255, 0.15);
+
         @media #{$xl} {
             padding: 28px 20px;
         }
@@ -185,6 +219,22 @@
 
             & i {
                 font-size: 53px;
+            }
+        }
+    }
+
+    &-right-black {
+        & .tp-header-search {
+            & i {
+                color: var(--tp-icon-color);
+            }
+        }
+
+        & .tp-header-bar {
+            & button {
+                background: none;
+                padding: 0;
+                color: var(--tp-icon-color);
             }
         }
     }
