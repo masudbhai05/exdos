@@ -20,10 +20,32 @@
 }
 
 .tpteam {
+
     &__thumb {
+        position: relative;
+
         & img {
             border-radius: 15px;
             width: 100%;
+        }
+
+        &-2 {
+            margin-left: 10px;
+
+            & img {
+                transition: .3s;
+            }
+        }
+
+        &-border {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            border: 1px solid #57595C;
+            z-index: -1;
+            border-radius: 15px;
         }
     }
 
@@ -37,6 +59,14 @@
         @media #{$sm} {
             font-size: 40px;
         }
+        &-2{
+            transition: .3s;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 7px;
+        display: block;
     }
 
     &__info {
@@ -76,6 +106,45 @@
             color: #0A0E1A;
             margin-right: 18px;
         }
+
+        &-2 {
+            position: absolute;
+            top: 55%;
+            right: 0;
+            left: 0;
+            transform: translateY(-50%);
+            transition: .3s;
+            opacity: 0;
+            visibility: hidden;
+
+            & a {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: #fff;
+                font-size: 22px;
+                line-height: 50px;
+                color: #0A0E1A;
+            }
+        }
+    }
+
+    &:hover {
+        & .tpteam__title-2 {
+           color: var(--tp-theme-color);
+        }
+        & .tpteam__thumb-2 {
+            & img {
+                filter: blur(1.5px);
+            }
+        }
+
+        & .tpteam__social-2 {
+            opacity: 1;
+            visibility: visible;
+            top: 50%;
+        }
     }
 }
 
@@ -92,75 +161,5 @@
         background-color: #DBDBDB;
         border-radius: 100%;
         margin: 0 10px;
-    }
-}
-
-// Expert Team Style =======================================================
-
-.tpexpertteam {
-    position: relative;
-
-    &__box {
-        width: 298px;
-        height: 370px;
-        border: 1px solid #000;
-        border-radius: 15px;
-    }
-
-    &__thumb {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        transition: .3s;
-    }
-
-    &__social {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 190px;
-        left: 77px;
-        z-index: 99;
-        opacity: 0;
-        visibility: hidden;
-        transition: .3s;
-
-        & a {
-            font-size: 22px;
-            color: #0A0E1A;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            background-color: #fff;
-            border-radius: 50%;
-            margin-left: 8px;
-            transition: .3s;
-
-            &:hover {
-                font-size: 30px;
-            }
-        }
-
-    }
-    &__title {
-        font-size: 30px;
-        transition: .3s;
-     }
-
-    &:hover {
-        & .tpexpertteam__thumb {
-           filter: blur(2px);
-        }
-        & .tpexpertteam__social {
-            opacity: 1;
-            visibility: visible;
-            top: 171px;
-        }
-        & .tpexpertteam__title {
-           color: var(--tp-theme-color);
-        }
     }
 }

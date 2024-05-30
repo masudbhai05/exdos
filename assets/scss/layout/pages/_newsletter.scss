@@ -89,10 +89,34 @@
             margin-bottom: 30px;
         }
 
-        & img {
+        & i {
+            color: #fff;
             position: absolute;
             top: 32%;
             right: 20px;
+        }
+    }
+
+    &-box-2 {
+        & input {
+            border-color: #57595C;
+            color: #57595C;
+
+            &:focus {
+                border-color: #57595C;
+            }
+            @include tp-placeholder {
+                color: #57595C;
+            }
+        }
+        & .tp-newsletter-back{
+            color: #EEEBE6;
+            opacity: 1;
+        }
+        & .tp-newsletter-input{
+            & i{
+                color: #57595C;
+            }
         }
     }
 }

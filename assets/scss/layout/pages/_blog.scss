@@ -1,10 +1,12 @@
 @use '../../utils' as *;
-.tp-blog-post-area{
+
+.tp-blog-post-area {
     @media #{$xs} {
         padding-top: 80px;
         padding-bottom: 80px;
     }
 }
+
 .tpblog {
     &__thumb {
         & img {
@@ -47,6 +49,37 @@
 
         @media #{$lg,$md} {
             font-size: 27px;
+        }
+    }
+
+    &-2 {
+        border: 1px solid #57595C;
+        position: relative;
+        border-radius: 10px;
+
+        & .tpblog {
+            &__thumb {
+                width: 224px;
+                height: 100%;
+                flex: 0 0 auto;
+                transform: translateY(-12px);
+                margin-left: -3px;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                & img {
+                    height: calc(100% + 24px);
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+
+            &__content {
+                padding-left: 250px;
+                padding-bottom: 30px;
+                padding-top: 30px;
+            }
         }
     }
 }

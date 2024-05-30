@@ -1,0 +1,55 @@
+@use '../../utils' as*;
+
+.tp-faq-wrapper{
+    padding: 20px 0;
+}
+.tpfaq-bg {
+    width: calc(50% - 65px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    border-radius: 0 20px 20px 0;
+}
+
+.tp-accordion {
+    &-item {
+        border-radius: 10px;
+        border: 1px solid #000;
+    }
+
+    &-header {
+        margin: 0;
+    }
+
+    &-button {
+        font-size: 20px;
+        width: 100%;
+        text-align: left;
+        padding: 23px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+
+        & span {
+            margin-left: 20px;
+            transition: .3s;
+            color: var(--tp-theme-color);
+
+        }
+
+        &.collapsed {
+            & span {
+                transform: rotate(-90deg);
+                color: #57595C;
+            }
+        }
+    }
+
+    &-body {
+        margin: 0 30px;
+        padding-top: 20px;
+        border-top: 1px solid #000;
+    }
+}

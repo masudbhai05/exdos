@@ -1,16 +1,7 @@
 @use '../../utils' as*;
 
-.tp-testimonial-area {
-    padding-bottom: 75px;
-
-    &-2 {
-        & .tp-testimonial-area {
-            padding-bottom: 75px;
-        }
-    }
-}
-
 .tp-testimonial {
+
     &-desc {
         font-size: 97px;
 
@@ -100,61 +91,42 @@
         }
     }
 
-    // Home page 2 
-    // Testimonial Home Page 2 Style =============================================
+    &-main-wrapper {
+        margin-left: -58px;
+    }
 
-    &-2 {
-        & .tp-testimonial {
-            &-desc {
-                font-weight: 400;
-                font-size: 60px;
-                text-align: left;
-                color: #FFF;
-                text-transform: uppercase;
-                margin-left: 30px;
+    &-text {
+        font-size: 60px;
+        color: #fff;
 
-                &::before {
-                    content: "\f119";
-                    display: inline-block;
-                    font-family: "flaticon";
-                    font-size: 43px;
-                    color: var(--tp-theme-color-2);
-                    transform: rotateY(180deg) translateX(24px) translateY(-5px);
-                }
+        & i {
+            color: var(--tp-theme-color-2);
+            font-size: 42px;
+        }
+    }
 
-                &::after {
-                    content: "\f119";
-                    display: inline-block;
-                    font-family: "flaticon";
-                    font-size: 43px;
-                    color: var(--tp-theme-color-2);
-                    transform: rotateY(0deg) translateX(0px) translateY(12px);
-                }
-            }
-
-            &-author-info {
-                text-align: left;
-            }
-
-            &-name {
-                color: #FFF;
-            }
-
-            &-desig {
-                color: #FFF;
-                margin-left: 0;
-
-                &::before {
-                    display: none;
-                }
-            }
+    &-author {
+        &-name {
+            font-size: 30px;
+            color: #fff;
         }
 
+        &-desig {
+            font-size: 17px;
+            color: #fff;
+        }
     }
 }
 
 .tp-rotate-180 {
     transform: rotateY(180deg)
+}
+
+.quotes-90 {
+    display: inline-block;
+    transform: scaleX(-1);
+    color: var(--tp-theme-color-2);
+    font-size: 42px;
 }
 
 .tp-swiper-test-button {
@@ -164,21 +136,6 @@
     font-size: 50px;
     z-index: 99;
 
-    // Home page 2 
-    // Testimonial Home Page 2 Style =============================================
-
-    &-2 {
-        z-index: 999;
-        top: 82%;
-        left: 36%;
-
-        &.tp-swiper-test-button-next {
-            right: 54%;
-        }
-
-    }
-
-    //======================================================================
     @media #{$xxlm,$xl,$md,$xs} {
         top: inherit;
         left: 0;
@@ -216,5 +173,39 @@
 
     &-prev {
         transform: rotateY(180deg)
+    }
+}
+
+.tp-testimonial-2 {
+    &-shape-thumb-1 {
+        top: 20%;
+        right: 10%;
+    }
+
+    &-shape-thumb-2 {
+        bottom: 15%;
+        right: 24%;
+    }
+}
+
+.tp-swiper-test-2-button {
+    color: #fff;
+    font-size: 50px;
+    z-index: 99;
+}
+
+.tp-test-slider-arrow-2 {
+    bottom: 24px;
+    left: 40%;
+    opacity: .5;
+    z-index: 99;
+
+    & span {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-color: #DBDBDB;
+        border-radius: 100%;
+        margin: 0 10px;
     }
 }
