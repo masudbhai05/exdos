@@ -55,20 +55,28 @@
     }
 }
 
-.tp-faq{
-    &-item {
-        border-bottom: 1px solid #000;
+.tp-faq {
+    &-header {
+        margin: 0;
     }
+
+    &-item {
+        border-bottom: 1px solid #D9D9D9;
+    }
+
     &-button {
         font-size: 24px;
-        margin-bottom: 8px;
-        
-        &::after{
+        width: 100%;
+        text-align: left;
+        padding: 21px 0;
+
+        &::after {
             content: "-";
             color: var(--tp-theme-orange);
         }
-        &.collapsed{
-            &::after{
+
+        &.collapsed {
+            &::after {
                 content: "+";
                 color: #0A0E1A;
             }

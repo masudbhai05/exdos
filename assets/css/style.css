@@ -6052,12 +6052,17 @@ img {
   border-top: 1px solid #000;
 }
 
+.tp-faq-header {
+  margin: 0;
+}
 .tp-faq-item {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #D9D9D9;
 }
 .tp-faq-button {
   font-size: 24px;
-  margin-bottom: 8px;
+  width: 100%;
+  text-align: left;
+  padding: 21px 0;
 }
 .tp-faq-button::after {
   content: "-";
