@@ -18,6 +18,13 @@
             font-size: 92px;
             display: flex;
         }
+
+        &-shape {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10;
+        }
     }
 
     &__text {
@@ -62,6 +69,41 @@
         & .tp-sv-btn {
             background-color: var(--tp-theme-color);
             color: #fff;
+        }
+
+        & .tpservices__btn {
+            color: var(--tp-theme-orange);
+        }
+    }
+
+    &__btn {
+        & a {
+            font-size: 45px;
+            display: block;
+            transition: .3s;
+
+            & i {
+                display: inline-block;
+            }
+        }
+    }
+
+    &-2 {
+        margin-top: -1px;
+        padding-bottom: 8px;
+
+        & .tpservices__icon {
+            & span {
+                position: relative;
+                top: 8px;
+                left: 0;
+                z-index: 11;
+                margin-left: 26px;
+
+                & i {
+                    font-size: 56px;
+                }
+            }
         }
     }
 

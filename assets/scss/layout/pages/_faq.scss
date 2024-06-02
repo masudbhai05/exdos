@@ -1,8 +1,9 @@
 @use '../../utils' as*;
 
-.tp-faq-wrapper{
+.tp-faq-wrapper {
     padding: 20px 0;
 }
+
 .tpfaq-bg {
     width: calc(50% - 65px);
     height: 100%;
@@ -51,5 +52,26 @@
         margin: 0 30px;
         padding-top: 20px;
         border-top: 1px solid #000;
+    }
+}
+
+.tp-faq{
+    &-item {
+        border-bottom: 1px solid #000;
+    }
+    &-button {
+        font-size: 24px;
+        margin-bottom: 8px;
+        
+        &::after{
+            content: "-";
+            color: var(--tp-theme-orange);
+        }
+        &.collapsed{
+            &::after{
+                content: "+";
+                color: #0A0E1A;
+            }
+        }
     }
 }

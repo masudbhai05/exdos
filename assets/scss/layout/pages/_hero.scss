@@ -115,6 +115,11 @@
     &-black {
         &-content {
             margin-left: 160px;
+            &:hover{
+                & .tp-text-btn{
+                    color: var(--tp-theme-orange);
+                }
+            }
         }
     }
 

@@ -15,6 +15,9 @@
 			display: inline-block;
 			transform: translateY(-1px);
 		}
+		& .tp-dot-color{
+			background-color: var(--tp-theme-orange);
+		}
 	}
 
 	&-title {
