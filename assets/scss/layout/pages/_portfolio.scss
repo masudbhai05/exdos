@@ -138,3 +138,41 @@
         }
     }
 }
+
+.tpshowcase {
+    &__number {
+        & span {
+            font-size: 30px;
+            color: #A3AEC3;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 60px;
+                height: 1px;
+                background-color: #A3AEC3;
+                position: absolute;
+                top: 50%;
+                left: -70px;
+            }
+        }
+    }
+
+    &__cat {
+        & span {
+            padding: 3px 20px;
+            border-radius: 15px;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 500;
+        }
+    }
+
+    &__title {
+        font-size: 40px;
+        color: #fff;
+    }
+
+    &__btn {}
+
+}

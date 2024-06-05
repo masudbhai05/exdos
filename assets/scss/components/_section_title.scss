@@ -15,6 +15,9 @@
 			display: inline-block;
 			transform: translateY(-1px);
 		}
+		&-white{
+			color: #A3AEC3;
+		}
 		& .tp-dot-color{
 			background-color: var(--tp-theme-orange);
 		}
@@ -49,6 +52,14 @@
 
 		&-white {
 			color: #fff;
+		}
+	}
+	&-contents{
+		& p{
+			color: #A3AEC3;
+			& b{
+				color: #fff;
+			}
 		}
 	}
 }

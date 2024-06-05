@@ -1,0 +1,47 @@
+@use '../../utils' as*;
+
+.tpprocess {
+    border: 1px solid #57595C;
+    border-radius: 215px;
+
+    &__step {
+        & span {
+            padding: 4px 20px;
+            background-color: var(--tp-theme-orange);
+            color: #fff;
+            border-radius: 15px;
+            transition: .3s;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+    }
+
+    &__icon {
+        & span {
+            font-size: 61px;
+            width: 150px;
+            height: 150px;
+            line-height: 160px;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            transition: .4s;
+        }
+    }
+
+    &:hover {
+        & .tpprocess__step {
+            & span {
+                background-color: var(--tp-theme-color);
+            }
+        }
+
+        & .tpprocess__icon {
+            & span {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

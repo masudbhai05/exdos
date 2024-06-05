@@ -1,0 +1,69 @@
+@use '../../utils' as*;
+
+.tpprice {
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    transition: .3s;
+
+    &__sep {
+        border: 1px solid #57595C;
+    }
+
+    &__icon {
+        position: relative;
+
+        & span {
+            font-size: 97px;
+            color: #0A0E1A;
+            position: relative;
+            z-index: 2;
+            margin-left: 23px;
+            transform: translateY(6px);
+            display: inline-block;
+        }
+
+        &-shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__price {
+        & h4 {
+            font-size: 70px;
+            margin: 0;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+    }
+
+    &__features {
+        & li {
+            margin-bottom: 10px;
+
+            & i {
+                font-size: 18px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &:hover {
+        border: 1px solid #57595C;
+
+        & .tp-btn-orange {
+            background-color: var(--tp-theme-color);
+
+            & i {
+                background-color: #71A2FF;
+            }
+        }
+    }
+}
+
+// .col{
+//     max-width: calc(100% - 2);
+// }

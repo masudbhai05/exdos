@@ -5,16 +5,20 @@
     $('[data-background]').each(function () {
         $(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
     })
+    // background color attribute
+    $('[data-bg-color]').each(function () {
+        $(this).css("background-color", $(this).attr("data-bg-color"))
+    })
 
     // about intro video Popup
     $('.popup-image').magnificPopup({
         type: 'image'
         // other options
-      });
+    });
     $('.popup-video').magnificPopup({
         type: 'iframe'
         // other options
-      });
+    });
 
     // testimonial swiper 
     var swiper = new Swiper(".tp-testimonial-active", {
@@ -48,6 +52,19 @@
         },
     });
     var swiper = new Swiper(".tp-brand-bottom-active", {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        freemode: true,
+        centeredSlides: true,
+        loop: true,
+        speed: 2000,
+        allowTouchMove: false,
+        autoplay: {
+            delay: 1,
+            disableOnInteraction: true
+        },
+    });
+    var swiper = new Swiper(".tp-brand-titile-active", {
         slidesPerView: 'auto',
         spaceBetween: 30,
         freemode: true,

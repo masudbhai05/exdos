@@ -1,0 +1,13 @@
+@use '../../utils' as *;
+
+.gradient {
+    background: radial-gradient(56.41% 5198.4% at 47.5% 62%, #0058FF 0%, #FF4C00 100%)
+}
+.tp-brand-title{
+    & h3{
+        font-size: 100px;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0;
+    }
+}
