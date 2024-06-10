@@ -103,18 +103,39 @@
             color: var(--tp-theme-color-2);
             font-size: 42px;
         }
+
+        &-black {
+            color: #0A0E1A;
+            font-size: 40px;
+        }
     }
 
     &-author {
         &-name {
             font-size: 30px;
             color: #fff;
+
+            &-black {
+                color: #0A0E1A;
+                font-size: 30px;
+            }
         }
 
         &-desig {
             font-size: 17px;
             color: #fff;
+
+            &-black {
+                color: #57595C;
+                font-size: 15px;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
         }
+    }
+
+    &-qoute {
+        float: left;
     }
 }
 
@@ -194,18 +215,69 @@
     z-index: 99;
 }
 
-.tp-test-slider-arrow-2 {
-    bottom: 24px;
-    left: 40%;
-    opacity: .5;
-    z-index: 99;
+.tp-test-slider-arrow {
+    &-2 {
+        bottom: 24px;
+        left: 40%;
+        opacity: .5;
+        z-index: 99;
 
-    & span {
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        background-color: #DBDBDB;
-        border-radius: 100%;
-        margin: 0 10px;
+        & span {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: #DBDBDB;
+            border-radius: 100%;
+            margin: 0 10px;
+        }
+    }
+
+    &-3 {
+        bottom: -1px;
+        left: 55%;
+
+        & .tp-swiper-test-2-button {
+            color: #FF5B15;
+        }
+
+        & .swiper-button-disabled {
+            color: #57595C;
+        }
+    }
+}
+
+
+.tp-testimonial-item-2 {
+    width: 100%;
+    height: 463px;
+    position: relative;
+}
+
+.tp-testimonial-thumb {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    opacity: 0;
+    transition: all ease .6s;
+
+}
+
+.tp-testimonial-bg-color {
+    width: 408px;
+    height: 360px;
+    background: #FF8653;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 180px 180px 80px 80px;
+}
+
+.swiper-slide {
+    // transition-duration: 300ms;
+
+    &-active {
+        & .tp-testimonial-thumb {
+            opacity: 1;
+        }
     }
 }

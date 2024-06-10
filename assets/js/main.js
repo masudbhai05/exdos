@@ -9,6 +9,10 @@
     $('[data-bg-color]').each(function () {
         $(this).css("background-color", $(this).attr("data-bg-color"))
     })
+    // color attribute 
+    $('[data-color]').each(function () {
+        $(this).css("color", $(this).attr("data-color"))
+    })
 
     // about intro video Popup
     $('.popup-image').magnificPopup({
@@ -36,6 +40,42 @@
             prevEl: ".tp-swiper-test-button-prev",
         },
     });
+    // testimonial-2 swiper
+
+
+    var swiper = new Swiper(".tp-testimonial-img-active", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        effect: "fade",
+        keyboard: {
+            enabled: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".tp-swiper-test-button-next",
+            prevEl: ".tp-swiper-test-button-prev",
+        },
+    });
+
+    var swiper = new Swiper(".tp-testimonial-2-active", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        keyboard: {
+            enabled: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".tp-swiper-test-button-next",
+            prevEl: ".tp-swiper-test-button-prev",
+        },
+    });
+    // Testimonial 2 end 
 
     // Brand Slider Animation 
     var swiper = new Swiper(".tp-brand-top-active", {
