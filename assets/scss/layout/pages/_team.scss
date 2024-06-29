@@ -26,7 +26,6 @@
 
         & img {
             border-radius: 15px;
-            width: 100%;
         }
 
         &-2 {
@@ -46,6 +45,27 @@
             border: 1px solid #57595C;
             z-index: -1;
             border-radius: 15px;
+        }
+
+        &-bg {
+            height: 360px;
+            width: 100%;
+            border-radius: 140px 140px 0 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+
+            &-border {
+                height: 360px;
+                border: 1px solid #57595C;
+                border-radius: 140px 140px 0 0;
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                z-index: -1;
+                right: 10px;
+            }
         }
     }
 
@@ -117,6 +137,7 @@
             transition: .3s;
             opacity: 0;
             visibility: hidden;
+            z-index: 12;
 
             &>a {
                 display: inline-block;

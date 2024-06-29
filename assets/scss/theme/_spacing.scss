@@ -4,66 +4,102 @@
     - Margin & Padding
 -----------------------------------------*/
 /*-- Margin Top --*/
-@for $i from 1 through 100 {
-    .mt-#{1 * $i}{margin-top: 1px * $i;}
+@for $i from 1 through 130 {
+    .mt-#{1 * $i} {
+        margin-top: 1px * $i;
+    }
 }
+
 /*-- Margin Bottom --*/
 @for $i from 1 through 130 {
-    .mb-#{1 * $i}{margin-bottom: 1px *$i;}
+    .mb-#{1 * $i} {
+        margin-bottom: 1px *$i;
+    }
 }
+
 /*-- Margin Left --*/
 @for $i from 1 through 100 {
-    .ml-#{1 * $i}{margin-left: 1px * $i;}
+    .ml-#{1 * $i} {
+        margin-left: 1px * $i;
+    }
 }
 
 /*-- Margin Right --*/
 @for $i from 1 through 100 {
-    .mr-#{1 * $i}{margin-right: 1px *$i;}
+    .mr-#{1 * $i} {
+        margin-right: 1px *$i;
+    }
 }
 
 /*-- Padding Top --*/
 @for $i from 1 through 150 {
-    .pt-#{1 * $i}{padding-top: 1px *$i;}
+    .pt-#{1 * $i} {
+        padding-top: 1px *$i;
+    }
 }
 
 /*-- Padding Bottom --*/
 @for $i from 1 through 150 {
-    .pb-#{1 * $i}{padding-bottom: 1px *$i;}
+    .pb-#{1 * $i} {
+        padding-bottom: 1px *$i;
+    }
 }
 
 /*-- Padding Left --*/
 @for $i from 1 through 120 {
-    .pl-#{1 * $i}{padding-left: 1px *$i;}
+    .pl-#{1 * $i} {
+        padding-left: 1px *$i;
+    }
 }
 
 /*-- Padding Right --*/
 @for $i from 1 through 100 {
-    .pr-#{1 * $i}{padding-right: 1px *$i;}
+    .pr-#{1 * $i} {
+        padding-right: 1px *$i;
+    }
 }
 
-.pt-279{
+.pt-279 {
     padding-top: 279px;
 }
-.pt-270{
+
+.pt-270 {
     padding-top: 270px;
 }
-.pt-210{
+
+.pt-210 {
     padding-top: 210px;
 }
-.pl-243{
+
+.pl-243 {
     padding-left: 243px;
 }
 
- .pb-170{
+.pb-170 {
     padding-bottom: 170px;
- }
- .pb-140{
-    padding-bottom: 150px;
- }
+}
 
- .ml-195{
+.pb-140 {
+    padding-bottom: 150px;
+}
+
+.ml-195 {
     margin-left: 195px;
- }
- .mr-195{
+}
+
+.mr-195 {
     margin-right: 195px;
- }
+}
+
+.tp-section-m-100 {
+    margin: 0 100px;
+}
+
+.plr-100 {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.plr-85 {
+    padding-left: 85px;
+    padding-right: 85px;
+}

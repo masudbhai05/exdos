@@ -188,6 +188,17 @@ h5 {
 h6 {
 	font-size: 16px;
 }
+.tp-fs{
+	&-30{
+		font-size: 30px;
+	}
+	&-24{
+		font-size: 24px;
+	}
+	&-15{
+		font-size: 15px;
+	}
+}
 
 ul {
 	margin: 0px;
@@ -313,12 +324,14 @@ textarea {
 
 *::-moz-placeholder {
 	color: var(--tp-common-black);
-	font-size: 14px;
+	font-size: 15px;
 	opacity: 1;
+	font-weight: 500;
 }
 
 *::placeholder {
 	color: var(--tp-common-black);
-	font-size: 14px;
+	font-size: 15px;
 	opacity: 1;
+	font-weight: 500;
 }

@@ -51,31 +51,47 @@ img {
 	position: absolute;
 }
 
-.br-20 {
-	border-radius: 20px;
-}
-
 .br {
 	&-20 {
-		& img {
+		border-radius: 20px;
+
+		&>img {
 			border-radius: 20px;
 		}
+
+		& a {
+			& img {
+				border-radius: 20px;
+			}
+		}
 	}
-	
+
 	&-15 {
-		& img {
+		&>img {
 			border-radius: 15px;
 		}
 	}
+
+	&-140 {
+		border-radius: 140px;
+	}
+
+	&-150 {
+		border-radius: 150px;
+	}
+}
+
+.tp-medium {
+	font-weight: 500;
 }
 
 .title-upper {
 	text-transform: uppercase;
 }
 
-.tp-pos-end{
+.tp-pos-end {
 	background-position: bottom left;
-    background-repeat: no-repeat;
+	background-repeat: no-repeat;
 }
 
 .tp-black-bg {
@@ -86,12 +102,20 @@ img {
 	background-color: var(--tp-theme-color);
 }
 
+.tp-light-blue-bg {
+	background-color: var(--tp-light-blue-color);
+}
+
 .tp-nblue-bg {
 	background-color: var(--tp-nblue-color);
 }
 
 .tp-cream-bg {
 	background-color: var(--tp-cream-color);
+}
+
+.tp-cream-2-bg {
+	background-color: var(--tp-cream-2-color);
 }
 
 .tp-yellow-bg {
@@ -102,6 +126,9 @@ img {
 	background-color: var(--tp-heading-color);
 }
 
+.tp-text-white {
+	color: #fff;
+}
 
 // brand animation 
 .tp-slide-transition {

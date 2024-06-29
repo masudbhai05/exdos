@@ -1,22 +1,61 @@
 @use '../../utils' as *;
-.tp-contact-form-area{
+
+.tp-contact-form-area {
     @media #{$xs} {
         padding-top: 80px;
         padding-bottom: 80px;
     }
 }
-.fs-100{
+
+.fs-100 {
     font-size: 100px;
+
     @media #{$xl} {
         font-size: 88px;
     }
+
     @media #{$xs} {
         font-size: 65px;
     }
 }
 
-.contact-form-box{
-    & input, & textarea{
+.contact-form-box {
+
+    & input,
+    & textarea {
         border-color: #57595C;
+    }
+}
+
+.tp-contact-thumb {
+    & img {
+        max-width: inherit;
+        margin-left: -40px;
+    }
+}
+
+.tp-contact-form-box {
+
+    & input,
+    & textarea {
+        border: 1px solid #57595C;
+        height: 60px;
+        padding: 0 25px;
+        border-radius: 10px;
+    }
+
+    .p-relative {
+        & i {
+            position: absolute;
+            right: 20px;
+            top: 21px;
+        }
+    }
+
+    & textarea {
+        border: 1px solid #57595C;
+        height: 160px;
+        padding-top: 17px;
+        padding-bottom: 17px;
     }
 }

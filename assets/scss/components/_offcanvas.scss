@@ -1,0 +1,95 @@
+@use '../utils' as *;
+
+.tp-offcanvas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    width: 420px;
+    height: 100%;
+    background: #fff;
+    padding: 60px 40px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: .4s ease;
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    scrollbar-width: none;
+
+    &-open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    &-title {
+        font-size: 35px;
+    }
+
+    &-close {
+        & button {
+            color: var(--tp-heading-color);
+            font-size: 25px;
+        }
+    }
+
+    &-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+
+    }
+
+    &-sm-title {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    &-info {
+        & span {
+            display: block;
+        }
+    }
+
+    &-social {
+        & a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 40px;
+            background: #efefef;
+            border-radius: 100%;
+            color: var(--tp-heading-color);
+            border: 1px solid #c6c6c6;
+            transition: .3s;
+
+            &:hover {
+                background: var(--tp-theme-color);
+                color: #fff;
+                border: transparent;
+            }
+        }
+    }
+
+    &-overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 98;
+        visibility: hidden;
+        opacity: 0;
+        background-color: rgba($color: #000000, $alpha: .50);
+        transition: .4s ease;
+
+        &-open {
+            visibility: visible;
+            opacity: 1;
+        }
+
+    }
+}

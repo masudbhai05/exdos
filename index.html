@@ -27,7 +27,7 @@
                     <div class="col-xl-10 col-lg-9 col-md-10 col-6">
                         <div class="tp-header-box d-flex justify-content-xl-between justify-content-end ">
                             <div class="tp-main-menu d-none d-xl-block pl-45">
-                                <nav>
+                                <nav class="tp-mobile-menu-active">
                                     <ul>
                                         <li><a href="/index.html">Home</a>
                                             <ul class="sub-menu">
@@ -35,8 +35,13 @@
                                                 <li><a href="/index-2.html">Home 2</a>
                                                 </li>
                                                 <li><a href="/index-3.html">Home 3</a></li>
-                                                <li><a href="#">Home 4</a></li>
-                                                <li><a href="#">Home 5</a>
+                                                <li><a href="/index-4.html">Home 4</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">About Us</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Home 3 level</a></li>
+                                                <li><a href="#">Home 3 level</a>
                                                     <ul class="sub-menu">
                                                         <li><a href="#">Home 3 level</a></li>
                                                         <li><a href="#">Home 3 level</a></li>
@@ -45,12 +50,30 @@
                                                         <li><a href="#">Home 3 level</a></li>
                                                     </ul>
                                                 </li>
+                                                <li><a href="#">Home 3 level</a></li>
+                                                <li><a href="#">Home 3 level</a></li>
+                                                <li><a href="#">Home 3 level</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">About Us</a></li>
                                         <li><a href="#">Service</a></li>
                                         <li><a href="#">Portfolio</a></li>
-                                        <li><a href="#">Pages</a></li>
+                                        <li><a href="#">Pages</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Home 3 level</a></li>
+                                                <li><a href="#">Home 3 level</a></li>
+                                                <li><a href="#">Home 3 level</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="#">Home 3 level</a></li>
+                                                        <li><a href="#">Home 3 level</a></li>
+                                                        <li><a href="#">Home 3 level</a></li>
+                                                        <li><a href="#">Home 3 level</a></li>
+                                                        <li><a href="#">Home 3 level</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Home 3 level</a></li>
+                                                <li><a href="#">Home 3 level</a></li>
+                                            </ul>
+                                        </li>
                                         <li><a href="#">Blog</a></li>
                                         <li><a href="#">Contact</a></li>
                                     </ul>
@@ -71,7 +94,7 @@
                                     </div>
                                 </div>
                                 <div class="tp-header-bar">
-                                    <button><i class="flaticon-menu"></i></button>
+                                    <button class="tp-offcanvas-toggle"><i class="flaticon-menu"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -81,6 +104,48 @@
         </div>
     </header>
     <!-- header end  -->
+
+    <!-- Offcanvas start  -->
+    <div class="tp-offcanvas-overlay"></div>
+    <div class="tp-offcanvas">
+        <div class="tp-offcanvas-wrapper">
+            <div class="tp-offcanvas-header d-flex justify-content-between align-items-center mb-90">
+                <div class="tp-offcanvas-logo">
+                    <a href="index.html"> <img src="assets/img/logo/Logo-black.png" alt=""></a>
+                </div>
+                <div class="tp-offcanvas-close">
+                    <button class="tp-offcanvas-close-toggle"><i class="fal fa-times"></i></button>
+                </div>
+            </div>
+            <div class="tp-offcanvas-menu mb-50 d-xl-none">
+                <nav></nav>
+            </div>
+            <div class="tp-offcanvas-contents mb-50">
+                <h2 class="tp-offcanvas-title">Hello There</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, enim.</p>
+            </div>
+            <div class="tp-offcanvas-gallery mb-40">
+                <a href="#"><img src="assets/img/portfolio/lp-01.jpg" alt=""></a>
+                <a href="#"><img src="assets/img/portfolio/lp-02.jpg" alt=""></a>
+                <a href="#"><img src="assets/img/portfolio/lp-03.jpg" alt=""></a>
+                <a href="#"><img src="assets/img/portfolio/lp-04.jpg" alt=""></a>
+            </div>
+            <div class="tp-offcanvas-info mb-40">
+                <h3 class="tp-offcanvas-sm-title">Information</h3>
+                <span><a href="#">+01254 554 584</a></span>
+                <span><a href="#">hello@exdos.com</a></span>
+                <span><a href="#">202/A, Florida, USA</a></span>
+            </div>
+            <div class="tp-offcanvas-social mb-40">
+                <h3 class="tp-offcanvas-sm-title">Follow Us</h3>
+                <a href="#"><i class="fab fa-behance"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Offcanvas end  -->
 
     <!-- main start  -->
     <main>
@@ -877,7 +942,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="tpblog mb-40">
-                            <div class="tpblog__thumb mb-30">
+                            <div class="tpblog__thumb mb-30 br-20">
                                 <a href="#"><img src="assets/img/blog/blog-img-1.jpg" alt=""></a>
                             </div>
                             <div class="tpblog__content pl-30">
@@ -898,7 +963,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="tpblog mb-40">
-                            <div class="tpblog__thumb mb-30">
+                            <div class="tpblog__thumb mb-30 br-20">
                                 <a href="#"><img src="assets/img/blog/blog-img-2.jpg" alt=""></a>
                             </div>
                             <div class="tpblog__content pl-30">
@@ -919,7 +984,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="tpblog mb-40">
-                            <div class="tpblog__thumb mb-30">
+                            <div class="tpblog__thumb mb-30 br-20">
                                 <a href="#"><img src="assets/img/blog/blog-img-3.jpg" alt=""></a>
                             </div>
                             <div class="tpblog__content pl-30">

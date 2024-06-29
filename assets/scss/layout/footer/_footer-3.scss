@@ -1,0 +1,22 @@
+@use '../../utils' as *;
+
+.tp-footer-social-box {
+    & a {
+        font-size: 30px;
+        border: 1px solid rgba($color: #FFF, $alpha: .15);
+        padding: 35px 30px;
+        display: block;
+        text-align: center;
+        border-radius: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: var(--tp-font-heading);
+        transition: .3s;
+    }
+    &:hover{
+        & a {
+            background-color: #FF3838;
+            border-color: transparent;
+        }
+    }
+}

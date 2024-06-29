@@ -23,3 +23,21 @@
     margin-bottom: -1px;
     border-radius: 10px;
 }
+
+.tp-brand-section-title {
+    border-bottom: 1px solid #D9D9D9;
+
+    & h2 {
+        color: #D9D9D9;
+        background-color: #1A1A1A;
+        padding: 0 20px;
+        font-size: 30px;
+        display: inline-block;
+        transform: translateY(27px);
+    }
+}
+
+.tp-brand-normal-wrapper{
+    padding: 80px 75px;
+    border: 1px solid #57595C;
+}
