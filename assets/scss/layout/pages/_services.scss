@@ -11,12 +11,12 @@
     border: 1px solid #57595C;
     padding: 40px;
     margin-right: -1px;
-    transition: all 0.4s;
+    @include transition(all .4s); 
 
     &__icon {
         & span {
             font-size: 92px;
-            display: flex;
+            @include flexbox();
         }
 
         &-shape {
@@ -57,7 +57,7 @@
                     border-radius: 50%;
                     display: inline-block;
                     margin-right: 8px;
-                    transform: translateY(-2px);
+                    @include transform(translateY(-2px));
                 }
             }
         }
@@ -80,7 +80,7 @@
         & a {
             font-size: 18px;
             display: block;
-            transition: .3s;
+            @include transition(.3s); 
 
             & i {
                 display: inline-block;
@@ -89,7 +89,7 @@
 
         &-2 {
             font-size: 45px;
-            transition: .3s;
+            @include transition(.3s); 
 
         }
     }
@@ -122,13 +122,13 @@
     padding: 6px 28px;
     font-family: var(--tp-font-heading);
     border-radius: 5px;
-    display: flex;
+    @include flexbox();
     justify-content: space-between;
     align-items: center;
-    transition: all 0.4s;
+    @include transition(all .4s); 
 
     & i {
-        transform: rotate(-45deg);
+        @include transform(rotate(-45deg));
     }
 }
 

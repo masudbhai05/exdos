@@ -16,7 +16,7 @@
 <body>
     <!-- header start  -->
     <header>
-        <div class="tp-header-area tp-transparent-header pl-100 pr-100">
+        <div class="tp-header-area tp-header-space tp-transparent-header pl-100 pr-100">
             <div class="conatiner-fluid p-0">
                 <div class="row gx-0 align-items-center">
                     <div class="col-xl-2 col-lg-3 col-md-2 col-6">
@@ -27,7 +27,7 @@
                     <div class="col-xl-10 col-lg-9 col-md-10 col-6">
                         <div class="tp-header-box d-flex justify-content-xl-between justify-content-end ">
                             <div class="tp-main-menu d-none d-xl-block pl-45">
-                                <nav>
+                                <nav class="tp-mobile-menu-active">
                                     <ul>
                                         <li><a href="/index.html">Home</a>
                                             <ul class="sub-menu">
@@ -49,7 +49,6 @@
                                         </li>
                                         <li><a href="#">About Us</a></li>
                                         <li><a href="#">Service</a></li>
-                                        <li><a href="#">Portfolio</a></li>
                                         <li><a href="#">Pages</a></li>
                                         <li><a href="#">Blog</a></li>
                                         <li><a href="#">Contact</a></li>
@@ -70,7 +69,7 @@
                                         <h4>02 (256) 256 025 </h4>
                                     </div>
                                 </div>
-                                <div class="tp-header-btn d-flex">
+                                <div class="tp-header-btn d-lg-flex d-none">
                                     <a href="#" class="tp-btn-sec">
                                         <div class="tp-btn-wrap">
                                             <span class="tp-btn-y-1">Discover More </span>
@@ -78,6 +77,9 @@
                                         </div>
                                         <i></i>
                                     </a>
+                                </div>
+                                <div class="tp-header-toggle ml-30 d-lg-none">
+                                    <button class="tp-offcanvas-toggle"><i class="flaticon-menu"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -87,11 +89,55 @@
         </div>
     </header>
     <!-- header end  -->
-
+    <!-- Offcanvas start  -->
+    <div class="tp-offcanvas-overlay"></div>
+    <div class="tp-offcanvas">
+        <div class="tp-offcanvas-wrapper">
+            <div class="tp-offcanvas-header d-flex justify-content-between align-items-center mb-90">
+                <div class="tp-offcanvas-logo">
+                    <a href="index.html"> <img src="assets/img/logo/Logo-black.png" alt=""></a>
+                </div>
+                <div class="tp-offcanvas-close">
+                    <button class="tp-offcanvas-close-toggle"><i class="fal fa-times"></i></button>
+                </div>
+            </div>
+            <div class="tp-offcanvas-menu mb-50 d-xl-none">
+                <nav></nav>
+            </div>
+            <div class="tp-offcanvas-contents mb-50 d-none d-xl-block">
+                <h2 class="tp-offcanvas-title">Hello There</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, enim.</p>
+            </div>
+            <div class="tp-offcanvas-gallery mb-40">
+                <a class="popup-image" href="assets/img/portfolio/lp-01.jpg"><img src="assets/img/portfolio/lp-01.jpg"
+                        alt=""></a>
+                <a class="popup-image" href="assets/img/portfolio/lp-02.jpg"><img src="assets/img/portfolio/lp-02.jpg"
+                        alt=""></a>
+                <a class="popup-image" href="assets/img/portfolio/lp-03.jpg"><img src="assets/img/portfolio/lp-03.jpg"
+                        alt=""></a>
+                <a class="popup-image" href="assets/img/portfolio/lp-04.jpg"><img src="assets/img/portfolio/lp-04.jpg"
+                        alt=""></a>
+            </div>
+            <div class="tp-offcanvas-info mb-40">
+                <h3 class="tp-offcanvas-sm-title">Information</h3>
+                <span><a href="#">+01254 554 584</a></span>
+                <span><a href="#">hello@exdos.com</a></span>
+                <span><a href="#">202/A, Florida, USA</a></span>
+            </div>
+            <div class="tp-offcanvas-social mb-50">
+                <h3 class="tp-offcanvas-sm-title">Follow Us</h3>
+                <a href="#"><i class="fab fa-behance"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Offcanvas end  -->
     <!-- main start  -->
     <main>
         <!-- tp-hero-area start  -->
-        <section class="tp-hero-area tp-black-bg pt-279 pb-150 p-relative tp-pos-end"
+        <section class="tp-hero-area tp-hero-space tp-black-bg pt-279 pb-150 p-relative tp-pos-end"
             style="background-image: url(assets/img/bg/hero-2-bg.png);">
             <div class="tp-hero-shape d-none">
                 <img class="tp-hero-shape-1 p-absolute d-none d-md-block" src="assets/img/shapes/hero-1-ball.png"
@@ -103,7 +149,6 @@
                 <img class="tp-hero-shape-4 p-absolute d-none d-md-block" src="assets/img/shapes/hero-ring.png" alt="">
                 <img class="tp-hero-shape-5 p-absolute d-none d-md-block" src="assets/img/shapes/hero-cicle.png" alt="">
             </div>
-            <div class="tp-hero-bg" data-background="assets/img/hero/hero-2.png"> </div>
             <div class="hero-info d-none d-xxl-block">
                 <div class="hero-info-social">
                     <span>Follow Us -
@@ -119,7 +164,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-7">
+                    <div class="col-xl-7 col-lg-8">
                         <div class="tp-hero p-relative">
                             <div class="mb-30">
                                 <h1 class="tp-hero-title tp-hero-title-2">Extension <br> <img
@@ -141,6 +186,7 @@
                     </div>
                 </div>
             </div>
+            <div class="tp-hero-bg" data-background="assets/img/hero/hero-2.png"> </div>
         </section>
         <!-- tp-hero-area end  -->
 
@@ -249,21 +295,21 @@
         <section class="tp-about-area tp-cream-bg p-relative pt-130 pb-150">
             <div class="container p-relative z-index-11">
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-xl-7 col-md-6">
                         <div class="tp-about-wrapper p-relative pl-243">
                             <div class="tp-section-title-wrapper mb-30">
                                 <span class="tp-section-subtitle mb-12"><i></i> our company</span>
-                                <h2 class="tp-section-title">Enjoy your<br>
+                                <h2 class="tp-section-title tp-about-title">Enjoy your<br>
                                     power of the<br>
                                     branding </h2>
                             </div>
-                            <div class="tp-about-circle-image">
+                            <div class="tp-about-circle-image d-none d-lg-block">
                                 <img src="assets/img/about/about-h-3.png" alt="">
                             </div>
                         </div>
 
                     </div>
-                    <div class="col-md-5 ">
+                    <div class="col-xl-5 col-md-6 ">
                         <div class="tp-about-content mb-50">
                             <p>PPer ipsum ultrices sollicitud platea facilisi Semper aliquam up tacits
                                 <b>senectus cursus</b> vivamu volutpat penatibus fringilla porttitor do
@@ -294,8 +340,8 @@
         <!-- tpfact-area start  -->
         <section class="tpfact-area pt-25 pb-100">
             <div class="container">
-                <div class="row d-flex justify-content-end">
-                    <div class="col-xl-3">
+                <div class="row d-flex justify-content-end text-center text-md-start ">
+                    <div class="col-xl-3 col-md-6">
                         <div class="tpfact tpfact-2 mb-30">
                             <div class="tpfact__icon">
                                 <span><i class="flaticon-merging"></i></span>
@@ -306,8 +352,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3">
-                        <div class="tpfact tpfact-2  mb-30">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="tpfact tpfact-2 mb-30">
                             <div class="tpfact__icon">
                                 <span><i class="flaticon-merging"></i></span>
                             </div>
@@ -332,7 +378,7 @@
                         portfolio</h2>
                 </div>
                 <div class="row">
-                    <div class="col-xl-7">
+                    <div class="col-lg-7">
                         <div class="tpportfolio p-relative mb-30">
                             <div class="tpportfolio__thumb br-20">
                                 <a class="popup-image" href="assets/img/portfolio/portfolio-01.jpg"><img
@@ -344,7 +390,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-5">
+                    <div class="col-lg-5">
                         <div class="tpportfolio p-relative mb-30">
                             <div class="tpportfolio__thumb br-20">
                                 <a class="popup-image" href="assets/img/portfolio/portfolio-02.jpg"><img
@@ -356,7 +402,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-12">
+                    <div class="col-lg-12">
                         <div class="tpportfolio p-relative mb-30">
                             <div class="tpportfolio__thumb br-20">
                                 <a class="popup-image" href="assets/img/portfolio/portfolio-03.jpg"><img
@@ -368,7 +414,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-7">
+                    <div class="col-lg-7">
                         <div class="tpportfolio p-relative mb-30">
                             <div class="tpportfolio__thumb br-20">
                                 <a class="popup-image" href="assets/img/portfolio/portfolio-04.jpg"><img
@@ -380,7 +426,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-5">
+                    <div class="col-lg-5">
                         <div class="tpportfolio p-relative mb-30">
                             <div class="tpportfolio__thumb br-20">
                                 <a class="popup-image" href="assets/img/portfolio/portfolio-05.jpg"><img
@@ -416,7 +462,7 @@
                     <h3 class="tp-section-title text-uppercase mb-20">Dedicated team </h3>
                 </div>
                 <div class="row">
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="tpteam text-center mb-20">
                             <div class="tpteam__thumb tpteam__thumb-2 m-img mb-20">
                                 <a href="#"> <img src="assets/img/team/team-05.jpg" alt=""></a>
@@ -427,13 +473,13 @@
                                     <a href="#"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
-                            <div class="tpteam__info text-center">
+                            <div class="tpteam__info text-center mb-50">
                                 <span class="tpteam__subtitle">Senior Designer</span>
                                 <h3 class="tpteam__title tpteam__title-2"><a href="#">Norris Belcher</a></h3>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="tpteam text-center mb-20">
                             <div class="tpteam__thumb tpteam__thumb-2 m-img mb-20">
                                 <a href="#"> <img src="assets/img/team/team-06.jpg" alt=""></a>
@@ -444,13 +490,13 @@
                                     <a href="#"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
-                            <div class="tpteam__info text-center">
+                            <div class="tpteam__info text-center mb-50">
                                 <span class="tpteam__subtitle">Senior Designer</span>
                                 <h3 class="tpteam__title tpteam__title-2"><a href="#">Margare Colligan</a></h3>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="tpteam text-center mb-20">
                             <div class="tpteam__thumb tpteam__thumb-2 m-img mb-20">
                                 <a href="#"> <img src="assets/img/team/team-07.jpg" alt=""></a>
@@ -461,13 +507,13 @@
                                     <a href="#"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
-                            <div class="tpteam__info text-center">
+                            <div class="tpteam__info text-center mb-50">
                                 <span class="tpteam__subtitle">Senior Designer</span>
                                 <h3 class="tpteam__title tpteam__title-2"><a href="#">Richard Bailey</a></h3>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="tpteam text-center mb-20">
                             <div class="tpteam__thumb tpteam__thumb-2 m-img mb-20">
                                 <a href="#"> <img src="assets/img/team/team-08.jpg" alt=""></a>
@@ -478,7 +524,7 @@
                                     <a href="#"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
-                            <div class="tpteam__info text-center">
+                            <div class="tpteam__info text-center mb-50">
                                 <span class="tpteam__subtitle">Senior Designer</span>
                                 <h3 class="tpteam__title tpteam__title-2"><a href="#">Malisa Murray</a></h3>
                             </div>
@@ -571,7 +617,7 @@
             </div>
             <div class="container">
                 <div class="row justify-content-end">
-                    <div class="col-xl-6">
+                    <div class="col-lg-6">
                         <div class="tp-faq-wrapper">
                             <div class="tp-section-title-wrapper mb-38">
                                 <span class="tp-section-subtitle mb-10"><i></i> expert member</span>
@@ -586,8 +632,7 @@
                                         <button class="tp-accordion-button" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseOne" aria-expanded="true"
                                             aria-controls="collapseOne">
-                                            How do you collaborate with developers? How do you collaborate with
-                                            developers? How do you collaborate with developers?
+                                            How do you collaborate with developers?
                                             <span><i class="far fa-arrow-down"></i></span>
                                         </button>
                                     </h2>
@@ -665,7 +710,7 @@
                                         <div class="tp-testimonial-item">
                                             <div class="tp-testimonial-long-text d-flex">
                                                 <i class="flaticon-quotes quotes-90 mr-15"></i>
-                                                <h2 class="tp-testimonial-text text-uppercase"> Cattle
+                                                <h2 class="tp-testimonial-text tp-testimonial-text-2 text-uppercase"> Cattle
                                                     given upon natural forth unto made beware give darknesscan't brought
                                                     is
                                                     not
@@ -691,7 +736,7 @@
                                         <div class="tp-testimonial-item">
                                             <div class="tp-testimonial-long-text d-flex">
                                                 <i class="flaticon-quotes quotes-90 mr-15"></i>
-                                                <h2 class="tp-testimonial-text text-uppercase"> Cattle
+                                                <h2 class="tp-testimonial-text tp-testimonial-text-2 text-uppercase"> Cattle
                                                     given upon natural forth unto made beware give darknesscan't brought
                                                     is
                                                     not
@@ -717,7 +762,7 @@
                                         <div class="tp-testimonial-item">
                                             <div class="tp-testimonial-long-text d-flex">
                                                 <i class="flaticon-quotes quotes-90 mr-15"></i>
-                                                <h2 class="tp-testimonial-text text-uppercase"> Cattle
+                                                <h2 class="tp-testimonial-text tp-testimonial-text-2 text-uppercase"> Cattle
                                                     given upon natural forth unto made beware give darknesscan't brought
                                                     is
                                                     not
@@ -766,9 +811,9 @@
                     <h2 class="tp-section-title text-uppercase">news and articles</h2>
                 </div>
                 <div class="row">
-                    <div class="col-xl-6 col-md-6">
-                        <div class="tpblog tpblog-2 d-flex mb-60">
-                            <div class="tpblog__thumb">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="tpblog tpblog-2 d-md-flex mb-60">
+                            <div class="tpblog__thumb tpblog__thumb-2">
                                 <a href="#"><img src="assets/img/blog/blog-sm-01.jpg" alt=""></a>
                             </div>
                             <div class="tpblog__content">
@@ -786,9 +831,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-md-6">
-                        <div class="tpblog tpblog-2 d-flex mb-60">
-                            <div class="tpblog__thumb">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="tpblog tpblog-2 d-md-flex mb-60">
+                            <div class="tpblog__thumb tpblog__thumb-2">
                                 <a href="#"><img src="assets/img/blog/blog-sm-02.jpg" alt=""></a>
                             </div>
                             <div class="tpblog__content">
@@ -806,9 +851,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-md-6">
-                        <div class="tpblog tpblog-2 d-flex mb-60">
-                            <div class="tpblog__thumb">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="tpblog tpblog-2 d-md-flex mb-60">
+                            <div class="tpblog__thumb tpblog__thumb-2">
                                 <a href="#"><img src="assets/img/blog/blog-sm-03.jpg" alt=""></a>
                             </div>
                             <div class="tpblog__content">
@@ -826,9 +871,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-md-6">
-                        <div class="tpblog tpblog-2 d-flex mb-60">
-                            <div class="tpblog__thumb">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="tpblog tpblog-2 d-md-flex mb-60">
+                            <div class="tpblog__thumb tpblog__thumb-2">
                                 <a href="#"><img src="assets/img/blog/blog-sm-04.jpg" alt=""></a>
                             </div>
                             <div class="tpblog__content">
@@ -905,7 +950,7 @@
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-4">
-                        <div class="tpfooter-social pl-35" bis_skin_checked="1">
+                        <div class="tpfooter-social pl-35 text-end" bis_skin_checked="1">
                             <a href="#"><i class="fab fa-behance"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>

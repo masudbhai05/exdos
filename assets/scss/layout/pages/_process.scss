@@ -10,7 +10,7 @@
             background-color: var(--tp-theme-orange);
             color: #fff;
             border-radius: 15px;
-            transition: .3s;
+            @include transition(.3s); 
         }
     }
 
@@ -67,7 +67,7 @@
             display: inline-block;
             border-radius: 50%;
             text-align: center;
-            transition: .4s;
+            @include transition(.3s); 
             color: #000;
         }
 
@@ -117,23 +117,24 @@
 
         & .tpprocess__icon {
             & span {
-                transform: scale(1.1);
+                @include transform(scale(1.1));
             }
         }
     }
 }
 
 .tp-process-2 {
-    transform: translateY(-40px);
+    @include transform(translateY(-40px));
 }
 
 .tp-process-4 {
-    transform: translateY(-40px);
+    @include transform(translateY(-40px));
 }
 
 .icon-transform-3 {
     & span {
-        transform: translateX(-8px) translateY(-8px);
+        @include transform(translateX(-8px) translateY(-8px));
+        // transform: translateX(-8px) translateY(-8px);
     }
 
     & .tpprocess__count {
@@ -143,7 +144,7 @@
 
 .icon-transform-4{
     &  span {
-        transform: translateX(-5px);
+        @include transform(translateX(-5px));
     }
     & .tpprocess__count {
         left: -14px;

@@ -11,7 +11,7 @@
         color: #fff;
         text-transform: uppercase;
         font-family: var(--tp-font-heading);
-        transition: .3s;
+        @include transition(.3s); 
     }
     &:hover{
         & a {

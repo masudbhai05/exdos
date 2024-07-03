@@ -3,7 +3,7 @@
 .tpprice {
     border-radius: 20px;
     background-repeat: no-repeat;
-    transition: .3s;
+    @include transition(.3s); 
     border: 1px solid transparent;
 
     &__sep {

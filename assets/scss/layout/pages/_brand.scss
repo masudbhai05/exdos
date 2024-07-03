@@ -16,7 +16,7 @@
 .tp-brand-item-border {
     border: 1px solid #57595C;
     min-height: 123px;
-    display: flex;
+    @include flexbox();
     justify-content: center;
     align-items: center;
     margin-right: -1px;
@@ -33,7 +33,7 @@
         padding: 0 20px;
         font-size: 30px;
         display: inline-block;
-        transform: translateY(27px);
+        @include transform(translateY(27px));
     }
 }
 

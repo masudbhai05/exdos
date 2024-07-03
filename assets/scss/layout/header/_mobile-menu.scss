@@ -12,8 +12,14 @@
                 font-weight: 500;
             }
 
-            &>a {
-                border-bottom: 1px solid #ddd;
+            // &>a {
+            //     border-bottom: 1px solid #ddd;
+            // }
+
+            &:not(:last-child) {
+                & a {
+                    border-bottom: 1px solid #ddd;
+                }
             }
 
             & .sub-menu {
@@ -32,7 +38,7 @@
                     color: #fff;
 
                     & i {
-                        transform: rotate(90deg);
+                        @include transform(rotate(90deg));
                     }
                 }
             }
@@ -53,6 +59,6 @@
     display: block;
 
     & i {
-        transition: .3s;
+        @include transition(.3s); 
     }
 }

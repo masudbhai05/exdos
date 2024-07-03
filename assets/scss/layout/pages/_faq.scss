@@ -12,6 +12,16 @@
     left: 0;
     background-size: cover;
     border-radius: 0 20px 20px 0;
+    @media #{$md} {
+        height: 500px;
+        width: 100%;
+        border-radius: 0;
+        position: static;
+        margin-bottom: 30px;
+    }
+    @media #{$xs} {
+        display: none;
+    }
 }
 
 .tp-accordion {
@@ -29,20 +39,20 @@
         width: 100%;
         text-align: left;
         padding: 23px 30px;
-        display: flex;
+        @include flexbox();
         justify-content: space-between;
         align-items: start;
 
         & span {
             margin-left: 20px;
-            transition: .3s;
+            @include transition(.3s); 
             color: var(--tp-theme-color);
 
         }
 
         &.collapsed {
             & span {
-                transform: rotate(-90deg);
+                @include transform(rotate(-90deg));
                 color: #57595C;
             }
         }

@@ -2,4 +2,7 @@
 
 .tp-video-area {
     padding: 300px 30px;
+    @media #{$xs} {
+        padding: 200px 30px;
+    }
 }

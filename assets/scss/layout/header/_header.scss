@@ -18,8 +18,31 @@
     @media #{$lg,$md} {
         padding-left: 40px;
     }
-    &-2{
-        border-color: #F2DDD1;  
+
+    &-2 {
+        border-color: #F2DDD1;
+    }
+}
+
+.tp-header-space {
+    @media #{$xxlm} {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media #{$xl, $lg, $xs, $sm} {
+        padding-right: 30px;
+    }
+    
+    @media #{$lg} {
+        padding-right: 40px;
+    }
+    @media #{$md} {
+        padding-right: 30px;
+    }
+    @media #{$xs, $sm} {
+        padding: 15px 30px;
+       
     }
 }
 
@@ -31,7 +54,7 @@
     & ul {
         & li {
             display: inline-block;
-            margin-right: 42px;
+            margin-right: 38px;
             position: relative;
 
             @media #{$xxlm} {
@@ -40,6 +63,11 @@
 
             @media #{$xl} {
                 margin-right: 19px;
+            }
+            
+
+            @media screen and (min-width: 1600px) and (max-width: 1800px) {
+                margin-right: 22px;
             }
 
             &>a {
@@ -57,9 +85,9 @@
                     position: absolute;
                     top: 0;
                     left: 10px;
-                    transform: rotate(130deg);
+                    @include transform(rotate(130deg));
                     opacity: 0;
-                    transition: all 0.3s;
+                    @include transition(all .3s);
                 }
             }
 
@@ -71,7 +99,7 @@
                 background-color: #fff;
                 visibility: hidden;
                 opacity: 0;
-                transition: 0.3s;
+                @include transition(.3s);
 
                 & li {
                     display: block;
@@ -182,6 +210,13 @@
             padding: 28px 20px;
         }
 
+        @media #{$xxlm} {
+            padding: 28px 22px;
+        }
+        @media #{$md} {
+            padding: 24px 40px;
+        }
+
 
         &-text {
             & span {
@@ -201,7 +236,7 @@
 
         &-icon {
             margin-right: 15px;
-            display: flex;
+            @include flexbox();
             align-items: center;
             justify-content: center;
 
@@ -216,7 +251,7 @@
         & button {
             background: #23252D;
             padding: 23px 23px;
-            display: flex;
+            @include flexbox();
             align-items: center;
             justify-content: center;
 
@@ -226,9 +261,22 @@
         }
     }
 
+    &-toggle {
+        & button {
+            @include flexbox();
+            align-items: center;
+            font-size: 40px;
+            color: #fff;
+            padding: 11px 16px;
+            background: #23252D;
+            border-radius: 5px;
+        }
+    }
+
     &-right-black {
         & .tp-header-search {
             margin-right: 20px;
+
             & i {
                 color: var(--tp-icon-color);
             }
@@ -236,13 +284,15 @@
 
         & .tp-header-bar {
             margin-left: 20px;
+
             & button {
                 background: none;
                 padding: 0;
                 color: var(--tp-icon-color);
             }
         }
-        &-sep{
+
+        &-sep {
             height: 40px;
             width: 1px;
             background-color: #F2DDD1;

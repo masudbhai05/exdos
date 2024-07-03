@@ -26,13 +26,14 @@
 
         & img {
             border-radius: 15px;
+            width: 100%;
         }
 
         &-2 {
             margin-left: 10px;
 
             & img {
-                transition: .3s;
+                @include transition(.3s);
             }
         }
 
@@ -81,7 +82,12 @@
         }
 
         &-2 {
-            transition: .3s;
+            @include transition(.3s);
+            font-size: 23px;
+            @media #{$xs} {
+                font-size: 40px;
+                // margin-bottom: 50px;
+            }
         }
     }
 
@@ -91,21 +97,24 @@
     }
 
     &__info {
-        @media #{$xxlm,$xl,$md} {
-            margin-left: 0;
+        &.ml-80 {
+            @media #{$xxlm,$xl,$md} {
+                margin-left: 0;
+            }
+
+            @media #{$md} {
+                margin-left: 30px;
+            }
+
+            @media #{$lg} {
+                margin-left: 35px;
+            }
+
+            @media #{$xs} {
+                margin-left: 50px;
+            }
         }
 
-        @media #{$md} {
-            margin-left: 30px;
-        }
-
-        @media #{$lg} {
-            margin-left: 35px;
-        }
-
-        @media #{$xs} {
-            margin-left: 50px;
-        }
 
         & span {
 
@@ -116,7 +125,7 @@
                 background: #D6D6D1;
                 display: inline-block;
                 margin-right: 5px;
-                transform: translateY(-5px);
+                @include transform(translateY(-5px));
             }
         }
     }
@@ -133,8 +142,8 @@
             top: 55%;
             right: 0;
             left: 0;
-            transform: translateY(-50%);
-            transition: .3s;
+            @include transform(translateY(-50%));
+            @include transition(.3s);
             opacity: 0;
             visibility: hidden;
             z-index: 12;

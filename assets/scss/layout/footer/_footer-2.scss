@@ -25,7 +25,7 @@
         }
 
         &-input {
-            transform: translateY(2px);
+            @include transform(translateY(2px));
             border-color: #57595C;
             margin-right: 10px;
         }
@@ -37,7 +37,7 @@
         color: #57595C;
         font-size: 20px;
         margin-right: 10px;
-        transition: .3s;
+        @include transition(.3s); 
 
         &:hover {
             color: #FF5B15;

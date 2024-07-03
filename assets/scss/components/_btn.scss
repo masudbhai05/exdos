@@ -18,8 +18,24 @@
 		position: absolute;
 		top: 5px;
 		right: -12px;
-		transform: rotate(16deg);
-		transition: 0.3s;
+		@include transform(rotate(16deg));
+		@include transition(.3s);
+	}
+
+	&:hover {
+		& i {
+			right: -100px;
+		}
+
+		& .tp-btn-y-1 {
+			@include transform(translateY(-100%));
+		}
+
+		& .tp-btn-y-2 {
+			@include transform(translateY(0));
+		}
+
+		color: #fff;
 	}
 
 	&-orange {
@@ -32,7 +48,7 @@
 		color: #fff;
 		position: relative;
 		overflow: hidden;
-		transition: .3s;
+		@include transition(.3s);
 
 		&>i {
 			background: #FFAD8A;
@@ -41,8 +57,8 @@
 			position: absolute;
 			top: 5px;
 			right: -12px;
-			transform: rotate(16deg);
-			transition: 0.3s;
+			@include transform(rotate(16deg));
+			@include transition(.3s);
 		}
 
 		&:hover {
@@ -51,11 +67,11 @@
 			}
 
 			& .tp-btn-y-1 {
-				transform: translateY(-100%);
+				@include transform(translateY(-100%));
 			}
 
 			& .tp-btn-y-2 {
-				transform: translateY(0);
+				@include transform(translateY(0));
 			}
 
 			color: #fff;
@@ -65,22 +81,6 @@
 
 	&-200 {
 		padding: 16px 36px;
-	}
-
-	&:hover {
-		& i {
-			right: -100px;
-		}
-
-		& .tp-btn-y-1 {
-			transform: translateY(-100%);
-		}
-
-		& .tp-btn-y-2 {
-			transform: translateY(0);
-		}
-
-		color: #fff;
 	}
 
 	&-sec {
@@ -105,8 +105,8 @@
 			position: absolute;
 			top: 6px;
 			right: -9px;
-			transform: rotate(16deg);
-			transition: 0.3s;
+			@include transform(rotate(16deg));
+			@include transition(.3s);
 		}
 
 		&:hover {
@@ -115,11 +115,11 @@
 			}
 
 			& .tp-btn-y-1 {
-				transform: translateY(-100%);
+				@include transform(translateY(-100%));
 			}
 
 			& .tp-btn-y-2 {
-				transform: translateY(0);
+				@include transform(translateY(0));
 			}
 		}
 	}
@@ -130,20 +130,20 @@
 		display: block;
 
 		& span {
-			transition: 0.3s;
+			@include transition(.3s);
 			display: block;
 		}
 	}
 
 	&-y-1 {
-		transform: translateY(0);
+		@include transform(translateY(0));
 	}
 
 	&-y-2 {
 		position: absolute;
 		top: 0;
 		left: 0;
-		transform: translateY(100%);
+		@include transform(translateY(100%));
 	}
 
 	&-circle {
@@ -156,7 +156,7 @@
 		display: inline-block;
 		padding: 42px 74px;
 		border-radius: 100%;
-		transition: .3s;
+		@include transition(.3s);
 
 		@media #{$xs} {
 			font-size: 38px;
@@ -177,11 +177,11 @@
 		font-family: var(--tp-font-heading);
 		font-size: 18px;
 		color: #0A0E1A;
-		transition: .3s;
+		@include transition(.3s);
 
 		& i {
 			margin-left: 9px;
-			transform: rotate(-45deg);
+			@include transform(rotate(-45deg));
 		}
 
 		&:hover {
@@ -196,12 +196,12 @@
 	margin-right: 10px;
 	font-family: var(--tp-font-heading);
 	color: #0A0E1A;
-	display: flex;
+	@include flexbox();
 	align-items: center;
-	transition: .3s;
+	@include transition(.3s);
 
 	& i {
-		transform: rotate(-45deg);
+		@include transform(rotate(-45deg));
 		margin-left: 10px;
 	}
 
@@ -221,12 +221,12 @@
 	line-height: 60px;
 
 	& i {
-		transform: rotate(-45deg);
+		@include transform(rotate(-45deg));
 	}
 }
 
 .tp-btn-wrap {
 	& i {
-		transform: rotate(-45deg);
+		@include transform(rotate(-45deg));
 	}
 }

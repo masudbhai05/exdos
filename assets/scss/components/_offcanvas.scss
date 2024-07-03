@@ -11,16 +11,27 @@
     padding: 60px 40px;
     visibility: hidden;
     opacity: 0;
-    transform: translateX(100%);
-    transition: .4s ease;
+    @include transform(translateX(100%));
+    @include transition(.4s ease); 
     overflow-y: scroll;
     overscroll-behavior-y: contain;
     scrollbar-width: none;
 
+    @media only screen and (max-width: 400px) {
+        width: 100%;
+        padding: 30px;
+    }
+
     &-open {
         visibility: visible;
         opacity: 1;
-        transform: translateX(0);
+        @include transform(translateX(0));
+    }
+
+    &-header {
+        @media #{$lg} {
+            margin-bottom: 40px;
+        }
     }
 
     &-title {
@@ -64,7 +75,7 @@
             border-radius: 100%;
             color: var(--tp-heading-color);
             border: 1px solid #c6c6c6;
-            transition: .3s;
+            @include transition(.3s);
 
             &:hover {
                 background: var(--tp-theme-color);
@@ -84,7 +95,7 @@
         visibility: hidden;
         opacity: 0;
         background-color: rgba($color: #000000, $alpha: .50);
-        transition: .4s ease;
+        @include transition(.4s ease);
 
         &-open {
             visibility: visible;

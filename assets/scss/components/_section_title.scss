@@ -13,7 +13,7 @@
 			border-radius: 30px;
 			background-color: #0057FC;
 			display: inline-block;
-			transform: translateY(-1px);
+			@include transform(translateY(-1px));
 		}
 		&-white{
 			color: #A3AEC3;

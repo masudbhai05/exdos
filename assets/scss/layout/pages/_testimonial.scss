@@ -93,11 +93,29 @@
 
     &-main-wrapper {
         margin-left: -58px;
+
+        @media #{$xs} {
+            margin-left: 0;
+        }
     }
 
     &-text {
         font-size: 60px;
         color: #fff;
+
+        &-2 {
+            @media #{$lg} {
+                font-size: 40px;
+            }
+
+            @media #{$md} {
+                font-size: 35px;
+            }
+
+            @media #{$xs} {
+                font-size: 26px;
+            }
+        }
 
         & i {
             color: var(--tp-theme-color-2);
@@ -110,10 +128,28 @@
         }
     }
 
+    &-long-text {
+        & i {
+            @media #{$xs} {
+                display: none;
+            }
+        }
+    }
+
     &-author {
+        &-info {
+            @media #{$xs} {
+                margin-left: 0;
+            }
+        }
+
         &-name {
             font-size: 30px;
             color: #fff;
+
+            @media #{$xs} {
+                font-size: 25px;
+            }
 
             &-black {
                 color: #0A0E1A;
@@ -140,7 +176,7 @@
 }
 
 .tp-rotate-180 {
-    transform: rotateY(180deg)
+    @include transform(rotate(180deg));
 }
 
 .quotes-90 {
@@ -193,7 +229,7 @@
     }
 
     &-prev {
-        transform: rotateY(180deg)
+        @include transform(rotate(180deg));
     }
 }
 
@@ -221,6 +257,23 @@
         left: 40%;
         opacity: .5;
         z-index: 99;
+
+        @media #{$lg} {
+            left: 50%;
+        }
+
+        @media #{$xl} {
+            left: 48%;
+        }
+
+        @media #{$md} {
+            left: 65%;
+        }
+
+        @media #{$xs} {
+            bottom: -86px;
+            left: 34%;
+        }
 
         & span {
             display: inline-block;
@@ -283,7 +336,7 @@
     z-index: 2;
     left: 0;
     opacity: 0;
-    transition: all ease .6s;
+    @include transition(all ease .6s);
 
 }
 
@@ -309,11 +362,11 @@
 
 .tp-testimonial-thumbs-active {
     & .swiper-slide {
-        transform: scale(.8);
+        @include transform(scale(.8));
     }
 
     & .swiper-slide-active {
-        transform: scale(1);
+        @include transform(scale(.8));
     }
 }
 
@@ -353,8 +406,9 @@
     line-height: 68px;
     border-radius: 30px;
     margin-left: 15px;
-    transition: .3s;
-    &:hover{
+    @include transition(.3s);
+
+    &:hover {
         border: transparent;
         background-color: var(--tp-theme-orange-2);
         color: #fff;

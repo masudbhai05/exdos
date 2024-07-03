@@ -224,7 +224,7 @@ select,
 textarea,
 li,
 .transition-3 {
-	// @extend %tp-transition-common;
+	@include transition(.3s); 
 }
 
 a:not([href]):not([class]),
