@@ -7401,8 +7401,10 @@ img {
     transform: translateY(0px);
   }
 }
-.tpblog-2 .tpblog__thumb-2 img {
-  border-radius: 0;
+@media (max-width: 767px) {
+  .tpblog-2 .tpblog__thumb-2 img {
+    border-radius: 0;
+  }
 }
 .tpblog-2 .tpblog__content {
   padding-left: 250px;

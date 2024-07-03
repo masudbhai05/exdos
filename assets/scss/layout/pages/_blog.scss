@@ -106,6 +106,7 @@
         border: 1px solid #57595C;
         position: relative;
         border-radius: 10px;
+
         @media #{$xs} {
             padding: 6px;
             border-radius: 0;
@@ -117,6 +118,7 @@
                 object-fit: cover;
                 border-radius: 10px;
             }
+
             &__thumb {
                 width: 224px;
                 height: 100%;
@@ -135,8 +137,11 @@
                         margin: auto;
                         @include transform(translateY(0px));
                     }
-                    & img{
-                        border-radius: 0;
+
+                    & img {
+                        @media #{$xs} {
+                            border-radius: 0;
+                        }
                     }
                 }
             }
