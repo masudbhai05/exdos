@@ -113,12 +113,6 @@
         }
 
         & .tpblog {
-            & img {
-                height: calc(100% + 24px);
-                object-fit: cover;
-                border-radius: 10px;
-            }
-
             &__thumb {
                 width: 224px;
                 height: 100%;
@@ -138,10 +132,15 @@
                         @include transform(translateY(0px));
                     }
 
-                    & img {
-                        @media #{$xs} {
-                            border-radius: 0;
-                        }
+                }
+
+                & img {
+                    height: calc(100% + 24px);
+                    object-fit: cover;
+                    border-radius: 10px;
+
+                    @media #{$xs} {
+                        border-radius: 0;
                     }
                 }
             }
