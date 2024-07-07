@@ -16,7 +16,7 @@
 <body>
     <!-- header start  -->
     <header>
-        <div class="tp-header-area tp-header-area-2 tp-transparent-header pl-100 pr-100">
+        <div class="tp-header-area tp-header-space tp-header-area-2 tp-transparent-header pl-100 pr-100">
             <div class="conatiner-fluid p-0">
                 <div class="row gx-0 align-items-center">
                     <div class="col-xl-2 col-lg-3 col-md-2 col-6">
@@ -27,7 +27,7 @@
                     <div class="col-xl-10 col-lg-9 col-md-10 col-6">
                         <div class="tp-header-box d-flex justify-content-xl-between justify-content-end ">
                             <div class="tp-main-menu tp-main-menu-black d-none d-xl-block pl-25">
-                                <nav>
+                                <nav class="tp-mobile-menu-active">
                                     <ul>
                                         <li><a href="/index.html">Home</a>
                                             <ul class="sub-menu">
@@ -66,6 +66,9 @@
                                 <div class="tp-header-btn pl-30">
                                     <a href="#" class="tp-btn-border">Let's Talk <i class="far fa-arrow-right"></i></a>
                                 </div>
+                                <div class="tp-header-bar d-xl-none">
+                                    <button class="tp-offcanvas-toggle"><i class="flaticon-menu"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -75,10 +78,56 @@
     </header>
     <!-- header end  -->
 
+<!-- Offcanvas start  -->
+<div class="tp-offcanvas-overlay"></div>
+<div class="tp-offcanvas">
+    <div class="tp-offcanvas-wrapper">
+        <div class="tp-offcanvas-header d-flex justify-content-between align-items-center mb-90">
+            <div class="tp-offcanvas-logo">
+                <a href="index.html"> <img src="assets/img/logo/Logo-black.png" alt=""></a>
+            </div>
+            <div class="tp-offcanvas-close">
+                <button class="tp-offcanvas-close-toggle"><i class="fal fa-times"></i></button>
+            </div>
+        </div>
+        <div class="tp-offcanvas-menu mb-50 d-xl-none">
+            <nav></nav>
+        </div>
+        <div class="tp-offcanvas-contents mb-50 d-none d-xl-block">
+            <h2 class="tp-offcanvas-title">Hello There</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, enim.</p>
+        </div>
+        <div class="tp-offcanvas-gallery mb-40">
+            <a class="popup-image" href="assets/img/portfolio/lp-01.jpg"><img src="assets/img/portfolio/lp-01.jpg"
+                    alt=""></a>
+            <a class="popup-image" href="assets/img/portfolio/lp-02.jpg"><img src="assets/img/portfolio/lp-02.jpg"
+                    alt=""></a>
+            <a class="popup-image" href="assets/img/portfolio/lp-03.jpg"><img src="assets/img/portfolio/lp-03.jpg"
+                    alt=""></a>
+            <a class="popup-image" href="assets/img/portfolio/lp-04.jpg"><img src="assets/img/portfolio/lp-04.jpg"
+                    alt=""></a>
+        </div>
+        <div class="tp-offcanvas-info mb-40">
+            <h3 class="tp-offcanvas-sm-title">Information</h3>
+            <span><a href="#">+01254 554 584</a></span>
+            <span><a href="#">hello@exdos.com</a></span>
+            <span><a href="#">202/A, Florida, USA</a></span>
+        </div>
+        <div class="tp-offcanvas-social mb-50">
+            <h3 class="tp-offcanvas-sm-title">Follow Us</h3>
+            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+<!-- Offcanvas end  -->
+
     <!-- main start  -->
     <main>
         <!-- tp-hero-area start  -->
-        <section class="tp-hero-area tp-black-bg pt-210 pb-125 p-relative"
+        <section class="tp-hero-area tp-hero-area-4 pt-210 pb-125 p-relative"
             style="background-image: url(assets/img/hero/hero-bg.jpg);">
             <div class="tp-hero-shape">
                 <div class="tp-hero-circle-shape p-absolute"></div>
@@ -86,7 +135,7 @@
                     <img src="assets/img/hero/element-shape.png" alt="">
                 </div>
             </div>
-            <div class="hero-info-social-4">
+            <div class="hero-info-social-4 d-none d-xxl-block">
                 <span>Follow Us -
                     <a href="#">Fb </a> <span>/</span>
                     <a href="#">Tw </a> <span>/</span>
@@ -98,9 +147,9 @@
                 <div class="row">
                     <div class="col-xl-6">
                         <div class="tp-hero-wrapper">
-                            <div class="tp-hero tp-hero-black ml-80 p-relative">
+                            <div class="tp-hero tp-hero-2 tp-hero-black ml-80 p-relative">
                                 <div class="mb-15 mt-40">
-                                    <h1 class="tp-hero-title tp-hero-title-black ml-m-7">digital <br>
+                                    <h1 class="tp-hero-title tp-hero-title-black tp-hero-title-black-4 ml-m-7">digital <br>
                                         marketing <br>
                                         experts
                                     </h1>

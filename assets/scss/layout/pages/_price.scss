@@ -5,6 +5,9 @@
     background-repeat: no-repeat;
     @include transition(.3s); 
     border: 1px solid transparent;
+    // @media #{$lg} {
+    //     padding: 30px 20px;
+    //  }
 
     &__sep {
         border: 1px solid #57595C;
@@ -44,6 +47,7 @@
     &__features {
         & li {
             margin-bottom: 10px;
+            @include flexbox();
 
             & i {
                 font-size: 18px;

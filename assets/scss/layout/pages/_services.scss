@@ -5,6 +5,11 @@
         padding-bottom: 85px;
         padding-top: 85px;
     }
+    &-3{
+        @media #{$xs} {
+            padding-bottom: 50px;
+        }
+    }
 }
 
 .tpservices {
@@ -12,6 +17,9 @@
     padding: 40px;
     margin-right: -1px;
     @include transition(all .4s); 
+    @media #{$md} {
+        padding: 24px;
+    }
 
     &__icon {
         & span {
@@ -39,6 +47,9 @@
 
         @media #{$xl} {
             font-size: 27px;
+        }
+        @media #{$md} {
+            font-size: 25px;
         }
     }
 
@@ -97,6 +108,9 @@
     &-2 {
         margin-top: -1px;
         padding-bottom: 8px;
+        @media #{$xl} {
+            padding: 20px;
+        }
 
         & .tpservices__icon {
             & span {
@@ -182,4 +196,12 @@
         }
     }
 
+}
+
+.tp-section-title-3{
+    & br{
+        @media #{$md, $xs} {
+            display: none;
+        }
+    }
 }

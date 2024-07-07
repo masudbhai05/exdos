@@ -6,7 +6,7 @@
     height: 1px;
 }
 
-.tp-footer-logo-area{
+.tp-footer-logo-area {
     @media #{$xs} {
         padding-top: 80px;
     }
@@ -31,6 +31,7 @@
 
 .tp-footer-widget-area {
     border-bottom: 1px solid rgba($color: #FFF, $alpha: 0.15);
+
     @media #{$xs} {
         padding-bottom: 20px;
     }
@@ -155,6 +156,9 @@
             color: #ffe815;
         }
     }
+    @media #{$md,$xs} {
+        margin-bottom: 30px;
+     }
 }
 
 .tp-footer-menu {
@@ -169,6 +173,11 @@
             margin-left: 30px;
             padding-left: 30px;
             position: relative;
+
+            @media #{$xl, $lg} {
+                margin-left: 15px;
+                padding-left: 15px;
+            }
 
             @media #{$xs} {
                 padding-left: 10px;
@@ -201,6 +210,12 @@
                 text-transform: uppercase;
                 color: #b1b4ba;
             }
+        }
+    }
+    &-2{
+        @media #{$xs} {
+           margin-top: 30px;
+           margin-bottom: 30px;
         }
     }
 }

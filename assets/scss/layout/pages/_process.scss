@@ -4,13 +4,22 @@
     border: 1px solid #57595C;
     border-radius: 215px;
 
+    @media #{$lg} {
+        padding: 100px 50px;
+        border-radius: 50px;
+    }
+
+    @media #{$xs} {
+        border-radius: 20px;
+    }
+
     &__step {
         & span {
             padding: 4px 20px;
             background-color: var(--tp-theme-orange);
             color: #fff;
             border-radius: 15px;
-            @include transition(.3s); 
+            @include transition(.3s);
         }
     }
 
@@ -67,7 +76,7 @@
             display: inline-block;
             border-radius: 50%;
             text-align: center;
-            @include transition(.3s); 
+            @include transition(.3s);
             color: #000;
         }
 
@@ -123,6 +132,12 @@
     }
 }
 
+.tp-process-area {
+    @media #{$xs} {
+        padding: 50px 0;
+    }
+}
+
 .tp-process-2 {
     @include transform(translateY(-40px));
 }
@@ -142,10 +157,11 @@
     }
 }
 
-.icon-transform-4{
-    &  span {
+.icon-transform-4 {
+    & span {
         @include transform(translateX(-5px));
     }
+
     & .tpprocess__count {
         left: -14px;
     }

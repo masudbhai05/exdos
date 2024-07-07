@@ -37,7 +37,7 @@
         color: #57595C;
         font-size: 20px;
         margin-right: 10px;
-        @include transition(.3s); 
+        @include transition(.3s);
 
         &:hover {
             color: #FF5B15;
@@ -53,14 +53,15 @@
             }
         }
     }
-    &-3{
+
+    &-3 {
         & a {
             color: #B1B4BA;
 
             &:hover {
                 color: #FF3838;
             }
-        } 
+        }
     }
 }
 
@@ -92,24 +93,44 @@
 }
 
 .tp-footer-2-col-02 {
-    margin-left: 80px;
+    padding-left: 80px;
+
+    @media #{$lg, $md, $xs} {
+        padding-left: 0;
+    }
 }
 
 .tp-footer-2-col-03 {
-    margin-left: 40px;
+    padding-left: 40px;
+
+    @media #{$lg, $md, $xs} {
+        padding-left: 0;
+    }
 }
 
 .tp-footer-2-col-04 {
-    margin-left: 70px;
+    padding-left: 70px;
+
+    @media #{$lg, $md, $xs} {
+        padding-left: 0;
+    }
 }
 
 .tp-footer-4 {
     &-col-02 {
-        margin-left: 60px;
+        padding-left: 60px;
+
+        @media #{$lg} {
+            padding-left: 0;
+        }
     }
 
     &-col-03 {
-        margin-left: 60px;
+        padding-left: 60px;
+
+        @media #{$lg} {
+            padding-left: 0;
+        }
     }
 }
 
@@ -183,4 +204,3 @@
         }
     }
 }
-

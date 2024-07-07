@@ -21,6 +21,14 @@
 
     &-2 {
         border-color: #F2DDD1;
+        @media #{$lg} {
+           padding-top: 30px;
+           padding-bottom: 30px;
+        }
+        @media #{$md} {
+           padding-top: 20px;
+           padding-bottom: 20px;
+        }
     }
 }
 
@@ -43,6 +51,9 @@
     @media #{$xs, $sm} {
         padding: 15px 30px;
        
+    }
+    &-3{
+        padding: 20px 30px;
     }
 }
 
@@ -297,6 +308,9 @@
             width: 1px;
             background-color: #F2DDD1;
             display: block;
+            @media #{$xs} {
+               display: none;
+            }
         }
     }
 

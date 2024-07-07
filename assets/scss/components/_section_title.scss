@@ -28,6 +28,9 @@
 			@media #{$xs} {
 				display: none;
 			}
+			@media #{$xl} {
+				display: none;
+			}
 		}
 
 		&-wrapper {

@@ -158,6 +158,11 @@
 }
 
 .tpshowcase {
+    @media #{$md, $xs} {
+       margin-bottom: 30px;
+       margin-top: 70px;
+    }
+
     &__number {
         & span {
             font-size: 30px;
@@ -173,6 +178,15 @@
                 top: 50%;
                 left: -70px;
             }
+            @media #{$md, $xs} {
+                transform: translateX(70px);
+                display: inline-block;
+            }
+        }
+    }
+    &__btn{
+        @media #{$md, $xs} {
+            margin-top: 0;
         }
     }
 
@@ -189,6 +203,14 @@
     &__title {
         font-size: 40px;
         color: #fff;
+        @media #{$lg} {
+            font-size: 35px;
+            }
+        & br{
+            @media #{$lg} {
+            display: none;
+            }
+        }
     }
 
     &__logo {
@@ -247,4 +269,7 @@
 
 .tp-project-active-margin {
     margin: 0 -100px;
+}
+.tp-section-contents{
+    padding-bottom: 5px;
 }

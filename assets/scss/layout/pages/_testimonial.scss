@@ -125,6 +125,18 @@
         &-black {
             color: #0A0E1A;
             font-size: 40px;
+
+            @media #{$lg} {
+                font-size: 36px;
+            }
+
+            @media #{$md} {
+                font-size: 30px;
+            }
+
+            @media #{$xs} {
+                font-size: 24px;
+            }
         }
     }
 
@@ -154,6 +166,10 @@
             &-black {
                 color: #0A0E1A;
                 font-size: 30px;
+
+                @media #{$xs} {
+                    font-size: 20px;
+                }
             }
         }
 
@@ -172,6 +188,20 @@
 
     &-qoute {
         float: left;
+
+        @media #{$xs} {
+          float: none;
+          margin-bottom: 20px;
+          }
+        & img {
+            @media #{$md} {
+                width: 74px;
+            }
+
+            @media #{$xs} {
+                width: 80px;
+            }
+        }
     }
 }
 
@@ -289,6 +319,23 @@
         bottom: -1px;
         left: 55%;
 
+        @media #{$xl} {
+            left: 71%;
+        }
+
+        @media #{$lg} {
+            bottom: 18px;
+            left: 61%;
+        }
+
+        @media #{$md} {
+            left: 77%;
+        }
+        @media #{$xs} {
+            bottom: -68px;
+            left: 37%;
+        }
+
         & .tp-swiper-test-2-button {
             color: #FF5B15;
         }
@@ -338,6 +385,16 @@
     opacity: 0;
     @include transition(all ease .6s);
 
+    @media #{$lg} {
+        left: 33%;
+    }
+
+}
+
+.tp-testimonial-box {
+    // @media #{$lg} {
+    //     margin-top: 30px;
+    // }
 }
 
 .tp-testimonial-bg-color {
@@ -348,14 +405,42 @@
     bottom: 0;
     z-index: -1;
     border-radius: 180px 180px 80px 80px;
+
+    @media #{$xl, $lg} {
+        width: 340px;
+        height: 349px;
+        border-radius: 180px 180px 20px 20px;
+    }
+
+    // @media #{$lg} {
+    //     width: 340px;
+    //     height: 349px;
+    // }
 }
 
 .swiper-slide {
-    // transition-duration: 300ms;
-
     &-active {
         & .tp-testimonial-thumb {
             opacity: 1;
+
+            @media #{$lg} {
+                opacity: 1;
+            }
+
+            & img {
+                @media #{$lg} {
+                    max-width: 87%
+                }
+            }
+        }
+    }
+}
+
+.tp-testimonial-thumb {
+
+    & img {
+        @media #{$lg} {
+            max-width: 87%
         }
     }
 }
@@ -414,3 +499,8 @@
         color: #fff;
     }
 }
+.tp-test {
+    @media #{$xs} {
+        text-align: center;
+    }
+  }
