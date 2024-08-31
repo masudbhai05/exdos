@@ -16,18 +16,18 @@
 <body>
     <!-- header start  -->
     <header>
-        <div class="tp-header-area tp-header-area-2 tp-transparent-header pl-100 pr-100">
+        <div class="tp-header-area tp-header-space tp-header-5 tp-transparent-header pl-100 pr-100">
             <div class="conatiner-fluid p-0">
                 <div class="row gx-0 align-items-center">
-                    <div class="col-xl-2 col-lg-3 col-md-2 col-6">
+                    <div class="col-xl-2 col-md-6 col-6">
                         <div class="tp-logo">
                             <a href="index.html"><img src="assets/img/logo/Logo-black.png" alt=""></a>
                         </div>
                     </div>
-                    <div class="col-xl-8 col-lg-9 col-md-10 col-6">
+                    <div class="col-xl-8 d-none d-xl-block">
                         <div class="tp-header-box d-flex justify-content-center ">
-                            <div class="tp-main-menu tp-main-menu-black d-none d-xl-block pl-45">
-                                <nav>
+                            <div class="tp-main-menu tp-main-menu-black pl-45">
+                                <nav class="tp-mobile-menu-active">
                                     <ul>
                                         <li><a href="/index.html">Home</a>
                                             <ul class="sub-menu">
@@ -59,16 +59,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2">
+                    <div class="col-xl-2 col-md-6 col-6">
                         <div
-                            class="tp-header-right tp-header-right-black d-md-flex justify-content-end flex-wrap align-items-center">
+                            class="tp-header-right tp-header-right-black d-flex justify-content-end flex-wrap align-items-center">
                             <div class="tp-header-search d-none d-md-block">
                                 <button class="d-flex justify-content-center align-items-center"><i
                                         class="flaticon-search"></i></button>
                             </div>
                             <span class="tp-header-right-black-sep"></span>
-                            <div class="tp-header-bar">
-                                <button><i class="flaticon-menu"></i></button>
+                            <div class="tp-header-bar text-end">
+                                <button class="tp-offcanvas-toggle"><i class="flaticon-menu"></i></button>
                             </div>
                         </div>
                     </div>
@@ -78,26 +78,68 @@
     </header>
     <!-- header end  -->
 
+    <!-- Offcanvas start  -->
+    <div class="tp-offcanvas-overlay"></div>
+    <div class="tp-offcanvas">
+        <div class="tp-offcanvas-wrapper">
+            <div class="tp-offcanvas-header d-flex justify-content-between align-items-center mb-90">
+                <div class="tp-offcanvas-logo">
+                    <a href="index.html"> <img src="assets/img/logo/Logo-black.png" alt=""></a>
+                </div>
+                <div class="tp-offcanvas-close">
+                    <button class="tp-offcanvas-close-toggle"><i class="fal fa-times"></i></button>
+                </div>
+            </div>
+            <div class="tp-offcanvas-menu mb-50 d-xl-none">
+                <nav></nav>
+            </div>
+            <div class="tp-offcanvas-contents mb-50 d-none d-xl-block">
+                <h2 class="tp-offcanvas-title">Hello There</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, enim.</p>
+            </div>
+            <div class="tp-offcanvas-gallery mb-40">
+                <a class="popup-image" href="assets/img/portfolio/lp-01.jpg"><img src="assets/img/portfolio/lp-01.jpg"
+                        alt=""></a>
+                <a class="popup-image" href="assets/img/portfolio/lp-02.jpg"><img src="assets/img/portfolio/lp-02.jpg"
+                        alt=""></a>
+                <a class="popup-image" href="assets/img/portfolio/lp-03.jpg"><img src="assets/img/portfolio/lp-03.jpg"
+                        alt=""></a>
+                <a class="popup-image" href="assets/img/portfolio/lp-04.jpg"><img src="assets/img/portfolio/lp-04.jpg"
+                        alt=""></a>
+            </div>
+            <div class="tp-offcanvas-info mb-40">
+                <h3 class="tp-offcanvas-sm-title">Information</h3>
+                <span><a href="#">+01254 554 584</a></span>
+                <span><a href="#">hello@exdos.com</a></span>
+                <span><a href="#">202/A, Florida, USA</a></span>
+            </div>
+            <div class="tp-offcanvas-social mb-50">
+                <h3 class="tp-offcanvas-sm-title">Follow Us</h3>
+                <a href="#"><i class="fab fa-behance"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Offcanvas end  -->
+
     <!-- main start  -->
     <main>
         <!-- tp-hero-area start  -->
-        <section class="tp-hero-area pt-210 pb-125 p-relative"
+        <section class="tp-hero-area tp-hero-ptb pt-210 pb-30 p-relative"
             style="background-image: url(assets/img/hero/blur-bg.png);">
-            <div class="tp-hero-shape">
-                <div class="tp-element-shape-thumb tp-element-shape-thumb-2 p-absolute text-end">
-                    <img src="assets/img/hero/pen.png" alt="">
-                </div>
-            </div>
-            <div class="tp-hero-star-shape-1 p-absolute">
+            
+            <div class="tp-hero-star-shape-1 p-absolute d-none d-xl-block">
                 <img src="assets/img/shapes/home-5-star-01.png" alt="">
             </div>
-            <div class="tp-hero-star-shape-2 p-absolute">
+            <div class="tp-hero-star-shape-2 p-absolute d-none d-xl-block">
                 <img src="assets/img/shapes/home-5-star-02.png" alt="">
             </div>
-            <div class="tp-hero-star-shape-3 p-absolute">
+            <div class="tp-hero-star-shape-3 p-absolute d-none d-lg-block">
                 <img src="assets/img/shapes/home-5-star-03.png" alt="">
             </div>
-            <div class="hero-info-social-4">
+            <div class="hero-info-social-4 d-none d-xxl-block">
                 <span>Follow Us -
                     <a href="#">Fb </a> <span>/</span>
                     <a href="#">Tw </a> <span>/</span>
@@ -107,16 +149,17 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-6">
+                    <div class="col-lg-6">
                         <div class="tp-hero-wrapper">
                             <div class="tp-hero tp-hero-black p-relative">
                                 <div class="mb-15 mt-40">
-                                    <h1 class="tp-hero-title tp-hero-title-black ml-m-7">design
+                                    <h1 class="tp-hero-title tp-hero-title-black tp-hero-title-black-2 ml-m-7">design
                                         studio firm
                                         from usa
                                     </h1>
                                 </div>
-                                <p>Life you under itself greater. Land the fill make so land waters fly beast <br> and
+                                <p class="tp-hero-content-5">Life you under itself greater. Land the fill make so land
+                                    waters fly beast and
                                     stars
                                     don't void first medal score</p>
 
@@ -131,7 +174,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="tp-hero-info">
+                                    <div class="tp-hero-info d-none d-md-block">
                                         <h3 class="tp-fs-30 mb-0">4.0 - Trustscore </h3>
                                         <span>BY Trust Pilot</span>
                                     </div>
@@ -140,6 +183,11 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="tp-hero-shape">
+                <div class="tp-element-shape-thumb tp-element-shape-thumb-2 p-absolute text-center text-lg-end">
+                    <img src="assets/img/hero/pen.png" alt="">
                 </div>
             </div>
         </section>
@@ -172,13 +220,13 @@
         <!-- tp-founder-area end  -->
 
         <!-- tp-about area start -->
-        <section class="tp-about-area pt-130 pb-130 p-relative" data-background="assets/img/about/about-5-bg.jpg">
+        <section class="tp-about-area tp-about-pb pt-130 pb-130 p-relative" data-background="assets/img/about/about-5-bg.jpg">
             <div class="container p-relative z-index-11">
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-lg-5">
                         <div class="tp-section-title-wrapper mb-30">
                             <span class="tp-section-subtitle mb-12"><i class="tp-dot-color"></i> our company</span>
-                            <h2 class="tp-section-title uppercase">exceptional
+                            <h2 class="tp-section-title tp-fns-37 uppercase">exceptional
                                 business need
                                 creative &
                                 unique design</h2>
@@ -202,7 +250,7 @@
             <div class="tp-about-right-box p-absolute" data-bg-color="#fff">
                 <div class="tp-about-fact-box pl-45 pb-25">
                     <div class="row g-0">
-                        <div class="col-xl-6">
+                        <div class="col-xl-6 col-lg-12 col-md-6">
                             <div class="tpfact tpfact-2 d-flex align-items-center mb-30">
                                 <div class="tpfact__icon tpfact__icon-2 mr-25 pr-25">
                                     <span><i class="flaticon-customer-feedback"></i></span>
@@ -213,8 +261,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6">
-                            <div class="tpfact tpfact-2 d-flex align-items-center mb-30 ml-29">
+                        <div class="col-xl-6 col-lg-12 col-md-6">
+                            <div class="tpfact tpfact-2 tpfact-5 d-flex align-items-center mb-30 ml-29">
                                 <div class="tpfact__icon tpfact__icon-2 mr-25 pr-25">
                                     <span><i class="flaticon-solution"></i></span>
                                 </div>
@@ -233,26 +281,26 @@
         </section>
         <!-- tp-about-area end -->
 
-        <section class="tpprocess-area pt-130 pb-130">
+        <section class="tpprocess-area pt-130 pb-130 xs-pb-80">
             <div class="container">
-                <div class="tp-section-title-wrapper text-center mb-130">
+                <div class="tp-section-title-wrapper text-center mb-130 xs-mb-80">
                     <span class="tp-section-subtitle mb-12"><i class="tp-dot-color"></i> Working process</span>
                     <h2 class="tp-section-title title-upper mb-15">solve problems</h2>
                 </div>
-                <div class="row gx-0">
-                    <div class="col-xl-3">
+                <div class="row gx-xl-0">
+                    <div class="col-xl-3 col-md-6">
                         <div class="tp-process">
-                            <div class="tpprocess__angle text-center mb-95">
+                            <div class="tpprocess__angle text-center mb-95 d-none d-md-block">
                                 <img src="assets/img/shapes/process-shape/about-angle-1.png" alt="">
                             </div>
                             <div class="tpprocess__icon tpprocess__icon-2 text-center p-relative">
                                 <span data-bg-color="#FFE9C9"><i class="flaticon-geometric-4"></i></span>
                                 <div class="tpprocess__count">01</div>
-                                <div class="tpprocess__shape p-absolute">
+                                <div class="tpprocess__shape p-absolute d-none d-xxl-block">
                                     <img src="assets/img/shapes/process-shape/round-line-1.png" alt="">
                                 </div>
                             </div>
-                            <div class="tpprocess__content mt-70">
+                            <div class="tpprocess__content text-center text-md-start mt-50">
                                 <h3 class="tpprocess__title">Free Signup</h3>
                                 <p>Said moved fruit are not unto forth years the brought kind herbs for under fort with
                                     may
@@ -260,9 +308,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3">
+                    <div class="col-xl-3 col-md-6">
                         <div class="tp-process tp-process-2">
-                            <div class="tpprocess__content mb-70">
+                            <div class="tpprocess__content text-center text-md-start b-70 d-none d-md-block">
                                 <h3 class="tpprocess__title">Plan Concept</h3>
                                 <p>Said moved fruit are not unto forth years the brought kind herbs for under fort with
                                     may
@@ -272,29 +320,35 @@
                                 class="tpprocess__icon tpprocess__icon-2 tpprocess__icon-2-pos tpprocess__icon-2-width text-center p-relative">
                                 <span data-bg-color="#D6F0FF"><i class="flaticon-triangle"></i></span>
                                 <div class="tpprocess__count">02</div>
-                                <div class="tpprocess__shape tpprocess__shape-2 p-absolute">
+                                <div class="tpprocess__shape tpprocess__shape-2 p-absolute d-none d-xxl-block">
                                     <img src="assets/img/shapes/process-shape/round-line-2.png" alt="">
                                 </div>
                             </div>
-                            <div class="tpprocess__angle text-center mt-95">
+                            <div class="tpprocess__content text-center text-md-start mt-50 d-md-none">
+                                <h3 class="tpprocess__title">Plan Concept</h3>
+                                <p>Said moved fruit are not unto forth years the brought kind herbs for under fort with
+                                    may
+                                    creepeth to delisa.</p>
+                            </div>
+                            <div class="tpprocess__angle text-center mt-95 d-none d-md-block">
                                 <img src="assets/img/shapes/process-shape/about-angle-1.png" alt="">
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3">
+                    <div class="col-xl-3 col-md-6">
                         <div class="tp-process tp-process-3">
-                            <div class="tpprocess__angle text-center mb-95">
+                            <div class="tpprocess__angle text-center mb-95 d-none d-md-block">
                                 <img src="assets/img/shapes/process-shape/about-angle-1.png" alt="">
                             </div>
                             <div
                                 class="tpprocess__icon tpprocess__icon-2 tpprocess__icon-2-width icon-transform-3 text-center p-relative">
                                 <span data-bg-color="#FFE4FB"><i class="flaticon-geometric-5"></i></span>
                                 <div class="tpprocess__count">03</div>
-                                <div class="tpprocess__shape tpprocess__shape-3 p-absolute">
+                                <div class="tpprocess__shape tpprocess__shape-3 p-absolute d-none d-xxl-block">
                                     <img src="assets/img/shapes/process-shape/round-line-3.png" alt="">
                                 </div>
                             </div>
-                            <div class="tpprocess__content mt-70">
+                            <div class="tpprocess__content text-center text-md-start mt-50">
                                 <h3 class="tpprocess__title">Sketch Design</h3>
                                 <p>Said moved fruit are not unto forth years the brought kind herbs for under fort with
                                     may
@@ -302,9 +356,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3">
+                    <div class="col-xl-3 col-md-6">
                         <div class="tp-process tp-process-4">
-                            <div class="tpprocess__content mb-70">
+                            <div class="tpprocess__content text-center text-md-start mb-70 d-none d-md-block">
                                 <h3 class="tpprocess__title">Final Project</h3>
                                 <p>Said moved fruit are not unto forth years the brought kind herbs for under fort with
                                     may
@@ -314,11 +368,17 @@
                                 class="tpprocess__icon tpprocess__icon-2 tpprocess__icon-2-pos icon-transform-4 text-center p-relative">
                                 <span data-bg-color="#E2EAD7"><i class="flaticon-3d-shapes"></i></span>
                                 <div class="tpprocess__count">04</div>
-                                <div class="tpprocess__shape tpprocess__shape-4 p-absolute">
+                                <div class="tpprocess__shape tpprocess__shape-4 p-absolute d-none d-xxl-block">
                                     <img src="assets/img/shapes/process-shape/round-line-4.png" alt="">
                                 </div>
                             </div>
-                            <div class="tpprocess__angle text-center mt-95">
+                            <div class="tpprocess__content text-center text-md-start mt-50 d-md-none">
+                                <h3 class="tpprocess__title">Final Project</h3>
+                                <p>Said moved fruit are not unto forth years the brought kind herbs for under fort with
+                                    may
+                                    creepeth to delisa.</p>
+                            </div>
+                            <div class="tpprocess__angle text-center mt-95 d-none d-md-block">
                                 <img src="assets/img/shapes/process-shape/about-angle-4.png" alt="">
                             </div>
                         </div>
@@ -331,18 +391,18 @@
         <section class="tp-services-area pt-128 pb-130 plr-100" data-bg-color="#0A0E1A">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-9">
+                    <div class="col-xxl-9 col-xl-10 col-lg-9">
                         <div class="tp-section-title-wrapper mb-10">
                             <span class="tp-section-subtitle mb-12" data-color="#B1B4BA"><i class="tp-dot-color"></i>
                                 popular services</span>
-                            <h2 class="tp-section-title tp-section-title-white title-upper mb-15">Luxurious Designs for
+                            <h2 class="tp-section-title tp-fns-46 tp-section-title-white title-upper mb-15">Luxurious Designs for
                                 the
                                 Lasting Impression</h2>
                         </div>
                     </div>
                 </div>
                 <div class="row justify-content-end">
-                    <div class="col-lg-6 pl-30">
+                    <div class="col-xxl-6 col-lg-8 services-pl">
                         <p data-color="#B1B4BA">Per ipsum ultrices sollicitud platea facilisi semper aliquam up tacits
                             senectus cursus for
                             vivamu volutpat penatibus fringilla porttitor do magna purus massa duis dapibus over the
@@ -383,7 +443,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="tp-services-tab-wrpper pl-50 mt-45">
+                        <div class="tp-services-tab-wrpper pl-50 services-pl-50 mt-45">
                             <nav>
                                 <div class="tp-services-tab" id="nav-tab" role="tablist">
                                     <div class="nav-links active" id="nav-home-tab" data-bs-toggle="tab"
@@ -593,14 +653,14 @@
             data-background="assets/img/testimonial/bg-pattern.png">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-xl-9">
+                    <div class="col-xl-9 col-md-8">
                         <div class="tp-section-title-wrapper mb-50">
                             <span class="tp-section-subtitle mb-10"><i class="tp-dot-color"></i> recent showcase</span>
-                            <h2 class="tp-section-title title-upper mb-15">We create award winning <br>
+                            <h2 class="tp-section-title title-upper title-break mb-15">We create award winning <br>
                                 design projects</h2>
                         </div>
                     </div>
-                    <div class="col-xl-3">
+                    <div class="col-xl-3 col-md-4">
                         <div class="tp-review-buttons d-flex justify-content-center align-items-center mb-50">
                             <div class="tp-review-button-prev tp-review-button tp-rotate-180"> <i
                                     class="flaticon-right-arrow"></i></div>
@@ -911,37 +971,39 @@
     <!-- footer start  -->
     <footer class="tp-footer-main-area p-relative" data-bg-color="#1A1A1A">
         <div class="container">
-            <div class="row gx-2 pt-110">
-                <div class="col-xl-3">
+           <div class="tp-social">
+            <div class="row gx-2 gx-md-4 pt-110">
+                <div class="col-lg-3 col-md-6">
                     <div class="tp-footer-social-box mb-30">
                         <a href="#">#facebook</a>
                     </div>
                 </div>
-                <div class="col-xl-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="tp-footer-social-box mb-30">
                         <a href="#">#intstagram</a>
                     </div>
                 </div>
-                <div class="col-xl-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="tp-footer-social-box mb-30">
                         <a href="#">#twetter</a>
                     </div>
                 </div>
-                <div class="col-xl-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="tp-footer-social-box mb-30">
                         <a href="#">#behance</a>
                     </div>
                 </div>
             </div>
+           </div>
             <div class="tp-footer-widget-area tp-footer-widget-area-border pt-80 pb-40">
                 <div class="row">
                     <div class="col-xl-5">
-                        <h2 class="tp-section-title tp-section-title-white title-upper mb-15">Have Design
+                        <h2 class="tp-section-title tp-section-title-white title-upper mb-40">Have Design
                             query? send us
                             message</h2>
                     </div>
-                    <div class="col-xl-4 col-md-4">
-                        <div class="tp-footer-wedget tp-footer-4-col-01 mb-40 pl-40">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="tp-footer-wedget tp-footer-5-col-01 mb-40">
                             <h3 class="tp-footer-wedget-title mb-20">Contact Info</h3>
                             <div class="tp-footer-contact">
                                 <div class="tp-footer-contact-item mb-25">
@@ -955,14 +1017,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3">
-                        <div class="tp-footer-wedget tp-footer-4-col-04  mb-40">
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="tp-footer-wedget tp-footer-5-col-04  mb-40">
                             <h3 class="tp-footer-wedget-title mb-20">Newsletter</h3>
                             <div class="tp-footer-2-newsletter tp-footer-4-newsletter mb-35">
                                 <form action="#">
                                     <div class="p-relative">
                                         <input type="email" placeholder="Email here*">
-                                        <button type="submit"><i data-color="#FF3838" class="far fa-arrow-right"></i></button>
+                                        <button type="submit"><i data-color="#FF3838"
+                                                class="far fa-arrow-right"></i></button>
                                     </div>
                                     <div class="form-check mt-20">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -983,12 +1046,12 @@
             </div>
             <div class="tp-footer-copyright-area tp-footer-copyright-area-2 pt-40 pb-30">
                 <div class="row align-items-center">
-                    <div class="col-xl-6 col-lg-4">
+                    <div class="col-xl-6 col-lg-6">
                         <div class="tp-footer-copyright tp-footer-copyright-2 text-md-center text-lg-start">
                             <p>Copyright © 2023 | Alright reserved by <a data-color="#FF3838" href="#">Hr Design</a></p>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-8">
+                    <div class="col-xl-6 col-lg-6">
                         <div class="tp-footer-menu tp-footer-menu-2 white-text text-end text-md-center text-lg-end">
                             <ul>
                                 <li><a href="#">Career</a></li>

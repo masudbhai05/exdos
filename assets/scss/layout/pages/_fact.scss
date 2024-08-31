@@ -38,6 +38,14 @@
                 font-size: 110px;
                 color: #57595C;
 
+                @media #{$xxlm} {
+                    font-size: 80px;
+                }
+
+                @media #{$xl} {
+                    font-size: 70px;
+                }
+
                 &-2 {
                     color: var(--tp-theme-orange);
                     position: relative;
@@ -50,6 +58,16 @@
                         position: absolute;
                         top: 15px;
                         right: 0;
+
+                        @media #{$xxlm} {
+                            height: 74px;
+                            top: 7px;
+                        }
+
+                        @media #{$xl} {
+                            height: 71px;
+                            top: 0px;
+                        }
                     }
                 }
             }
@@ -63,8 +81,20 @@
                     display: inline-block;
                     margin-top: 12px;
 
+                    @media #{$xxlm} {
+                        font-size: 60px;
+                    }
+
+                    @media #{$xl} {
+                        font-size: 50px;
+                    }
+
                     @media #{$lg} {
                         font-size: 75px;
+                    }
+
+                    @media #{$xs} {
+                        font-size: 65px;
                     }
                 }
 
@@ -72,13 +102,30 @@
 
             &__title {
                 font-size: 30px;
-                color: #0a0e1a;
+                color: #57595C;
                 opacity: 1;
+
+                @media #{$xxlm} {
+                    font-size: 23px;
+                }
+
+                @media #{$xl} {
+                    font-size: 17px;
+                }
 
                 @media #{$lg} {
                     font-size: 27px;
                 }
+
+                @media #{$md, $xs} {
+                    font-size: 22px;
+                }
             }
+        }
+    }
+    &-5{
+        @media #{$lg, $xs} {
+            margin-left: 0;
         }
     }
 }
@@ -90,5 +137,24 @@
 
     @media #{$xs} {
         width: 100%;
+    }
+}
+
+.tp-about {
+    &-pb {
+        @media #{$xxlm, $xl} {
+            padding-bottom: 80px;
+        }
+    }
+
+    &-fact-box {
+        @media #{$xxlm, $xl} {
+            padding-left: 12px;
+        }
+    }
+}
+.tp-fns-37{
+    @media #{$xl} {
+       font-size: 37px;
     }
 }

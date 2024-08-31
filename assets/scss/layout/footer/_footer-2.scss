@@ -120,7 +120,7 @@
     &-col-02 {
         padding-left: 60px;
 
-        @media #{$lg} {
+        @media #{$lg, $md, $xs} {
             padding-left: 0;
         }
     }
@@ -128,7 +128,7 @@
     &-col-03 {
         padding-left: 60px;
 
-        @media #{$lg} {
+        @media #{$lg, $md, $xs} {
             padding-left: 0;
         }
     }

@@ -31,6 +31,13 @@
     & img {
         max-width: inherit;
         margin-left: -40px;
+        @media #{$xl, $lg, $md, $xs} {
+            // max-width: 100%;
+            width: 100%;
+        }
+        @media #{$md, $xs} {
+           margin-left: 0;
+        }
     }
 }
 

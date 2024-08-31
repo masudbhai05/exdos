@@ -52,6 +52,12 @@
                 color: #fff;
             }
         }
+
+        &-2 {
+            @media #{$xl} {
+                margin-top: 0;
+            }
+        }
     }
 
     &-back {
@@ -105,18 +111,22 @@
             &:focus {
                 border-color: #57595C;
             }
+
             @include tp-placeholder {
                 color: #57595C;
             }
         }
-        & .tp-newsletter-back{
+
+        & .tp-newsletter-back {
             color: #EEEBE6;
             opacity: 1;
         }
-        & .tp-newsletter-input{
-            & i{
+
+        & .tp-newsletter-input {
+            & i {
                 color: #57595C;
             }
         }
     }
 }
+

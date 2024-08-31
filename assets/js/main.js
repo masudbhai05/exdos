@@ -19,7 +19,7 @@
         type: 'image',
         // other options
     });
-   
+
     $('.popup-video').magnificPopup({
         type: 'iframe'
         // other options
@@ -60,7 +60,22 @@
     });
 
     // Mobile menu code end here -------------------------------------------------------
-    // testimonial swiper 
+    // blog post swiper 
+    var swiper = new Swiper(".tp-blog-active", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        keyboard: {
+            enabled: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".tp-swiper-blog-button-next",
+            prevEl: ".tp-swiper-blog-button-prev",
+        },
+    });
     var swiper = new Swiper(".tp-testimonial-active", {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -76,9 +91,8 @@
             prevEl: ".tp-swiper-test-button-prev",
         },
     });
+
     // testimonial-2 swiper
-
-
     var swiper = new Swiper(".tp-testimonial-img-active", {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -141,6 +155,21 @@
     // Testimonial thumb home 5 start---------------------------
     var swiper = new Swiper(".tp-testi-active", {
         slidesPerView: 4,
+        breakpoints: {
+            // when window width is >= 992px
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 4,
+            },
+        },
         spaceBetween: 30,
         keyboard: {
             enabled: true,
@@ -153,6 +182,7 @@
             nextEl: ".tp-review-button-next",
             prevEl: ".tp-review-button-prev",
         },
+
     });
     // Testimonial thumb home 5 end---------------------------
 
@@ -293,4 +323,32 @@
             prevEl: ".tp-team-slider-button-prev",
         },
     });
+
+    // portfolio filter 
+    if ($('.grid').length != 0) {
+        $('.grid').imagesLoaded(function () {
+            var $grid = $('.grid').isotope({
+                itemSelector: '.grid-item',
+                percentPosition: true,
+                masonry: {
+                    columnWidth: 1
+                }
+            });
+            // filter items on button click
+            $('.tp-portfolio-filter').on('click', 'button', function () {
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({ filter: filterValue });
+            });
+
+            // for menu active class 
+            $('.tp-portfolio-filter button').on('click', function (event) {
+                $(this).siblings('.active').removeClass('active');
+                $(this).addClass('active');
+                event.preventDefault();
+            })
+        });
+    }
+
+
+
 })(jQuery)

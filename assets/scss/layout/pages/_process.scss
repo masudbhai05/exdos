@@ -166,3 +166,18 @@
         left: -14px;
     }
 }
+.tp-process{
+    @media #{$lg, $md, $xs} {
+       margin-bottom: 90px;
+    }
+    &-2{
+        @media #{$xs} {
+            margin-bottom: 25px;
+         } 
+    }
+    &-4{
+        @media #{$xs} {
+            margin-bottom: 0;
+         } 
+    }
+}

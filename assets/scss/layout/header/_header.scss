@@ -16,19 +16,7 @@
     }
 
     @media #{$lg,$md} {
-        padding-left: 40px;
-    }
-
-    &-2 {
-        border-color: #F2DDD1;
-        @media #{$lg} {
-           padding-top: 30px;
-           padding-bottom: 30px;
-        }
-        @media #{$md} {
-           padding-top: 20px;
-           padding-bottom: 20px;
-        }
+        padding-left: 30px;
     }
 }
 
@@ -41,19 +29,37 @@
     @media #{$xl, $lg, $xs, $sm} {
         padding-right: 30px;
     }
-    
+
     @media #{$lg} {
         padding-right: 40px;
     }
+
     @media #{$md} {
         padding-right: 30px;
     }
+
     @media #{$xs, $sm} {
         padding: 15px 30px;
-       
     }
-    &-3{
-        padding: 20px 30px;
+
+    &-2 {
+        border-color: #F2DDD1;
+
+        @media #{$lg} {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        @media #{$md} {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &-3 {
+        @media #{$lg, $md} {
+            padding: 20px 30px;
+        }
     }
 }
 
@@ -75,7 +81,7 @@
             @media #{$xl} {
                 margin-right: 19px;
             }
-            
+
 
             @media screen and (min-width: 1600px) and (max-width: 1800px) {
                 margin-right: 22px;
@@ -224,6 +230,7 @@
         @media #{$xxlm} {
             padding: 28px 22px;
         }
+
         @media #{$md} {
             padding: 24px 40px;
         }
@@ -308,9 +315,17 @@
             width: 1px;
             background-color: #F2DDD1;
             display: block;
+
             @media #{$xs} {
-               display: none;
+                display: none;
             }
+        }
+    }
+
+    &-5 {
+        @media #{$lg, $md} {
+            padding-top: 23px;
+            padding-bottom: 23px;
         }
     }
 

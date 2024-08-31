@@ -74,10 +74,17 @@ img {
 
 	&-140 {
 		border-radius: 140px;
+
+		@media #{$md, $xs} {
+			border-radius: 0;
+		}
 	}
 
 	&-150 {
 		border-radius: 150px;
+		@media #{$md, $xs} {
+			border-radius: 0;
+		}
 	}
 }
 
@@ -128,6 +135,10 @@ img {
 
 .tp-text-white {
 	color: #fff;
+}
+
+.blog-bg {
+	background-color: #FFE4FB;
 }
 
 // brand animation 

@@ -1,0 +1,56 @@
+@use '../utils' as *;
+
+.tp-skill-item {
+    & label {
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        color: #0A0E1A;
+        line-height: 1;
+    }
+}
+
+.progress,
+.progress-stacked {
+    height: 12px;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.progress {
+    &-bar {
+        background-color: var(--tp-theme-color);
+    }
+
+    &-outer {
+        border: 1px solid #57595C;
+        padding: 3px;
+        border-radius: 5px;
+        position: relative;
+    }
+    &-num {
+        position: absolute;
+        top: -38px;
+        left: calc(25% - 33px);
+        background: var(--tp-theme-color);
+        padding: 7px 6px;
+        line-height: 1;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 11px;
+    
+        &::before {
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 0 10px 10px 0;
+            border-color: transparent #0057FC transparent transparent;
+            transform: rotate(0deg);
+            position: absolute;
+            top: 100%;
+            right: 10px;
+        }
+    }
+}
+
