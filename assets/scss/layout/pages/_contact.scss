@@ -31,12 +31,14 @@
     & img {
         max-width: inherit;
         margin-left: -40px;
+
         @media #{$xl, $lg, $md, $xs} {
             // max-width: 100%;
             width: 100%;
         }
+
         @media #{$md, $xs} {
-           margin-left: 0;
+            margin-left: 0;
         }
     }
 }
@@ -66,3 +68,40 @@
         padding-bottom: 17px;
     }
 }
+
+
+.tp-contact-info {
+    border: 1px solid #95695C;
+    padding: 36px 45px;
+    border-radius: 10px;
+
+    &-icon {
+        i {
+            font-size: 85px;
+            color: #000;
+        }
+    }
+
+    &-text {
+        & span {
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        & a {
+            display: block;
+            font-size: 30px;
+            color: #0A0E1A;
+            font-family: var(--tp-font-heading);
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.tp-map-area iframe{
+    height: 700px;
+    width: 100%;
+}
+

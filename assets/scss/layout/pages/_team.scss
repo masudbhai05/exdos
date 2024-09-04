@@ -87,6 +87,7 @@
         &-2 {
             @include transition(.3s);
             font-size: 23px;
+
             @media #{$xs} {
                 font-size: 40px;
                 // margin-bottom: 50px;
@@ -196,5 +197,101 @@
         background-color: #DBDBDB;
         border-radius: 100%;
         margin: 0 10px;
+    }
+}
+
+
+.tp-team {
+    &-details-content {
+        &span {
+            font-size: 16px;
+        }
+    }
+
+    &-exp-more-info {
+        & ul {
+            list-style: inherit;
+            margin-left: 15px;
+        }
+    }
+
+    &-more-info {
+        & ul {
+            li {
+                margin-bottom: 10px;
+
+                & label {
+                    width: 140px;
+                }
+
+                & span {
+                    font-weight: 500;
+                    color: #141820;
+                }
+            }
+        }
+    }
+}
+
+.tp-team-skill-more-info {
+    & .progress-outer {
+        border: none;
+        padding: 2px;
+
+    }
+
+    & .progress,
+    .progress-stacked {
+        height: 9px;
+        background-color: #ddd;
+        border-radius: 4px;
+
+
+    }
+}
+
+
+.tp-team {
+    &-call {
+        & a {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            & i {
+                margin-left: 20px;
+                padding-left: 20px;
+                color: var(--tp-theme-color);
+                border-left: 1px solid #ddd;
+            }
+        }
+    }
+
+    &-social {
+        & a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            font-size: 22px;
+            line-height: 50px;
+            color: #57595C;
+            text-align: center;
+
+            &:hover {
+                background-color: var(--tp-theme-color);
+                border: 1px solid var(--tp-theme-color);
+                color: #fff;
+            }
+        }
     }
 }
