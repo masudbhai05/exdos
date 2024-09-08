@@ -69,7 +69,7 @@
     }
 
     & ul {
-        & li {
+        &>li {
             display: inline-block;
             margin-right: 38px;
             position: relative;
@@ -117,6 +117,7 @@
                 visibility: hidden;
                 opacity: 0;
                 @include transition(.3s);
+                box-shadow: 0px 2px 6px rgba(1, 15, 28, 0.2);
 
                 & li {
                     display: block;
@@ -137,6 +138,7 @@
                         top: 5%;
                         visibility: hidden;
                         opacity: 0;
+                        box-shadow: 0px 2px 6px rgba(1, 15, 28, 0.2);
                     }
 
                     &:hover {
@@ -329,4 +331,90 @@
         }
     }
 
+}
+
+.tp-main-menu ul>li:hover .tp-mega-menu {
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+}
+
+.tp-mega-menu {
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 1200px;
+    background: #fff;
+    padding: 25px;
+    padding-bottom: 0;
+    box-shadow: 0px 2px 6px rgba(1, 15, 28, 0.2);
+    visibility: hidden;
+    opacity: 0;
+    @include transition(.3s);
+
+    @media #{$xl, $lg, $md, $xs} {
+        position: static;
+        width: auto;
+        visibility: visible;
+        opacity: 1;
+        transition: none;
+        display: none;
+    }
+
+}
+
+.tp-home-thumb {
+    overflow: hidden;
+
+    & img {
+        box-shadow: 0px 2px 6px rgba(1, 15, 28, 0.2);
+        @include transition(.3s);
+    }
+}
+
+.tp-home-title {
+    font-size: 20px;
+    text-align: center;
+}
+
+.tp-home-menu a:hover {
+    & .tp-home-thumb>img {
+        transform: scale(1.1);
+    }
+}
+
+
+// Sticky header 
+
+@keyframes tpFadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.tpFadeInDown{
+    animation: tpFadeInDown 1s ease-out forwards;
+}
+
+.header-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    -webkit-animation: 500ms ease-in-out 0s normal none 1 running tpFadeInDown;
+    animation: 500ms ease-in-out 0s normal none 1 running tpFadeInDown;
+    -webkit-box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.1);
+    box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.1);
+    &.tp-header-black{
+        background-color: var(--tp-common-black);
+    }
+    &.tp-header-white{
+        background-color: #fff;
+    }
 }

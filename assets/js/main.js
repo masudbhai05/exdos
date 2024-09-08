@@ -1,6 +1,6 @@
 (function ($) {
     "use strict";
-
+    var windowOn = $(window);
     // background image attribute
     $('[data-background]').each(function () {
         $(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
@@ -38,6 +38,19 @@
 
     // Offcanvas end ------------------------------------------------------------
 
+    // search bar start ------------------------------------------------------------
+    $(".tp-search-toggle").on('click', function () {
+        $(".tp-header-search-bar").addClass("tp-search-open");
+        $(".tp-offcanvas-overlay").addClass("tp-offcanvas-overlay-open");
+    });
+    $(".tp-search-close, .tp-offcanvas-overlay").on('click', function () {
+        $(".tp-header-search-bar").removeClass("tp-search-open");
+        $(".tp-offcanvas-overlay").removeClass("tp-offcanvas-overlay-open");
+
+    });
+
+    // search bar end ------------------------------------------------------------
+
     // Mobile menu code start here -------------------------------------------------------
     var tpMenuWrap = $('.tp-mobile-menu-active > ul').clone();
     var tpSideMenu = $('.tp-offcanvas-menu nav');
@@ -60,6 +73,18 @@
     });
 
     // Mobile menu code end here -------------------------------------------------------
+
+    // Sticky Header Js
+	windowOn.on('scroll', function () {
+		var scroll = windowOn.scrollTop();
+		if (scroll < 100) {
+			$("#header-sticky").removeClass("header-sticky");
+		} else {
+			$("#header-sticky").addClass("header-sticky");
+		}
+    });
+      // Sticky Header Js end
+
     // blog post swiper 
     var swiper = new Swiper(".tp-blog-active", {
         slidesPerView: 1,

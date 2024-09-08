@@ -5,7 +5,7 @@
         & li {
             position: relative;
 
-            & a {
+            & > a {
                 display: block;
                 padding: 9px 0;
                 font-size: 16px;
@@ -17,7 +17,7 @@
             // }
 
             &:not(:last-child) {
-                & a {
+                & > a {
                     border-bottom: 1px solid #ddd;
                 }
             }

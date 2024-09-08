@@ -164,7 +164,7 @@
 .tpshowcase {
     @media #{$md, $xs} {
         margin-bottom: 30px;
-        margin-top: 70px;
+        margin-top: 20px;
     }
 
     &__number {
@@ -361,6 +361,10 @@
             border-radius: 15px;
             transition: .3s;
         }
+
+        & img {
+            width: 100%;
+        }
     }
 
     &-item {
@@ -463,16 +467,41 @@
         }
     }
 }
-.tp-portfolio-list-item{
-    & li{
-        margin-bottom: 15px;
-        font-weight: 500;
-        &::before{
-            content: "\f061";
-            font-family: "Font Awesome 5 Pro";
-            transform: rotate(-40deg);
-            display: inline-block;
-            margin-right: 7px;
+
+.tp-portfolio-list {
+    &-item {
+        & li {
+            margin-bottom: 15px;
+            font-weight: 500;
+            position: relative;
+
+            &::before {
+                content: "\f061";
+                font-family: "Font Awesome 5 Pro";
+                transform: rotate(-40deg);
+                display: inline-block;
+                margin-right: 7px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            & span{
+                padding-left: 25px;
+                overflow: hidden;
+                display: block;
+            }
         }
+    }
+
+    &-thumb img {
+        @media #{$md, $xs} {
+            width: 100%;
+        }
+    }
+}
+
+.showcase-grid-item{
+    @media #{$md, $xs} {
+        margin-bottom: 40px;
     }
 }

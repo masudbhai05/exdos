@@ -2,7 +2,21 @@
 
 .tp-video-area {
     padding: 300px 30px;
-    @media #{$xs} {
+
+    @media #{$xl, $lg, $md, $xs} {
         padding: 200px 30px;
+    }
+
+    @media #{$xs} {
+        padding: 100px 30px;
+    }
+
+}
+
+.tp-play-btn {
+    & img {
+        @media #{$xs} {
+            width: 50%;
+        }
     }
 }

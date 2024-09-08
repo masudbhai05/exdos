@@ -227,6 +227,12 @@
             font-size: 91px;
         }
     }
+
+    &-skill-box {
+        @media #{$lg, $md, $xs} {
+            padding-left: 0;
+        }
+    }
 }
 
 .tp-bg-circle {
@@ -269,12 +275,14 @@
     padding: 21px 49px;
     border-radius: 10px;
     z-index: 2;
-    &-wrapper{
+
+    &-wrapper {
         position: absolute;
         top: -45px;
         right: 0;
     }
-    &-bg{
+
+    &-bg {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -287,10 +295,13 @@
 
     & h2 {
         font-size: 100px;
+        @media #{$xs} {
+            font-size: 65px;
+        }
     }
-}
-.tp-about-exp{
-    & img{
-       max-width: inherit;
+    & h5{
+        @media #{$xs} {
+            font-size: 21px;
+        }   
     }
 }

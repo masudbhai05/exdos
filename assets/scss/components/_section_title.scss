@@ -49,12 +49,17 @@
 			}
 		}
 
-		@media #{$xxlm, $xl,$lg} {
+		@media #{$xxlm, $xl,$lg, $md, $xs} {
 			font-size: 40px;
 		}
 
-		@media #{$md, $xs} {
-			font-size: 35px;
+		// @media #{$md, $xs} {
+		// 	font-size: 35px;
+		// }
+		& br {
+			@media #{$lg ,$md, $xs} {
+				display: none;
+			}
 		}
 
 		&-white {

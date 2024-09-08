@@ -334,6 +334,12 @@
             color: #fff;
             text-align: center;
             line-height: 50px;
+            flex: 0 0 auto;
         }
+    }
+    &-title{
+        @media #{$lg} {
+            font-size: 21px;
+        } 
     }
 }

@@ -96,6 +96,9 @@
             font-family: var(--tp-font-heading);
             line-height: 1.2;
             margin-bottom: 10px;
+            @media #{$xl, $xs} {
+                font-size: 24px;
+              }
         }
     }
 }
@@ -103,5 +106,8 @@
 .tp-map-area iframe{
     height: 700px;
     width: 100%;
+    @media #{$xs} {
+        height: 400px;
+      }
 }
 
