@@ -1,0 +1,95 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.1 Accordion
+/*----------------------------------------*/
+
+.tp-accordion {
+    &-item {
+        border-radius: 10px;
+        border: 1px solid #000;
+    }
+
+    &-header {
+        margin: 0;
+    }
+
+    &-button {
+        font-size: 20px;
+        width: 100%;
+        text-align: left;
+        padding: 23px 30px;
+        @include flexbox();
+        justify-content: space-between;
+        align-items: start;
+
+        & span {
+            margin-left: 20px;
+            @include transition(.3s); 
+            color: var(--tp-theme-color);
+
+        }
+
+        &.collapsed {
+            & span {
+                @include transform(rotate(-90deg));
+                color: #57595C;
+            }
+        }
+    }
+
+    &-body {
+        margin: 0 30px;
+        padding-top: 20px;
+        border-top: 1px solid #000;
+    }
+}
+
+.tp-faq {
+    &-header {
+        margin: 0;
+    }
+
+    &-item {
+        border-bottom: 1px solid #D9D9D9;
+    }
+
+    &-button {
+        font-size: 24px;
+        width: 100%;
+        text-align: left;
+        padding: 21px 0;
+
+        &::after {
+            content: "-";
+            color: var(--tp-theme-orange);
+        }
+
+        &.collapsed {
+            &::after {
+                content: "+";
+                color: #0A0E1A;
+            }
+        }
+    }
+    &-thumb{
+        @media #{$md, $xs} {
+           margin-left: 0;
+        }
+        & img{
+            max-width: inherit;
+           
+            // @media #{$xxlm} {
+            //     width: 600px;
+            // }
+            @media #{$xl, $lg} {
+                width: 600px;
+            }
+            @media #{$md, $xs} {
+                width: 100%;
+                margin-top: 40px;
+            }
+            
+        }
+    }
+}

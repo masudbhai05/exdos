@@ -1,0 +1,61 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  4.3 Sidebar 
+/*----------------------------------------*/
+
+.tp-blog-sidebar {
+    &-widget {
+      background-color: #FBF6EF;
+      padding: 40px;
+      border-radius: 10px;
+    }
+  
+    &-title {
+      & span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--tp-theme-color);
+        display: inline-block;
+        margin-right: 7px;
+        transform: translateY(-4px);
+      }
+    }
+  
+    &-cat {
+      & ul {
+        & li {
+          margin-bottom: 15px;
+  
+          & a {
+            color: #57595C;
+            padding: 15px 25px;
+            display: block;
+            position: relative;
+            border: 1px solid #57595C;
+            border-radius: 8px;
+            background: #fff;
+  
+            &:hover {
+              color: #fff;
+              border: 1px solid var(--tp-theme-color);
+              background: var(--tp-theme-color);
+            }
+          }
+  
+        }
+      }
+    }
+  
+    &-post-item {
+      border-bottom: 1px solid #57595C;
+      padding-bottom: 15px;
+  
+      &:last-child {
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+  

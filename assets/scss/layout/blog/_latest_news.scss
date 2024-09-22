@@ -1,0 +1,196 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  	4.2 Latest News 
+/*----------------------------------------*/
+
+.tp-blog-post-area {
+    @media #{$xs} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+  }
+  
+  .tpblog {
+    &__thumb {
+        & img {
+            width: 100%;
+        }
+  
+        &-2 {
+            & img {
+                @media #{$lg} {
+                    width: 70%;
+                }
+            }
+        }
+    }
+  
+    &__content {
+        @media #{$lg,$md,$xs} {
+            padding-left: 0;
+        }
+  
+        &-meta {
+            width: 55px;
+            height: 170px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            @include flexbox();
+            justify-content: center;
+            flex: 0 0 auto;
+  
+            & cite {
+                width: 130px;
+                display: block;
+                position: absolute;
+                left: -38px;
+                top: 25px;
+                @include transform(rotate(-90deg));
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 500;
+                color: #000;
+            }
+  
+            & span {
+                @include flexbox();
+                flex-direction: column-reverse;
+  
+                & i {
+                    padding: 14px 14px;
+                    background-color: #fff;
+                    display: inline-block;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    border: 1px solid #57595C;
+                }
+            }
+  
+        }
+  
+  
+  
+    }
+  
+    &__meta {
+        @include flexbox();
+        align-items: center;
+        flex-wrap: wrap;
+  
+        & span {
+            & i {
+                margin-right: 5px;
+            }
+        }
+  
+        & cite {
+            display: inline-block;
+            width: 2px;
+            height: 16px;
+            background: #57595C;
+            margin: 0 15px;
+        }
+  
+        &>i {
+            color: var(--tp-theme-orange);
+        }
+    }
+  
+    &__title {
+        font-size: 30px;
+        line-height: 1.25;
+  
+        @media #{$lg,$md} {
+            font-size: 27px;
+        }
+        @media #{$xs} {
+            font-size: 22px;
+        }
+    }
+  
+    &-2 {
+        border: 1px solid #57595C;
+        position: relative;
+        border-radius: 10px;
+  
+        @media #{$xs} {
+            padding: 6px;
+            border-radius: 0;
+        }
+  
+        & .tpblog {
+            &__thumb {
+                width: 224px;
+                height: 100%;
+                flex: 0 0 auto;
+                @include transform(translateY(-12px));
+                margin-left: -3px;
+                position: absolute;
+                left: 0;
+                top: 0;
+  
+                &-2 {
+                    @media #{$xs} {
+                        position: static;
+                        width: 100%;
+                        height: auto;
+                        margin: auto;
+                        @include transform(translateY(0px));
+                    }
+  
+                }
+  
+                & img {
+                    height: calc(100% + 24px);
+                    object-fit: cover;
+                    border-radius: 10px;
+  
+                    @media #{$xs} {
+                        border-radius: 0;
+                    }
+                }
+            }
+  
+            &__content {
+                padding-left: 250px;
+                padding-bottom: 30px;
+                padding-top: 30px;
+                padding-right: 20px;
+  
+                @media #{$xs} {
+                    padding: 23px 20px;
+                }
+  
+                @media #{$lg} {
+                    padding-left: 172px;
+                }
+            }
+        }
+    }
+  }
+  
+  .tp-blog-btn {
+    display: inline-block;
+  
+    & i {
+        font-size: 55px;
+    }
+  
+    & span {
+        width: 38px;
+        height: 38px;
+        background-color: #F8F5FF;
+        border-radius: 30px;
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        right: -11px;
+        z-index: -1;
+    }
+  
+    &:hover {
+        & span {
+            background-color: #ff9b76;
+        }
+    }
+  }

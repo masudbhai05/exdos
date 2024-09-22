@@ -1,6 +1,11 @@
 (function ($) {
     "use strict";
     var windowOn = $(window);
+    // wow
+    windowOn.on('load', function () {
+        wowAnimation();
+    });
+
     // background image attribute
     $('[data-background]').each(function () {
         $(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
@@ -75,15 +80,15 @@
     // Mobile menu code end here -------------------------------------------------------
 
     // Sticky Header Js
-	windowOn.on('scroll', function () {
-		var scroll = windowOn.scrollTop();
-		if (scroll < 100) {
-			$("#header-sticky").removeClass("header-sticky");
-		} else {
-			$("#header-sticky").addClass("header-sticky");
-		}
+    windowOn.on('scroll', function () {
+        var scroll = windowOn.scrollTop();
+        if (scroll < 100) {
+            $("#header-sticky").removeClass("header-sticky");
+        } else {
+            $("#header-sticky").addClass("header-sticky");
+        }
     });
-      // Sticky Header Js end
+    // Sticky Header Js end
 
     // blog post swiper 
     var swiper = new Swiper(".tp-blog-active", {
@@ -374,6 +379,23 @@
         });
     }
 
+    // wow
+    function wowAnimation() {
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: false,
+            live: true
+        });
+        wow.init();
+    }
 
+    // jarallax
+    if ($('.jarallax').length) {
+        $('.jarallax').jarallax({
+            speed: 0.2,
+        });
+    }
 
 })(jQuery)

@@ -1,9 +1,18 @@
 @use '../../utils' as *;
+/*----------------------------------------*/
+/*  5.1 Footer Style 1
+/*----------------------------------------*/
 
 .footer-sep {
     background: #fff;
     opacity: 0.15;
     height: 1px;
+}
+
+.tp-footer-logo{
+    & img{
+        width: 168px;
+    }
 }
 
 .tp-footer-logo-area {

@@ -20,103 +20,55 @@
 	-----------------
     02. COMPONENTS css
 	-----------------
-		2.1 Back to top
-		2.2 Theme Settings
-		2.3 Buttons
-		2.4 Animations
-		2.5 Preloader
-		2.6 Background 
-		2.7 Carousel
-		2.8 Nice Select
-		2.9 Pagination
-		2.10 Offcanvas
-		2.11 Breadcrumb
-		2.12 Accordion
-		2.13 Tab
-		2.14 Modal
-		2.15 Section Title
-		2.16 Search
-		2.17 Hotspot
-		2.18 Ragne Slider
+		2.1 Accordion
+		2.2 Back to top
+		2.3 Breadcrumb
+		2.4 Button
+		2.5 Custom Animation
+		2.6 Offcanvas
+		2.7 Preloader
+		2.8 Search Bar
+		2.9 Section Title
+		2.10 Skill
+
 	-----------------
     03. HEADER CSS
 	-----------------
-		3.1 Header Style 1
-		3.2 Header Style 2
-		3.3 Header Style 3
-		3.4 Header Style 5
-
-    ---------------------------------
-	04. MENU CSS
+		3.1 Header Style 
+		3.2 Mobile Menu
 	---------------------------------
-		4.1 Main menu css
-		4.2 Meanmenu css
-		4.3 Mobile css
-		4.4 Category menu css
+	04. BLOG CSS
+	---------------------------------
+		4.1 Blog 
+		4.2 Latest News 
+		4.3 Sidebar 
 
 	---------------------------------
-	05. BLOG CSS
+	05. FOOTER CSS
 	---------------------------------
-		5.1 Postbox css
-		5.2 Recent Post css
-		5.3 Sidebar css
-		5.4 Blog css
-		5.5 Blog Grid css
+		5.1 Footer Style 1
+		5.2 Footer Style 2
+		5.3 Footer Style 3
 
 	---------------------------------
-	06. FOOTER CSS
+	06. PAGES CSS
 	---------------------------------
-		6.1 Footer Style 1
-		6.2 Footer Style 2
-		6.3 Footer Style 3
-		6.4 Footer Style 4
-		6.5 Footer Style 5
-
-	---------------------------------
-	07. PAGES CSS
-	---------------------------------
-		7.1 Slider css
-		7.2 About css
-		7.3 Feature css
-		7.4 Subscribe css
-		7.5 Instagram css
-		7.6 Testimonial css
-		7.7 Brand css
-		7.8 CTA css
-		7.9 Login css
-		7.10 Contact css
-		7.11 Error css
-		7.12 Profile css
-
-	---------------------------------
-	08. ECOMMERCE CSS
-	---------------------------------
-		8.1 Ecommerce Common CSS
-		8.2 Cartmini CSS
-		8.3 Cart Modal CSS
-		8.4 Category CSS
-		8.5 Banner CSS
-		8.6 Tooltip CSS
-		8.7 Featured Product CSS
-		8.8 Trending CSS
-		8.9 Product Card CSS
-		8.10 Product Card Style 2 CSS
-		8.11 Product Card Style 3 CSS
-		8.12 Product Card Style 4 CSS
-		8.13 Product Card Style 5 CSS
-		8.14 Product Details CSS
-		8.15 Product Widget CSS
-		8.16 Shop CSS
-		8.17 Filter Offcanvas CSS
-		8.18 Product Quantity CSS
-		8.19 Cart CSS
-		8.20 Order CSS
-		8.21 Checkout CSS
-		8.22 compare CSS
-		8.23 Collection CSS
-		8.24 Deal CSS
-		8.25 Side Banner CSS
-		8.26 Coupon CSS
+		6.1 About
+		6.2 Award
+		6.3 Brand
+		6.4 Contact
+		6.5 CTA
+		6.6 Fact
+		6.7 FAQ
+		6.8 Hero
+		6.9 Newsletter
+		6.10 Portfolio
+		6.11 Price
+		6.12 Process
+		6.13 Services
+		6.14 Team
+		6.15 Testimonial
+		6.16 Video
 
 
 **********************************************/
@@ -399,6 +351,9 @@ textarea {
   font-weight: 500;
 }
 
+/*----------------------------------------*/
+/*  1.2 Common Classes
+/*----------------------------------------*/
 .w-img img {
   width: 100%;
 }
@@ -548,9 +503,21 @@ img {
   display: inline-block;
 }
 
-/*--
-    - Margin & Padding
------------------------------------------*/
+.tp-solid-bg {
+  height: 800px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .tp-solid-bg {
+    height: 600px;
+  }
+}
+
+/*----------------------------------------*/
+/*  1.3 Default Spacing
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*     Margin & Padding
+/*-----------------------------------------*/
 /*-- Margin Top --*/
 .mt-1 {
   margin-top: 1px;
@@ -4579,6 +4546,95 @@ img {
   }
 }
 
+/*----------------------------------------*/
+/*  2.1 Accordion
+/*----------------------------------------*/
+.tp-accordion-item {
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+.tp-accordion-header {
+  margin: 0;
+}
+.tp-accordion-button {
+  font-size: 20px;
+  width: 100%;
+  text-align: left;
+  padding: 23px 30px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.tp-accordion-button span {
+  margin-left: 20px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color: var(--tp-theme-color);
+}
+.tp-accordion-button.collapsed span {
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  color: #57595C;
+}
+.tp-accordion-body {
+  margin: 0 30px;
+  padding-top: 20px;
+  border-top: 1px solid #000;
+}
+
+.tp-faq-header {
+  margin: 0;
+}
+.tp-faq-item {
+  border-bottom: 1px solid #D9D9D9;
+}
+.tp-faq-button {
+  font-size: 24px;
+  width: 100%;
+  text-align: left;
+  padding: 21px 0;
+}
+.tp-faq-button::after {
+  content: "-";
+  color: var(--tp-theme-orange);
+}
+.tp-faq-button.collapsed::after {
+  content: "+";
+  color: #0A0E1A;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .tp-faq-thumb {
+    margin-left: 0;
+  }
+}
+.tp-faq-thumb img {
+  max-width: inherit;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .tp-faq-thumb img {
+    width: 600px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .tp-faq-thumb img {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
+/*----------------------------------------*/
+/* 2.4 Button
+/*----------------------------------------*/
 .tp-btn {
   background: var(--tp-theme-color);
   padding: 16px 46px;
@@ -4871,6 +4927,9 @@ img {
   transform: rotate(-45deg);
 }
 
+/*----------------------------------------*/
+/*  2.9 Section Title
+/*----------------------------------------*/
 .tp-section-subtitle {
   font-size: 15px;
   text-transform: uppercase;
@@ -4937,6 +4996,9 @@ img {
   color: #fff;
 }
 
+/*----------------------------------------*/
+/*  2.6 Offcanvas
+/*----------------------------------------*/
 .tp-offcanvas {
   position: fixed;
   top: 0;
@@ -5044,6 +5106,9 @@ img {
   opacity: 1;
 }
 
+/*----------------------------------------*/
+/* 2.3 Breadcrumb
+/*----------------------------------------*/
 .tp-breadcrumb-space {
   padding-top: 235px;
   padding-bottom: 142px;
@@ -5085,6 +5150,9 @@ img {
   top: 50%;
 }
 
+/*----------------------------------------*/
+/* 2.10 Skill
+/*----------------------------------------*/
 .tp-skill-item label {
   font-size: 15px;
   font-weight: 500;
@@ -5133,6 +5201,9 @@ img {
   right: 10px;
 }
 
+/*----------------------------------------*/
+/*  2.8 Search Bar
+/*----------------------------------------*/
 .tp-header-search-bar {
   height: 400px;
   background: #fff;
@@ -5169,6 +5240,262 @@ img {
   line-height: 40px;
 }
 
+/*----------------------------------------*/
+/*  2.5 Custom Animation
+/*----------------------------------------*/
+.tpFadeInUp {
+  opacity: 0; /* Start invisible */
+  animation: tpFadeInUp 2s ease-out forwards; /* 2 seconds duration, ease-out effect */
+}
+
+@keyframes tpFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Start slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+  }
+}
+.tpFadeInLeft {
+  opacity: 0; /* Start invisible */
+  animation: tpFadeInLeft 2s ease-out forwards; /* 2 seconds duration, ease-out effect */
+}
+
+@keyframes tpFadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px); /* Start slightly to the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at original position */
+  }
+}
+.tpFadeInRight {
+  opacity: 0; /* Start invisible */
+  animation: tpFadeInRight 2s ease-out forwards; /* 2 seconds duration, ease-out effect */
+}
+
+@keyframes tpFadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px); /* Start slightly to the right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at original position */
+  }
+}
+@keyframes tpslideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.tpfadeInLeft {
+  opacity: 0; /* Start invisible */
+  animation: tpfadeInLeft 2s ease-out forwards; /* 2 seconds duration, ease-out effect */
+}
+
+@keyframes tpfadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); /* Start slightly to the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at original position */
+  }
+}
+.tpSkillInLeft {
+  opacity: 0; /* Start invisible */
+  animation: tpSkillInLeft 2s ease-out forwards; /* 2 seconds duration, ease-out effect */
+}
+
+@keyframes tpSkillInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px); /* Start slightly to the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at original position */
+  }
+}
+.slideinup {
+  -webkit-animation-name: slideinup;
+  animation-name: slideinup;
+}
+
+@keyframes slideinup {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideinright {
+  0% {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideindown {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.slideinleft {
+  -webkit-animation-name: slideinleft;
+  animation-name: slideinleft;
+}
+
+@keyframes slideinleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slidebottomright {
+  0% {
+    opacity: 0;
+    transform: translateX(100px) translateY(100px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+@keyframes slidetopleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) translateY(-100px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  0% {
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+  75% {
+    border-top-color: #fff;
+    border-left-color: #fff;
+    border-right-color: #fff;
+    border-bottom-color: transparent;
+  }
+  100% {
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+}
+/*img-animation**********************/
+.img-custom-anim-right {
+  animation: img-anim-right 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+  opacity: 0;
+}
+
+@keyframes img-anim-right {
+  0% {
+    transform: translateX(5%);
+    clip-path: inset(0 0 0 100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+.img-custom-anim-left {
+  animation: img-anim-left 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+  opacity: 0;
+}
+
+@keyframes img-anim-left {
+  0% {
+    transform: translateX(-5%);
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+.img-custom-anim-top {
+  animation: img-anim-top 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 0;
+}
+
+@keyframes img-anim-top {
+  0% {
+    transform: translateY(-5%);
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+.img-custom-anim-bottom {
+  animation: img-anim-bottom 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 0;
+}
+
+@keyframes img-anim-bottom {
+  0% {
+    transform: translateY(5%);
+    clip-path: inset(100% 0 0 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+/*----------------------------------------*/
+/*  2.2 Back to top
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*  2.7 Preloader
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*  	4.1 Blog 
+/*----------------------------------------*/
 .tp-postbox-meta span {
   margin-right: 15px;
 }
@@ -5337,47 +5664,6 @@ img {
   border: 1px solid var(--tp-theme-color);
 }
 
-.tp-blog-sidebar-widget {
-  background-color: #FBF6EF;
-  padding: 40px;
-  border-radius: 10px;
-}
-.tp-blog-sidebar-title span {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--tp-theme-color);
-  display: inline-block;
-  margin-right: 7px;
-  transform: translateY(-4px);
-}
-.tp-blog-sidebar-cat ul li {
-  margin-bottom: 15px;
-}
-.tp-blog-sidebar-cat ul li a {
-  color: #57595C;
-  padding: 15px 25px;
-  display: block;
-  position: relative;
-  border: 1px solid #57595C;
-  border-radius: 8px;
-  background: #fff;
-}
-.tp-blog-sidebar-cat ul li a:hover {
-  color: #fff;
-  border: 1px solid var(--tp-theme-color);
-  background: var(--tp-theme-color);
-}
-.tp-blog-sidebar-post-item {
-  border-bottom: 1px solid #57595C;
-  padding-bottom: 15px;
-}
-.tp-blog-sidebar-post-item:last-child {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
 .tp-blog-form input {
   border: 1px solid #57595C;
   padding: 10px;
@@ -5461,12 +5747,253 @@ blockquote cite {
   color: #57595C;
 }
 
+/*----------------------------------------*/
+/*  	4.2 Latest News 
+/*----------------------------------------*/
+@media (max-width: 767px) {
+  .tp-blog-post-area {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.tpblog__thumb img {
+  width: 100%;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .tpblog__thumb-2 img {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .tpblog__content {
+    padding-left: 0;
+  }
+}
+.tpblog__content-meta {
+  width: 55px;
+  height: 170px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+.tpblog__content-meta cite {
+  width: 130px;
+  display: block;
+  position: absolute;
+  left: -38px;
+  top: 25px;
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  color: #000;
+}
+.tpblog__content-meta span {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.tpblog__content-meta span i {
+  padding: 14px 14px;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: 1px solid #57595C;
+}
+.tpblog__meta {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tpblog__meta span i {
+  margin-right: 5px;
+}
+.tpblog__meta cite {
+  display: inline-block;
+  width: 2px;
+  height: 16px;
+  background: #57595C;
+  margin: 0 15px;
+}
+.tpblog__meta > i {
+  color: var(--tp-theme-orange);
+}
+.tpblog__title {
+  font-size: 30px;
+  line-height: 1.25;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .tpblog__title {
+    font-size: 27px;
+  }
+}
+@media (max-width: 767px) {
+  .tpblog__title {
+    font-size: 22px;
+  }
+}
+.tpblog-2 {
+  border: 1px solid #57595C;
+  position: relative;
+  border-radius: 10px;
+}
+@media (max-width: 767px) {
+  .tpblog-2 {
+    padding: 6px;
+    border-radius: 0;
+  }
+}
+.tpblog-2 .tpblog__thumb {
+  width: 224px;
+  height: 100%;
+  flex: 0 0 auto;
+  -moz-transform: translateY(-12px);
+  -o-transform: translateY(-12px);
+  -ms-transform: translateY(-12px);
+  -webkit-transform: translateY(-12px);
+  transform: translateY(-12px);
+  margin-left: -3px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media (max-width: 767px) {
+  .tpblog-2 .tpblog__thumb-2 {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+.tpblog-2 .tpblog__thumb img {
+  height: calc(100% + 24px);
+  object-fit: cover;
+  border-radius: 10px;
+}
+@media (max-width: 767px) {
+  .tpblog-2 .tpblog__thumb img {
+    border-radius: 0;
+  }
+}
+.tpblog-2 .tpblog__content {
+  padding-left: 250px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-right: 20px;
+}
+@media (max-width: 767px) {
+  .tpblog-2 .tpblog__content {
+    padding: 23px 20px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .tpblog-2 .tpblog__content {
+    padding-left: 172px;
+  }
+}
+
+.tp-blog-btn {
+  display: inline-block;
+}
+.tp-blog-btn i {
+  font-size: 55px;
+}
+.tp-blog-btn span {
+  width: 38px;
+  height: 38px;
+  background-color: #F8F5FF;
+  border-radius: 30px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: -11px;
+  z-index: -1;
+}
+.tp-blog-btn:hover span {
+  background-color: #ff9b76;
+}
+
+/*----------------------------------------*/
+/*  4.3 Sidebar 
+/*----------------------------------------*/
+.tp-blog-sidebar-widget {
+  background-color: #FBF6EF;
+  padding: 40px;
+  border-radius: 10px;
+}
+.tp-blog-sidebar-title span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--tp-theme-color);
+  display: inline-block;
+  margin-right: 7px;
+  transform: translateY(-4px);
+}
+.tp-blog-sidebar-cat ul li {
+  margin-bottom: 15px;
+}
+.tp-blog-sidebar-cat ul li a {
+  color: #57595C;
+  padding: 15px 25px;
+  display: block;
+  position: relative;
+  border: 1px solid #57595C;
+  border-radius: 8px;
+  background: #fff;
+}
+.tp-blog-sidebar-cat ul li a:hover {
+  color: #fff;
+  border: 1px solid var(--tp-theme-color);
+  background: var(--tp-theme-color);
+}
+.tp-blog-sidebar-post-item {
+  border-bottom: 1px solid #57595C;
+  padding-bottom: 15px;
+}
+.tp-blog-sidebar-post-item:last-child {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*----------------------------------------*/
+/*  3.1 Header Style 
+/*----------------------------------------*/
 .tp-transparent-header {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 3;
+}
+
+.tp-logo img {
+  width: 168px;
 }
 
 .tp-header-area {
@@ -5777,7 +6304,7 @@ blockquote cite {
   position: absolute;
   top: 105%;
   left: 0;
-  width: 1200px;
+  width: 1000px;
   background: #fff;
   padding: 25px;
   padding-bottom: 0;
@@ -5790,7 +6317,12 @@ blockquote cite {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .tp-mega-menu {
+    width: 900px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .tp-mega-menu {
     position: static;
     width: auto;
@@ -5854,6 +6386,9 @@ blockquote cite {
   background-color: #fff;
 }
 
+/*----------------------------------------*/
+/*  3.2 Mobile Menu
+/*----------------------------------------*/
 .tp-offcanvas-menu ul li {
   position: relative;
 }
@@ -5905,6 +6440,9 @@ blockquote cite {
   transition: 0.3s;
 }
 
+/*----------------------------------------*/
+/*  6.8 Hero
+/*----------------------------------------*/
 @media (max-width: 767px) {
   .tp-hero-area {
     padding-top: 198px;
@@ -6681,6 +7219,9 @@ blockquote cite {
   }
 }
 
+/*----------------------------------------*/
+/*	6.1 About
+/*----------------------------------------*/
 @media (max-width: 767px) {
   .tp-about-space {
     padding-top: 50px;
@@ -6962,6 +7503,9 @@ blockquote cite {
   }
 }
 
+/*----------------------------------------*/
+/*  6.4 Contact
+/*----------------------------------------*/
 @media (max-width: 767px) {
   .tp-contact-form-area {
     padding-top: 80px;
@@ -7058,6 +7602,9 @@ blockquote cite {
   }
 }
 
+/*----------------------------------------*/
+/*  6.9 Newsletter
+/*----------------------------------------*/
 .tp-newsletter-margin {
   margin-top: -110px;
 }
@@ -7195,6 +7742,9 @@ blockquote cite {
   color: #57595C;
 }
 
+/*----------------------------------------*/
+/*  6.5 CTA
+/*----------------------------------------*/
 .tp-cta-bg-color::before {
   background: cover no-repeat;
   content: "";
@@ -7208,6 +7758,9 @@ blockquote cite {
   z-index: 1;
 }
 
+/*----------------------------------------*/
+/* 6.6 Fact
+/*----------------------------------------*/
 .tpfact__icon {
   font-size: 110px;
   color: var(--tp-theme-color-2);
@@ -7362,6 +7915,9 @@ blockquote cite {
   }
 }
 
+/*----------------------------------------*/
+/*  6.10 Portfolio
+/*----------------------------------------*/
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .tp-project-tab-area {
     padding-right: 40px;
@@ -7815,6 +8371,9 @@ blockquote cite {
   }
 }
 
+/*----------------------------------------*/
+/*  6.13 Services
+/*----------------------------------------*/
 @media (max-width: 767px) {
   .tp-services-area {
     padding-bottom: 85px;
@@ -7997,6 +8556,7 @@ blockquote cite {
 }
 .tpsvtab__title {
   font-size: 100px;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .tpsvtab__title {
@@ -8133,6 +8693,9 @@ blockquote cite {
   }
 }
 
+/*----------------------------------------*/
+/*  6.14 Team
+/*----------------------------------------*/
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .tp-team-area {
     padding-left: 40px;
@@ -8408,6 +8971,9 @@ blockquote cite {
   border-radius: 4px;
 }
 
+/*----------------------------------------*/
+/*  6.15 Testimonial
+/*----------------------------------------*/
 .tp-testimonial-desc {
   font-size: 97px;
 }
@@ -8925,6 +9491,9 @@ blockquote cite {
   }
 }
 
+/*----------------------------------------*/
+/* 	6.2 Award
+/*----------------------------------------*/
 @media (max-width: 767px) {
   .tp-award-area {
     padding-bottom: 80px;
@@ -8997,193 +9566,9 @@ blockquote cite {
   }
 }
 
-@media (max-width: 767px) {
-  .tp-blog-post-area {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-}
-
-.tpblog__thumb img {
-  width: 100%;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .tpblog__thumb-2 img {
-    width: 70%;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .tpblog__content {
-    padding-left: 0;
-  }
-}
-.tpblog__content-meta {
-  width: 55px;
-  height: 170px;
-  padding: 8px 10px;
-  border-radius: 10px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: center;
-  flex: 0 0 auto;
-}
-.tpblog__content-meta cite {
-  width: 130px;
-  display: block;
-  position: absolute;
-  left: -38px;
-  top: 25px;
-  -moz-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  color: #000;
-}
-.tpblog__content-meta span {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column-reverse;
-}
-.tpblog__content-meta span i {
-  padding: 14px 14px;
-  background-color: #fff;
-  display: inline-block;
-  border-radius: 5px;
-  margin-top: 10px;
-  border: 1px solid #57595C;
-}
-.tpblog__meta {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.tpblog__meta span i {
-  margin-right: 5px;
-}
-.tpblog__meta cite {
-  display: inline-block;
-  width: 2px;
-  height: 16px;
-  background: #57595C;
-  margin: 0 15px;
-}
-.tpblog__meta > i {
-  color: var(--tp-theme-orange);
-}
-.tpblog__title {
-  font-size: 30px;
-  line-height: 1.25;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .tpblog__title {
-    font-size: 27px;
-  }
-}
-@media (max-width: 767px) {
-  .tpblog__title {
-    font-size: 22px;
-  }
-}
-.tpblog-2 {
-  border: 1px solid #57595C;
-  position: relative;
-  border-radius: 10px;
-}
-@media (max-width: 767px) {
-  .tpblog-2 {
-    padding: 6px;
-    border-radius: 0;
-  }
-}
-.tpblog-2 .tpblog__thumb {
-  width: 224px;
-  height: 100%;
-  flex: 0 0 auto;
-  -moz-transform: translateY(-12px);
-  -o-transform: translateY(-12px);
-  -ms-transform: translateY(-12px);
-  -webkit-transform: translateY(-12px);
-  transform: translateY(-12px);
-  margin-left: -3px;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-@media (max-width: 767px) {
-  .tpblog-2 .tpblog__thumb-2 {
-    position: static;
-    width: 100%;
-    height: auto;
-    margin: auto;
-    -moz-transform: translateY(0px);
-    -o-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-}
-.tpblog-2 .tpblog__thumb img {
-  height: calc(100% + 24px);
-  object-fit: cover;
-  border-radius: 10px;
-}
-@media (max-width: 767px) {
-  .tpblog-2 .tpblog__thumb img {
-    border-radius: 0;
-  }
-}
-.tpblog-2 .tpblog__content {
-  padding-left: 250px;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  padding-right: 20px;
-}
-@media (max-width: 767px) {
-  .tpblog-2 .tpblog__content {
-    padding: 23px 20px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .tpblog-2 .tpblog__content {
-    padding-left: 172px;
-  }
-}
-
-.tp-blog-btn {
-  display: inline-block;
-}
-.tp-blog-btn i {
-  font-size: 55px;
-}
-.tp-blog-btn span {
-  width: 38px;
-  height: 38px;
-  background-color: #F8F5FF;
-  border-radius: 30px;
-  display: inline-block;
-  position: absolute;
-  top: 10px;
-  right: -11px;
-  z-index: -1;
-}
-.tp-blog-btn:hover span {
-  background-color: #ff9b76;
-}
-
+/*----------------------------------------*/
+/*  6.16 Video
+/*----------------------------------------*/
 .tp-video-area {
   padding: 300px 30px;
 }
@@ -9204,6 +9589,9 @@ blockquote cite {
   }
 }
 
+/*----------------------------------------*/
+/*  6.7 FAQ
+/*----------------------------------------*/
 .tp-faq-wrapper {
   padding: 20px 0;
 }
@@ -9238,89 +9626,9 @@ blockquote cite {
   background-position: center;
 }
 
-.tp-accordion-item {
-  border-radius: 10px;
-  border: 1px solid #000;
-}
-.tp-accordion-header {
-  margin: 0;
-}
-.tp-accordion-button {
-  font-size: 20px;
-  width: 100%;
-  text-align: left;
-  padding: 23px 30px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-}
-.tp-accordion-button span {
-  margin-left: 20px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  color: var(--tp-theme-color);
-}
-.tp-accordion-button.collapsed span {
-  -moz-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  color: #57595C;
-}
-.tp-accordion-body {
-  margin: 0 30px;
-  padding-top: 20px;
-  border-top: 1px solid #000;
-}
-
-.tp-faq-header {
-  margin: 0;
-}
-.tp-faq-item {
-  border-bottom: 1px solid #D9D9D9;
-}
-.tp-faq-button {
-  font-size: 24px;
-  width: 100%;
-  text-align: left;
-  padding: 21px 0;
-}
-.tp-faq-button::after {
-  content: "-";
-  color: var(--tp-theme-orange);
-}
-.tp-faq-button.collapsed::after {
-  content: "+";
-  color: #0A0E1A;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .tp-faq-thumb {
-    margin-left: 0;
-  }
-}
-.tp-faq-thumb img {
-  max-width: inherit;
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
-  .tp-faq-thumb img {
-    width: 600px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .tp-faq-thumb img {
-    width: 100%;
-    margin-top: 40px;
-  }
-}
-
+/*----------------------------------------*/
+/*  	6.3 Brand
+/*----------------------------------------*/
 .gradient {
   background: radial-gradient(56.41% 5198.4% at 47.5% 62%, #0058FF 0%, #FF4C00 100%);
 }
@@ -9380,6 +9688,9 @@ blockquote cite {
   border: 1px solid #57595C;
 }
 
+/*----------------------------------------*/
+/*  6.12 Process
+/*----------------------------------------*/
 .tpprocess {
   border: 1px solid #57595C;
   border-radius: 215px;
@@ -9549,6 +9860,9 @@ blockquote cite {
   }
 }
 
+/*----------------------------------------*/
+/*  6.11 Price
+/*----------------------------------------*/
 .tpprice {
   border-radius: 20px;
   background-repeat: no-repeat;
@@ -9608,10 +9922,17 @@ blockquote cite {
   background-color: #71A2FF;
 }
 
+/*----------------------------------------*/
+/*  5.1 Footer Style 1
+/*----------------------------------------*/
 .footer-sep {
   background: #fff;
   opacity: 0.15;
   height: 1px;
+}
+
+.tp-footer-logo img {
+  width: 168px;
 }
 
 @media (max-width: 767px) {
@@ -9858,6 +10179,9 @@ blockquote cite {
   }
 }
 
+/*----------------------------------------*/
+/*  5.2 Footer Style 2
+/*----------------------------------------*/
 .tp-footer-widget-area-border {
   border-bottom: 1px solid #57595C;
 }
@@ -10022,6 +10346,9 @@ blockquote cite {
   color: #B1B4BA;
 }
 
+/*----------------------------------------*/
+/*  5.3 Footer Style 3
+/*----------------------------------------*/
 .tp-footer-social-box a {
   font-size: 30px;
   border: 1px solid rgba(255, 255, 255, 0.15);

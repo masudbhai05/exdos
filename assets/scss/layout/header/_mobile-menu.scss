@@ -1,4 +1,7 @@
 @use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.2 Mobile Menu
+/*----------------------------------------*/
 
 .tp-offcanvas-menu {
     & ul {
@@ -11,10 +14,6 @@
                 font-size: 16px;
                 font-weight: 500;
             }
-
-            // &>a {
-            //     border-bottom: 1px solid #ddd;
-            // }
 
             &:not(:last-child) {
                 & > a {

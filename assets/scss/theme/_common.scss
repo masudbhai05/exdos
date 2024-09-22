@@ -1,4 +1,7 @@
 @use '../utils' as *;
+/*----------------------------------------*/
+/*  1.2 Common Classes
+/*----------------------------------------*/
 
 
 .w-img {
@@ -161,4 +164,11 @@ img {
 .tp-brand-slide-element {
 	width: auto;
 	display: inline-block;
+}
+
+.tp-solid-bg {
+    height: 800px;
+	@media #{$md, $xs} {
+		height: 600px;
+	}
 }
