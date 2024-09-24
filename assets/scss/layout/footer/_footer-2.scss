@@ -73,6 +73,9 @@
         & li {
             & a {
                 color: #5c5957;
+                &:hover{
+                    color: var(--tp-theme-orange);
+                }
             }
         }
     }
@@ -134,6 +137,18 @@
         @media #{$lg, $md, $xs} {
             padding-left: 0;
         }
+        & ul {
+            & li {
+                & a {
+    
+                    transition: .3s;
+    
+                    &:hover {
+                        color: var(--tp-theme-orange);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -170,6 +185,9 @@
         & li {
             & a {
                 color: #57595C;
+                &:hover{
+                    color: var(--tp-theme-orange);
+                }
             }
 
             &:first-child {
@@ -207,3 +225,4 @@
         }
     }
 }
+

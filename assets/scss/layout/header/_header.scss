@@ -11,8 +11,8 @@
     z-index: 3;
 }
 
-.tp-logo{
-    & img{
+.tp-logo {
+    & img {
         width: 168px;
     }
 }
@@ -219,7 +219,7 @@
 .tp-header {
     &-search {
         margin-right: 40px;
-
+       
         @media #{$xl} {
             margin-right: 23px;
         }
@@ -227,6 +227,14 @@
         & i {
             font-size: 28px;
             color: #B1B4BA;
+            transition: .3s;
+
+        }
+
+        &:hover {
+              & i{
+                color: var(--tp-theme-color-2);
+              }
         }
     }
 
@@ -276,6 +284,12 @@
         }
     }
 
+    &-btn {
+        & a {
+            color: var(--tp-heading-color);
+        }
+    }
+
     &-bar {
         & button {
             background: #23252D;
@@ -286,6 +300,16 @@
 
             & i {
                 font-size: 53px;
+            }
+        }
+
+        &:hover {
+            & button {
+                background-color: var(--tp-theme-color-2);
+            }
+
+            & i {
+                color: #0A0E1A
             }
         }
     }
@@ -410,7 +434,8 @@
         transform: translateY(0);
     }
 }
-.tpFadeInDown{
+
+.tpFadeInDown {
     animation: tpFadeInDown 1s ease-out forwards;
 }
 
@@ -424,10 +449,12 @@
     animation: 500ms ease-in-out 0s normal none 1 running tpFadeInDown;
     -webkit-box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.1);
     box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.1);
-    &.tp-header-black{
+
+    &.tp-header-black {
         background-color: var(--tp-common-black);
     }
-    &.tp-header-white{
+
+    &.tp-header-white {
         background-color: #fff;
     }
 }

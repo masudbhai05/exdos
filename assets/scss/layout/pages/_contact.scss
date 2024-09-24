@@ -99,6 +99,9 @@
             font-family: var(--tp-font-heading);
             line-height: 1.2;
             margin-bottom: 10px;
+            &:hover {
+                color: var(--tp-theme-color);
+            }
             @media #{$xl, $xs} {
                 font-size: 24px;
               }

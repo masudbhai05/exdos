@@ -79,6 +79,10 @@
 
     &__title {
         font-size: 30px;
+        transition: .3s;
+        &:hover{
+            color: var(--tp-theme-color);
+        }
 
         @media #{$xl} {
             font-size: 26px;
@@ -143,6 +147,10 @@
             font-size: 25px;
             color: #0A0E1A;
             margin-right: 18px;
+            transition: .3s;
+            &:hover{
+                color: var(--tp-theme-color);
+            }
         }
 
         &-2 {
@@ -165,6 +173,11 @@
                 font-size: 22px;
                 line-height: 50px;
                 color: #0A0E1A;
+                transition: .3s;
+                &:hover{
+                    background-color: var(--tp-theme-color);
+                    color: #fff;
+                }
             }
         }
     }
@@ -191,6 +204,10 @@
 .tp-team-slider-button {
     display: inline-block;
     font-size: 52px;
+    transition: .3s;
+    &:hover{
+        color: var(--tp-theme-color);
+    }
 }
 
 .tp-team-nav {
@@ -253,6 +270,9 @@
             border-bottom: 1px solid #ddd;
             padding-left: 15px;
             padding-right: 15px;
+            &:hover {
+                color: var(--tp-theme-color);
+            }
 
             @media #{$xs} {
                 padding: 10px 4px;

@@ -223,6 +223,11 @@
 	text-align: center;
 	line-height: 60px;
 
+	&:hover {
+		background: var(--tp-theme-color);
+		color: #fff;
+	}
+
 	& i {
 		@include transform(rotate(-45deg));
 	}

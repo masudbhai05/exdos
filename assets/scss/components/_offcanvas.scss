@@ -7,7 +7,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 99;
+    z-index: 50000;
     width: 420px;
     height: 100%;
     background: #fff;
@@ -15,10 +15,22 @@
     visibility: hidden;
     opacity: 0;
     @include transform(translateX(100%));
-    @include transition(.4s ease); 
+    @include transition(.4s ease);
     overflow-y: scroll;
     overscroll-behavior-y: contain;
     scrollbar-width: none;
+
+    &-menu {
+        & ul {
+            & li {
+                & a {
+                    &:hover {
+                        color: var(--tp-theme-color);
+                    }
+                }
+            }
+        }
+    }
 
     @media only screen and (max-width: 400px) {
         width: 100%;
@@ -42,11 +54,19 @@
     }
 
     &-close {
+        
         & button {
             color: var(--tp-heading-color);
             font-size: 25px;
         }
+
+        &-toggle {
+            &:hover {
+                transform: rotate(90deg);
+            }
+        }
     }
+
 
     &-gallery {
         display: grid;
@@ -63,6 +83,12 @@
     &-info {
         & span {
             display: block;
+
+            & a {
+                &:hover {
+                    color: var(--tp-theme-color);
+                }
+            }
         }
     }
 

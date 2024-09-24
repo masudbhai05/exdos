@@ -31,6 +31,19 @@
             line-height: 75px;
             border-radius: 50%;
             display: inline-block;
+            transition: .3s;
+
+            &:hover {
+                background-color: var(--tp-theme-color);
+                border-color: var(--tp-theme-color);
+                & i {
+                    color: #fff;
+                }
+            }
+            & i {
+                color: #57595C;
+                transition: .3s;
+            }
         }
     }
 
@@ -298,13 +311,15 @@
 
     & h2 {
         font-size: 100px;
+
         @media #{$xs} {
             font-size: 65px;
         }
     }
-    & h5{
+
+    & h5 {
         @media #{$xs} {
             font-size: 21px;
-        }   
+        }
     }
 }

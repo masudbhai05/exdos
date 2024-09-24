@@ -6,6 +6,24 @@
         wowAnimation();
     });
 
+    // preloader 
+    windowOn.on('load', function () {
+        $("#loading").fadeOut(500);
+    })
+
+    // back-to-top
+    var btn = $('#back-to-top');
+    windowOn.scroll(function () {
+        if (windowOn.scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+    btn.on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+
     // background image attribute
     $('[data-background]').each(function () {
         $(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
@@ -158,28 +176,28 @@
     // Testimonial 2 end---------------------------
 
 
-    // Testimonial thumb start---------------------------
-    var swiperThumbs = new Swiper(".tp-testimonial-thumbs-active", {
-        spaceBetween: 30,
-        slidesPerView: 3,
+    // our expert team home 4 start---------------------------
+    var slider = new Swiper('.tp-testimonial-content-active', {
+        slidesPerView: 1,
         centeredSlides: true,
-        freeMode: true,
-        watchSlidesProgress: true,
+        loop: true,
+        loopedSlides: 3,
         navigation: {
-            nextEl: ".tp-swiper-test-button-next",
-            prevEl: ".tp-swiper-test-button-prev",
-        }
-    });
-    var swiperContent = new Swiper(".tp-testimonial-contents-active", {
-        // spaceBetween: 10,
-        navigation: {
-            nextEl: ".tp-swiper-test-button-next",
-            prevEl: ".tp-swiper-test-button-prev",
-        },
-        thumbs: {
-            swiper: swiperThumbs
+            nextEl: '.tp-swiper-test-button-next',
+            prevEl: '.tp-swiper-test-button-prev',
         },
     });
+    var thumbs = new Swiper('.tp-testimonial-thumb-active', {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        centeredSlides: false,
+        centeredSlides: true,
+        loop: true,
+        slideToClickedSlide: true,
+    });
+
+    slider.controller.control = thumbs;
+    thumbs.controller.control = slider;
     // Testimonial thumb end---------------------------
 
     // Testimonial thumb home 5 start---------------------------

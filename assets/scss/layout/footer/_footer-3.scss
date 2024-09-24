@@ -14,15 +14,21 @@
         color: #fff;
         text-transform: uppercase;
         font-family: var(--tp-font-heading);
-        @include transition(.3s); 
+        @include transition(.3s);
+
         @media #{$lg} {
             font-size: 25px;
         }
     }
-    &:hover{
+
+    &:hover {
         & a {
             background-color: #FF3838;
             border-color: transparent;
         }
     }
+}
+
+.footer-4 {
+   
 }

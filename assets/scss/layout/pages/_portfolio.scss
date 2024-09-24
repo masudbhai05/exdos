@@ -197,6 +197,18 @@
         @media #{$md, $xs} {
             margin-top: 0;
         }
+        & a{
+            &:hover{
+                color: var(--tp-theme-color-2);
+            }
+        }
+        &-hover{
+            & a{
+                &:hover{
+                    color: var(--tp-theme-color);
+                }
+            }
+        }
     }
 
     &__cat {
@@ -212,6 +224,11 @@
     &__title {
         font-size: 40px;
         color: #fff;
+        transition: .3s;
+
+        &:hover {
+            color: var(--tp-theme-color-2);
+        }
 
         @media #{$lg} {
             font-size: 35px;
@@ -255,7 +272,6 @@
 
     &__heading {
         font-size: 40px;
-
         @media #{$lg, $xs} {
             font-size: 30px;
         }
@@ -488,7 +504,8 @@
                 top: 0;
                 left: 0;
             }
-            & span{
+
+            & span {
                 padding-left: 25px;
                 overflow: hidden;
                 display: block;
@@ -503,7 +520,7 @@
     }
 }
 
-.showcase-grid-item{
+.showcase-grid-item {
     @media #{$md, $xs} {
         margin-bottom: 40px;
     }

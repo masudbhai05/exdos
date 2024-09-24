@@ -227,6 +227,10 @@
     font-size: 50px;
     z-index: 99;
 
+    &:hover {
+        color: var(--tp-theme-color);
+    }
+
     @media #{$xxlm,$xl,$md,$xs} {
         top: inherit;
         left: 0;
@@ -282,14 +286,21 @@
 .tp-swiper-test-2-button {
     color: #fff;
     font-size: 50px;
-    z-index: 99;
+    z-index: 9999;
+    transition: .3s;
+
+    &:hover {
+        color: var(--tp-theme-color-2);
+        opacity: 1;
+    }
+
 }
 
 .tp-test-slider-arrow {
     &-2 {
         bottom: 24px;
         left: 40%;
-        opacity: .5;
+        opacity: 1;
         z-index: 99;
 
         @media #{$lg} {
@@ -425,6 +436,8 @@
 
 .swiper-slide {
     &-active {
+
+
         & .tp-testimonial-thumb {
             opacity: 1;
 
@@ -450,21 +463,31 @@
     }
 }
 
-.tp-testimonial-thumbs-active {
+.tp-testimonial-thumb-active {
     & .swiper-slide {
-        @include transform(scale(.8));
-    }
+        & img {
+            @include transform(scale(.8));
+            width: 100px;
+            transition: .3s;
+        }
 
-    & .swiper-slide-active {
-        @include transform(scale(.8));
+        &.swiper-slide-active {
+            & img {
+                @include transform(scale(1));
+            }
+
+            position: relative;
+        }
     }
 }
 
 .tptest {
     padding: 50px;
+
     @media #{$xs} {
         padding: 20px;
     }
+
     &__rating {
         & i {
             color: #FF824D;
@@ -487,9 +510,11 @@
 
 .tp-test-slider-space {
     margin-right: -440px;
+
     @media #{$lg, $md} {
         margin-right: -200px;
     }
+
     @media #{$xs} {
         margin-right: 0;
     }
@@ -518,10 +543,11 @@
         text-align: center;
     }
 }
-.title-break{
-    & br{
+
+.title-break {
+    & br {
         @media #{$md,$xs} {
             display: none;
-        }  
+        }
     }
 }

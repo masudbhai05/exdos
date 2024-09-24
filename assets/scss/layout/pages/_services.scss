@@ -49,6 +49,10 @@
     &__title {
         font-size: 30px;
         margin-bottom: 15px;
+        transition: .3s;
+        &:hover{
+            color: var(--tp-theme-color);
+        }
 
         @media #{$xl} {
             font-size: 25px;

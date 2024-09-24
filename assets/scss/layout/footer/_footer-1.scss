@@ -31,6 +31,9 @@
         color: #fff;
         opacity: 0.8;
         margin-right: 19px;
+        &:hover {
+           color: var(--tp-theme-color-2);
+        }
     }
 
     @media #{$xxlm} {
@@ -68,6 +71,10 @@
             & a {
                 font-size: 17px;
                 color: #b1b4ba;
+                transition: .3s;
+                &:hover{
+                    color: var(--tp-theme-color-2);
+                }
             }
         }
     }
@@ -224,6 +231,10 @@
                 font-size: 15px;
                 text-transform: uppercase;
                 color: #b1b4ba;
+                transition: .3s;
+                &:hover{
+                    color: var(--tp-theme-color-2);
+                }
             }
         }
     }
